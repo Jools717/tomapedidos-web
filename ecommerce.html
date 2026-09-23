@@ -73,298 +73,481 @@
     </div>
   </nav>
 
-  <!-- =========================================================================
+  <main id="main-content">
+    <!-- =========================================================================
        PUNTO 1: HERO SECTION INVERTIDO (VIDEO IZQUIERDA / TEXTOS DERECHA)
        ========================================================================= -->
-  <header class="ecommerce-hero-banner container-fluid">
-    <!-- Fluid Wave Layers con gradiente orgánico (composición adaptada para Ecommerce) -->
-    <div class="ecommerce-hero-wave-layer">
-      <svg class="ecommerce-hero-wave-svg" viewBox="0 0 1440 900" fill="none" xmlns="http://www.w3.org/2000/svg"
-        preserveAspectRatio="none">
-        <defs>
-          <linearGradient id="ecomWaveGrad1" x1="100%" y1="100%" x2="0%" y2="0%">
-            <stop offset="0%" stop-color="#0C417B" stop-opacity="0.95" />
-            <stop offset="40%" stop-color="#1057A4" stop-opacity="0.85" />
-            <stop offset="75%" stop-color="#F04A0C" stop-opacity="0.7" />
-            <stop offset="100%" stop-color="#B43809" stop-opacity="0.9" />
-          </linearGradient>
-          <linearGradient id="ecomWaveGrad2" x1="0%" y1="100%" x2="100%" y2="0%">
-            <stop offset="0%" stop-color="#F04A0C" stop-opacity="0.8" />
-            <stop offset="50%" stop-color="#B43809" stop-opacity="0.75" />
-            <stop offset="100%" stop-color="#093363" stop-opacity="0.4" />
-          </linearGradient>
-          <filter id="ecomSoftGlow" x="-20%" y="-20%" width="140%" height="140%">
-            <feGaussianBlur stdDeviation="40" result="blur" />
-            <feComposite in="SourceGraphic" in2="blur" operator="over" />
-          </filter>
-        </defs>
-        <!-- Ambient Glow Wave 1 -->
-        <path d="M-100,480 C180,620 450,340 760,490 C1080,640 1320,380 1550,510 L1550,950 L-100,950 Z"
-          fill="url(#ecomWaveGrad1)" filter="url(#ecomSoftGlow)" />
-        <!-- Ribbon Wave 2 -->
-        <path d="M-50,560 C240,680 520,430 840,580 C1140,710 1310,490 1520,560 L1520,950 L-50,950 Z"
-          fill="url(#ecomWaveGrad2)" />
-        <!-- Curved White Accent Line -->
-        <path d="M-30,590 C220,710 500,470 820,620 C1120,750 1340,530 1500,600"
-          stroke="rgba(255, 255, 255, 0.4)" stroke-width="2.5" stroke-linecap="round" fill="none" />
-        <!-- Subtle Shopping Bag & Digital Route Nodes in Background -->
-        <g opacity="0.3" transform="translate(140, 100) scale(1.3)">
-          <path
-            d="M19 6h-2c0-2.76-2.24-5-5-5S7 3.24 7 6H5c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-7-3c1.66 0 3 1.34 3 3H9c0-1.66 1.34-3 3-3zm7 17H5V8h14v12z"
-            fill="#4079B6" />
-        </g>
-        <path d="M120,180 C180,240 240,200 320,270 C360,305 400,280 460,330"
-          stroke="rgba(64, 121, 182, 0.35)" stroke-width="2" stroke-dasharray="6,6" fill="none" />
-      </svg>
-    </div>
+    <div class="ecommerce-hero-banner container-fluid">
+      <!-- Fluid Wave Layers con gradiente orgánico (composición adaptada para Ecommerce) -->
+      <div class="ecommerce-hero-wave-layer">
+        <svg class="ecommerce-hero-wave-svg" viewBox="0 0 1440 900" fill="none" xmlns="http://www.w3.org/2000/svg"
+          preserveAspectRatio="none">
+          <defs>
+            <linearGradient id="ecomWaveGrad1" x1="100%" y1="100%" x2="0%" y2="0%">
+              <stop offset="0%" stop-color="#0C417B" stop-opacity="0.95" />
+              <stop offset="40%" stop-color="#1057A4" stop-opacity="0.85" />
+              <stop offset="75%" stop-color="#F04A0C" stop-opacity="0.7" />
+              <stop offset="100%" stop-color="#B43809" stop-opacity="0.9" />
+            </linearGradient>
+            <linearGradient id="ecomWaveGrad2" x1="0%" y1="100%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#F04A0C" stop-opacity="0.8" />
+              <stop offset="50%" stop-color="#B43809" stop-opacity="0.75" />
+              <stop offset="100%" stop-color="#093363" stop-opacity="0.4" />
+            </linearGradient>
+            <filter id="ecomSoftGlow" x="-20%" y="-20%" width="140%" height="140%">
+              <feGaussianBlur stdDeviation="40" result="blur" />
+              <feComposite in="SourceGraphic" in2="blur" operator="over" />
+            </filter>
+          </defs>
+          <!-- Ambient Glow Wave 1 -->
+          <path d="M-100,480 C180,620 450,340 760,490 C1080,640 1320,380 1550,510 L1550,950 L-100,950 Z"
+            fill="url(#ecomWaveGrad1)" filter="url(#ecomSoftGlow)" />
+          <!-- Ribbon Wave 2 -->
+          <path d="M-50,560 C240,680 520,430 840,580 C1140,710 1310,490 1520,560 L1520,950 L-50,950 Z"
+            fill="url(#ecomWaveGrad2)" />
+          <!-- Curved White Accent Line -->
+          <path d="M-30,590 C220,710 500,470 820,620 C1120,750 1340,530 1500,600" stroke="rgba(255, 255, 255, 0.4)"
+            stroke-width="2.5" stroke-linecap="round" fill="none" />
+          <!-- Subtle Shopping Bag & Digital Route Nodes in Background -->
+          <g opacity="0.3" transform="translate(140, 100) scale(1.3)">
+            <path
+              d="M19 6h-2c0-2.76-2.24-5-5-5S7 3.24 7 6H5c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-7-3c1.66 0 3 1.34 3 3H9c0-1.66 1.34-3 3-3zm7 17H5V8h14v12z"
+              fill="#4079B6" />
+          </g>
+          <path d="M120,180 C180,240 240,200 320,270 C360,305 400,280 460,330" stroke="rgba(64, 121, 182, 0.35)"
+            stroke-width="2" stroke-dasharray="6,6" fill="none" />
+        </svg>
+      </div>
 
-    <div class="container ecommerce-hero-container">
-      <div class="row align-items-center">
-        <!-- Columna Izquierda: Video Card & Direct WhatsApp Card -->
-        <div class="col-lg-6 pe-lg-4 mb-5 mb-lg-0 order-2 order-lg-1">
-          <!-- Video Card -->
-          <div class="ecommerce-hero-video-card">
-            <div class="ecommerce-hero-video-wrapper">
-              <iframe id="ecommerce-hero-yt-video" src="https://www.youtube.com/embed/r63o8vkpopo?rel=0&modestbranding=1"
-                title="Video Presentación Módulo Ecommerce Toma Pedidos"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-              </iframe>
+      <div class="container ecommerce-hero-container">
+        <div class="row align-items-center">
+          <!-- Columna Izquierda: Video Card & Direct WhatsApp Card -->
+          <div class="col-lg-6 pe-lg-4 mb-5 mb-lg-0 order-2 order-lg-1">
+            <!-- Video Card -->
+            <div class="ecommerce-hero-video-card">
+              <div class="ecommerce-hero-video-wrapper">
+                <iframe id="ecommerce-hero-yt-video"
+                  src="https://www.youtube.com/embed/r63o8vkpopo?rel=0&modestbranding=1"
+                  title="Video Presentación Módulo Ecommerce Toma Pedidos"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                </iframe>
+              </div>
+            </div>
+
+            <!-- WhatsApp Contact Card -->
+            <div class="ecommerce-hero-whatsapp-card">
+              <h3 class="ecommerce-hero-whatsapp-title">¿Quieres activar tu Tienda Online B2B?</h3>
+              <p class="ecommerce-hero-whatsapp-desc">
+                Habla directamente con nuestro equipo por WhatsApp para conocer una demostración o activarla en tu
+                cuenta.
+              </p>
+              <a href="https://api.whatsapp.com/send/?phone=573103258432&text=Hola!%20Vi%20el%20m%C3%B3dulo%20de%20Ecommerce%20y%20quiero%20conocer%20m%C3%A1s%20detalles%20para%20activar%20la%20tienda%20online%20de%20mi%20negocio.&utm_source=ecommerce-page&utm_medium=hero-video&utm_campaign=modulo-ecommerce"
+                target="_blank" class="ecommerce-btn-whatsapp">
+                <span class="ecommerce-btn-whatsapp-inner">
+                  <img src="https://www.tomapedidos.app/tomapedidos/media/images/WhatsApp_icon.png" alt="WhatsApp"
+                    class="ecommerce-btn-whatsapp-img" />
+                  <span>Solicitar activación por WhatsApp</span>
+                  <span class="ecommerce-btn-whatsapp-arrow">→</span>
+                </span>
+              </a>
             </div>
           </div>
 
-          <!-- WhatsApp Contact Card -->
-          <div class="ecommerce-hero-whatsapp-card">
-            <h3 class="ecommerce-hero-whatsapp-title">¿Quieres activar tu Tienda Online B2B?</h3>
-            <p class="ecommerce-hero-whatsapp-desc">
-              Habla directamente con nuestro equipo por WhatsApp para conocer una demostración o activarla en tu cuenta.
+          <!-- Columna Derecha: Propuesta de Valor & Features -->
+          <div class="col-lg-6 text-white ps-lg-4 order-1 order-lg-2 mb-5 mb-lg-0">
+            <h1 class="ecommerce-hero-title">
+              Convierte tu catálogo en una tienda online y recibe pedidos de tus clientes con <span
+                class="ecommerce-text-highlight">Ecommerce</span>
+            </h1>
+
+            <div class="ecommerce-hero-divider"></div>
+
+            <p class="ecommerce-hero-description">
+              La <strong>tienda virtual B2B conectada al Módulo Administrativo de Toma Pedidos</strong> para
+              enviar el enlace a tus clientes y tenderos, permitiéndoles <strong>hacer pedidos en cualquier
+                momento</strong>
+              con sus listas de precios personalizadas, sin comisiones y con inventario en tiempo real.
             </p>
-            <a href="https://api.whatsapp.com/send/?phone=573103258432&text=Hola!%20Vi%20el%20m%C3%B3dulo%20de%20Ecommerce%20y%20quiero%20conocer%20m%C3%A1s%20detalles%20para%20activar%20la%20tienda%20online%20de%20mi%20negocio.&utm_source=ecommerce-page&utm_medium=hero-video&utm_campaign=modulo-ecommerce"
-              target="_blank" class="ecommerce-btn-whatsapp">
-              <span class="ecommerce-btn-whatsapp-inner">
-                <img src="https://www.tomapedidos.app/tomapedidos/media/images/WhatsApp_icon.png" alt="WhatsApp"
-                  class="ecommerce-btn-whatsapp-img" />
-                <span>Solicitar activación por WhatsApp</span>
-                <span class="ecommerce-btn-whatsapp-arrow">→</span>
-              </span>
-            </a>
-          </div>
-        </div>
 
-        <!-- Columna Derecha: Propuesta de Valor & Features -->
-        <div class="col-lg-6 text-white ps-lg-4 order-1 order-lg-2 mb-5 mb-lg-0">
-          <div class="ecommerce-hero-badge">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#25D366" stroke-width="2"
-              stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-              <polyline points="9 12 11 14 15 10"></polyline>
-            </svg>
-            <span>Integración nativa con tu cuenta de Toma Pedidos · 24/7</span>
-          </div>
-
-          <h1 class="ecommerce-hero-title">
-            Convierte tu catálogo en una tienda online y recibe pedidos de tus clientes con <span class="ecommerce-text-highlight">Ecommerce</span>
-          </h1>
-
-          <div class="ecommerce-hero-divider"></div>
-
-          <p class="ecommerce-hero-description">
-            La <strong>tienda virtual B2B conectada al Módulo Administrativo de Toma Pedidos</strong> para
-            enviar el enlace a tus clientes y tenderos, permitiéndoles <strong>hacer pedidos en cualquier momento</strong>
-            con sus listas de precios personalizadas, sin comisiones y con inventario en tiempo real.
-          </p>
-
-          <!-- Features Grid -->
-          <div class="ecommerce-hero-features-grid">
-            <div class="ecommerce-hero-feature-card">
-              <div class="ecommerce-hero-feature-icon">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                  stroke-linecap="round" stroke-linejoin="round">
-                  <circle cx="12" cy="12" r="10"></circle>
-                  <polyline points="12 6 12 12 16 14"></polyline>
-                </svg>
+            <!-- Features Grid -->
+            <div class="ecommerce-hero-features-grid">
+              <div class="ecommerce-hero-feature-card">
+                <div class="ecommerce-hero-feature-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
+                </div>
+                <div class="ecommerce-hero-feature-text">
+                  <h4>Ventas 24 Horas</h4>
+                  <p>Pedidos automáticos de noche y fines de semana</p>
+                </div>
               </div>
-              <div class="ecommerce-hero-feature-text">
-                <h4>Ventas 24 Horas</h4>
-                <p>Pedidos automáticos de noche y fines de semana</p>
-              </div>
-            </div>
 
-            <div class="ecommerce-hero-feature-card">
-              <div class="ecommerce-hero-feature-icon">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                  stroke-linecap="round" stroke-linejoin="round">
-                  <line x1="12" y1="1" x2="12" y2="23"></line>
-                  <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
-                </svg>
+              <div class="ecommerce-hero-feature-card">
+                <div class="ecommerce-hero-feature-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="12" y1="1" x2="12" y2="23"></line>
+                    <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                  </svg>
+                </div>
+                <div class="ecommerce-hero-feature-text">
+                  <h4>Precios por Cliente</h4>
+                  <p>Listas y descuentos pactados para cada tendero</p>
+                </div>
               </div>
-              <div class="ecommerce-hero-feature-text">
-                <h4>Precios por Cliente</h4>
-                <p>Listas y descuentos pactados para cada tendero</p>
-              </div>
-            </div>
 
-            <div class="ecommerce-hero-feature-card">
-              <div class="ecommerce-hero-feature-icon">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                  stroke-linecap="round" stroke-linejoin="round">
-                  <circle cx="9" cy="21" r="1"></circle>
-                  <circle cx="20" cy="21" r="1"></circle>
-                  <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
-                </svg>
+              <div class="ecommerce-hero-feature-card">
+                <div class="ecommerce-hero-feature-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="9" cy="21" r="1"></circle>
+                    <circle cx="20" cy="21" r="1"></circle>
+                    <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                  </svg>
+                </div>
+                <div class="ecommerce-hero-feature-text">
+                  <h4>0% Comisiones</h4>
+                  <p>Sin cobros porcentuales por tus transacciones</p>
+                </div>
               </div>
-              <div class="ecommerce-hero-feature-text">
-                <h4>0% Comisiones</h4>
-                <p>Sin cobros porcentuales por tus transacciones</p>
-              </div>
-            </div>
 
-            <div class="ecommerce-hero-feature-card">
-              <div class="ecommerce-hero-feature-icon">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                  stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"></path>
-                </svg>
-              </div>
-              <div class="ecommerce-hero-feature-text">
-                <h4>Sincronización Total</h4>
-                <p>Pedidos directos a picking y facturación</p>
+              <div class="ecommerce-hero-feature-card">
+                <div class="ecommerce-hero-feature-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"></path>
+                  </svg>
+                </div>
+                <div class="ecommerce-hero-feature-text">
+                  <h4>Sincronización Total</h4>
+                  <p>Pedidos directos a picking y facturación</p>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </header>
 
-  <!-- =========================================================================
-       PUNTO 2: EXPERIENCIA MULTIDISPOSITIVO (DOBLE SLIDER COMPUTADOR + CELULAR)
+    <!-- =========================================================================
+       PUNTO 2: EXPERIENCIA MULTIDISPOSITIVO (CHIPS INTERACTIVOS: PC / CELULAR)
        ========================================================================= -->
-  <section class="ecommerce-showcase-section container-fluid">
-    <div class="container">
-      <div class="row">
-        <div class="col-12 text-center ecommerce-section-header">
-          <span class="ecommerce-section-badge">Experiencia Omnicanal</span>
-          <h2 class="ecommerce-section-title">Tu Tienda en Cualquier Pantalla</h2>
-          <p class="ecommerce-section-subtitle">
-            Diseñada tanto para compras ágiles del tendero desde su smartphone como para pedidos masivos y gestión desde el computador.
-          </p>
-        </div>
-      </div>
+    <section class="ecommerce-showcase-section container-fluid">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-center ecommerce-section-header">
+            <h2 class="ecommerce-section-title">Tu Tienda en Cualquier Pantalla</h2>
+            <p class="ecommerce-section-subtitle">
+              Diseñada tanto para compras ágiles del tendero desde su smartphone como para pedidos masivos y gestión
+              desde
+              el computador.
+            </p>
 
-      <!-- Layout Combinado: Información de Pantallas + Vitrina Dual Interactiva -->
-      <div class="row align-items-center ecommerce-dual-screen-row">
-        <!-- Columna Explicativa: Describiendo el uso de ambas pantallas -->
-        <div class="col-lg-4 mb-4 mb-lg-0">
-          <div class="ecommerce-device-info-card ecommerce-device-card-mobile">
-            <div class="ecommerce-device-card-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                stroke-linecap="round" stroke-linejoin="round">
-                <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
-                <line x1="12" y1="18" x2="12.01" y2="18"></line>
-              </svg>
-            </div>
-            <div class="ecommerce-device-card-body">
-              <h3>Desde el Celular</h3>
-              <p class="ecommerce-device-role">Para el Tendero y Cliente Final</p>
-              <p>
-                Tu cliente abre el enlace recibido por WhatsApp sin descargar aplicaciones. Consulta fotos en alta calidad,
-                precios vigentes y repite su pedido habitual en menos de un minuto.
-              </p>
-              <ul class="ecommerce-device-bullets">
-                <li>Acceso inmediato desde el navegador móvil.</li>
-                <li>Carrito de compras visual y simplificado.</li>
-                <li>Confirmación de pedido al instante.</li>
-              </ul>
-            </div>
-          </div>
+            <!-- Fila de Chips Interactivos: Computador y Celular -->
+            <div class="ecommerce-device-toggle-wrapper">
+              <div class="ecommerce-device-toggle-group" role="tablist" aria-label="Seleccionar vista de dispositivo">
+                <button type="button" class="ecommerce-device-chip active" id="chip-desktop" data-device="desktop"
+                  role="tab" aria-selected="true" aria-controls="ecommerce-view-desktop">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                    <line x1="8" y1="21" x2="16" y2="21"></line>
+                    <line x1="12" y1="17" x2="12" y2="21"></line>
+                  </svg>
+                  <span>Desde el Computador</span>
+                </button>
 
-          <div class="ecommerce-device-info-card ecommerce-device-card-desktop mt-4">
-            <div class="ecommerce-device-card-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                stroke-linecap="round" stroke-linejoin="round">
-                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
-                <line x1="8" y1="21" x2="16" y2="21"></line>
-                <line x1="12" y1="17" x2="12" y2="21"></line>
-              </svg>
-            </div>
-            <div class="ecommerce-device-card-body">
-              <h3>Desde el Computador</h3>
-              <p class="ecommerce-device-role">Para Mayoristas y Oficinas de Compra</p>
-              <p>
-                Ideal para clientes que compran por volumen desde el mostrador o departamento de compras.
-                Permite búsquedas avanzadas por categoría, visualización completa del catálogo y gestión de facturas.
-              </p>
-              <ul class="ecommerce-device-bullets">
-                <li>Catálogo extendido en pantalla completa.</li>
-                <li>Cargue ágil de pedidos de gran escala.</li>
-                <li>Control centralizado con Toma Pedidos.</li>
-              </ul>
+                <button type="button" class="ecommerce-device-chip" id="chip-mobile" data-device="mobile" role="tab"
+                  aria-selected="false" aria-controls="ecommerce-view-mobile">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                    <line x1="12" y1="18" x2="12.01" y2="18"></line>
+                  </svg>
+                  <span>Desde el Celular</span>
+                </button>
+              </div>
             </div>
           </div>
         </div>
 
-        <!-- Columna Visual: Composición Doble Slider (Computador Base + Celular Integrado) -->
-        <div class="col-lg-8 ecommerce-devices-stage">
-          <div class="ecommerce-dual-mockup-wrapper">
-            <!-- Slider Computador (Plantilla Monitor) -->
-            <div class="ecommerce-desktop-mockup-box">
-              <div id="carouselEcommerceDesktop" class="carousel slide carousel-fade" data-bs-touch="false"
-                data-bs-interval="false">
-                <div class="carousel-inner ecommerce-carousel-inner-desktop">
-                  <img class="carousel-item active ecommerce-front-image-desktop"
-                    src="media/images/como-funciona-image-desktop-1.png" alt="Captura 1 Tienda en Computador">
-                  <img class="carousel-item ecommerce-front-image-desktop"
-                    src="media/images/como-funciona-image-desktop-2.png" alt="Captura 2 Tienda en Computador">
-                  <img class="carousel-item ecommerce-front-image-desktop"
-                    src="media/images/como-funciona-image-desktop-3.png" alt="Captura 3 Tienda en Computador">
-                  <img class="carousel-item ecommerce-front-image-desktop"
-                    src="media/images/como-funciona-image-desktop-4.png" alt="Captura 4 Tienda en Computador">
-                  <img class="carousel-item ecommerce-front-image-desktop"
-                    src="media/images/como-funciona-image-desktop-5.png" alt="Captura 5 Tienda en Computador">
-                  <img class="carousel-item ecommerce-front-image-desktop"
-                    src="media/images/como-funciona-image-desktop-6.png" alt="Captura 6 Tienda en Computador">
+        <!-- VISTA 1: COMPUTADOR (ACTIVA POR DEFECTO) -->
+        <div id="ecommerce-view-desktop" class="ecommerce-device-view active" role="tabpanel"
+          aria-labelledby="chip-desktop">
+          <div class="row align-items-center justify-content-center g-4 ecommerce-showcase-grid">
+            <!-- Costado Izquierdo: 2 Cards Computador -->
+            <div class="col-lg-3 col-md-6 order-2 order-lg-1 d-flex flex-column gap-3">
+              <div class="ecommerce-showcase-card">
+                <div class="ecommerce-showcase-card-header">
+                  <div class="ecommerce-showcase-card-icon">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round">
+                      <rect x="3" y="3" width="7" height="7"></rect>
+                      <rect x="14" y="3" width="7" height="7"></rect>
+                      <rect x="14" y="14" width="7" height="7"></rect>
+                      <rect x="3" y="14" width="7" height="7"></rect>
+                    </svg>
+                  </div>
+                  <div>
+                    <span class="ecommerce-showcase-card-tag">Mostrador y Compras</span>
+                    <h4 class="ecommerce-showcase-card-title">Catálogo Panorámico</h4>
+                  </div>
                 </div>
-                <button class="carousel-control-prev ecommerce-carousel-control-prev-desktop" type="button"
-                  data-bs-target="#carouselEcommerceDesktop" data-bs-slide="prev">
-                  <span class="carousel-control-prev-icon ecommerce-carousel-control-prev-icon-desktop"
-                    aria-hidden="true"></span>
-                  <span class="visually-hidden">Anterior</span>
-                </button>
-                <button class="carousel-control-next ecommerce-carousel-control-next-desktop" type="button"
-                  data-bs-target="#carouselEcommerceDesktop" data-bs-slide="next">
-                  <span class="carousel-control-next-icon ecommerce-carousel-control-next-icon-desktop"
-                    aria-hidden="true"></span>
-                  <span class="visually-hidden">Siguiente</span>
-                </button>
+                <p class="ecommerce-showcase-card-desc">
+                  Visualización extendida de cientos de referencias, filtros avanzados por categoría y marcas para
+                  agilizar compras de gran volumen.
+                </p>
+                <div class="ecommerce-showcase-card-bullet">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span>Búsqueda instantánea en pantalla grande</span>
+                </div>
               </div>
-              <div class="ecommerce-mockup-caption">
-                <span>💻 Vista Pantalla Grande / Oficina</span>
+
+              <div class="ecommerce-showcase-card">
+                <div class="ecommerce-showcase-card-header">
+                  <div class="ecommerce-showcase-card-icon">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round">
+                      <line x1="16.5" y1="9.4" x2="7.5" y2="4.21"></line>
+                      <path
+                        d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z">
+                      </path>
+                      <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                      <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                    </svg>
+                  </div>
+                  <div>
+                    <span class="ecommerce-showcase-card-tag">Eficiencia Mayorista</span>
+                    <h4 class="ecommerce-showcase-card-title">Pedidos por Volumen</h4>
+                  </div>
+                </div>
+                <p class="ecommerce-showcase-card-desc">
+                  Cargue rápido por bulto, embalaje o cajas cerradas con cálculo automático de escalas de descuento y
+                  topes mínimos configurados.
+                </p>
+                <div class="ecommerce-showcase-card-bullet">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span>Escalas y descuentos B2B automáticos</span>
+                </div>
               </div>
             </div>
 
-            <!-- Slider Celular (Plantilla Móvil Superpuesta) -->
-            <div class="ecommerce-mobile-mockup-box">
-              <div id="carouselEcommerceMobile" class="carousel slide carousel-fade" data-bs-touch="false"
-                data-bs-interval="false">
-                <div class="carousel-inner ecommerce-carousel-inner-mobile">
-                  <img class="carousel-item active ecommerce-front-image-mobile"
-                    src="media/images/como-funciona-image-mobile-1.png" alt="Captura 1 Tienda en Celular">
-                  <img class="carousel-item ecommerce-front-image-mobile"
-                    src="media/images/como-funciona-image-mobile-2.png" alt="Captura 2 Tienda en Celular">
-                  <img class="carousel-item ecommerce-front-image-mobile"
-                    src="media/images/como-funciona-image-mobile-3.png" alt="Captura 3 Tienda en Celular">
-                  <img class="carousel-item ecommerce-front-image-mobile"
-                    src="media/images/como-funciona-image-mobile-4.png" alt="Captura 4 Tienda en Celular">
-                  <img class="carousel-item ecommerce-front-image-mobile"
-                    src="media/images/como-funciona-image-mobile-5.png" alt="Captura 5 Tienda en Celular">
-                  <img class="carousel-item ecommerce-front-image-mobile"
-                    src="media/images/como-funciona-image-mobile-6.png" alt="Captura 6 Tienda en Celular">
-                  <img class="carousel-item ecommerce-front-image-mobile"
-                    src="media/images/como-funciona-image-mobile-7.png" alt="Captura 7 Tienda en Celular">
-                  <img class="carousel-item ecommerce-front-image-mobile"
-                    src="media/images/como-funciona-image-mobile-8.png" alt="Captura 8 Tienda en Celular">
+            <!-- Centro: Slider Computador -->
+            <div class="col-lg-6 col-md-10 order-1 order-lg-2 text-center mb-4 mb-lg-0">
+              <div class="ecommerce-desktop-mockup-standalone">
+                <div id="carouselEcommerceDesktop" class="carousel slide carousel-fade" data-bs-touch="false"
+                  data-bs-interval="false">
+                  <div class="carousel-inner ecommerce-carousel-inner-desktop">
+                    <img class="carousel-item active ecommerce-front-image-desktop"
+                      src="https://www.tomapedidos.app/tomapedidos/media/images/interfaz-ecommerce-tomapedidos-0.png"
+                      alt="Captura 1 Tienda en Computador">
+                    <img class="carousel-item ecommerce-front-image-desktop"
+                      src="https://www.tomapedidos.app/tomapedidos/media/images/interfaz-ecommerce-tomapedidos-1.png"
+                      alt="Captura 2 Tienda en Computador">
+                    <img class="carousel-item ecommerce-front-image-desktop"
+                      src="https://www.tomapedidos.app/tomapedidos/media/images/interfaz-ecommerce-tomapedidos-2.png"
+                      alt="Captura 3 Tienda en Computador">
+                    <img class="carousel-item ecommerce-front-image-desktop"
+                      src="https://www.tomapedidos.app/tomapedidos/media/images/interfaz-ecommerce-tomapedidos-3.png"
+                      alt="Captura 4 Tienda en Computador">
+                    <img class="carousel-item ecommerce-front-image-desktop"
+                      src="https://www.tomapedidos.app/tomapedidos/media/images/interfaz-ecommerce-tomapedidos-4.png"
+                      alt="Captura 5 Tienda en Computador">
+                    <img class="carousel-item ecommerce-front-image-desktop"
+                      src="https://www.tomapedidos.app/tomapedidos/media/images/interfaz-ecommerce-tomapedidos-5.png"
+                      alt="Captura 6 Tienda en Computador">
+
+                    <button class="carousel-control-prev ecommerce-carousel-control-prev-desktop" type="button"
+                      data-bs-target="#carouselEcommerceDesktop" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon ecommerce-carousel-control-prev-icon-desktop"
+                        aria-hidden="true"></span>
+                      <span class="visually-hidden">Anterior</span>
+                    </button>
+                    <button class="carousel-control-next ecommerce-carousel-control-next-desktop" type="button"
+                      data-bs-target="#carouselEcommerceDesktop" data-bs-slide="next">
+                      <span class="carousel-control-next-icon ecommerce-carousel-control-next-icon-desktop"
+                        aria-hidden="true"></span>
+                      <span class="visually-hidden">Siguiente</span>
+                    </button>
+                  </div>
                 </div>
+
+                <!-- Previsualizador Ampliado Fuera del Mockup (Desktop) -->
+                <div class="ecommerce-popout-preview ecommerce-popout-desktop" id="popoutPreviewDesktop"
+                  aria-hidden="true">
+                  <img id="popoutDesktopImg"
+                    src="https://www.tomapedidos.app/tomapedidos/media/images/interfaz-ecommerce-tomapedidos-0.png"
+                    alt="Vista Ampliada Computador">
+                </div>
+
+                <div class="ecommerce-mockup-caption">
+                  <span>💻 Vista Pantalla Grande / Oficina · <em>Pasa el cursor sobre la captura para ver en
+                      grande</em></span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Costado Derecho: 2 Cards Computador -->
+            <div class="col-lg-3 col-md-6 order-3 order-lg-3 d-flex flex-column gap-3">
+              <div class="ecommerce-showcase-card">
+                <div class="ecommerce-showcase-card-header">
+                  <div class="ecommerce-showcase-card-icon">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                      <polyline points="14 2 14 8 20 8"></polyline>
+                      <line x1="16" y1="13" x2="8" y2="13"></line>
+                      <line x1="16" y1="17" x2="8" y2="17"></line>
+                      <polyline points="10 9 9 9 8 9"></polyline>
+                    </svg>
+                  </div>
+                  <div>
+                    <span class="ecommerce-showcase-card-tag">Administración Central</span>
+                    <h4 class="ecommerce-showcase-card-title">Cartera y Facturas</h4>
+                  </div>
+                </div>
+                <p class="ecommerce-showcase-card-desc">
+                  Tus clientes consultan su historial de pedidos, facturas generadas y estados de despacho de forma
+                  autónoma sin llamar a oficina.
+                </p>
+                <div class="ecommerce-showcase-card-bullet">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span>Autogestión de historial y estados</span>
+                </div>
+              </div>
+
+              <div class="ecommerce-showcase-card">
+                <div class="ecommerce-showcase-card-header">
+                  <div class="ecommerce-showcase-card-icon">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"></path>
+                    </svg>
+                  </div>
+                  <div>
+                    <span class="ecommerce-showcase-card-tag">Cero Reprocesos</span>
+                    <h4 class="ecommerce-showcase-card-title">Enlace con Bodega</h4>
+                  </div>
+                </div>
+                <p class="ecommerce-showcase-card-desc">
+                  Cada orden ingresa directamente al Módulo Administrativo de Toma Pedidos, pasando a preparación de
+                  bodega y despacho con entregadores.
+                </p>
+                <div class="ecommerce-showcase-card-bullet">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span>Sincronización directa sin transcripción</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- VISTA 2: CELULAR (ACTIVADA MEDIANTE CHIP) -->
+        <div id="ecommerce-view-mobile" class="ecommerce-device-view" role="tabpanel" aria-labelledby="chip-mobile">
+          <div class="row align-items-center justify-content-center g-4 ecommerce-showcase-grid">
+            <!-- Costado Izquierdo: 2 Cards Celular -->
+            <div class="col-lg-4 col-md-6 order-2 order-lg-1 d-flex flex-column gap-3">
+              <div class="ecommerce-showcase-card">
+                <div class="ecommerce-showcase-card-header">
+                  <div class="ecommerce-showcase-card-icon">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round">
+                      <path
+                        d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z">
+                      </path>
+                    </svg>
+                  </div>
+                  <div>
+                    <span class="ecommerce-showcase-card-tag">Cero Fricción</span>
+                    <h4 class="ecommerce-showcase-card-title">Directo por WhatsApp</h4>
+                  </div>
+                </div>
+                <p class="ecommerce-showcase-card-desc">
+                  El tendero entra a través del enlace web recibido en su chat, sin descargar aplicaciones pesadas ni
+                  recordar registros engorrosos.
+                </p>
+                <div class="ecommerce-showcase-card-bullet">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span>Acceso inmediato en cualquier teléfono</span>
+                </div>
+              </div>
+
+              <div class="ecommerce-showcase-card">
+                <div class="ecommerce-showcase-card-header">
+                  <div class="ecommerce-showcase-card-icon">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="23 4 23 10 17 10"></polyline>
+                      <path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path>
+                    </svg>
+                  </div>
+                  <div>
+                    <span class="ecommerce-showcase-card-tag">Agilidad en Tienda</span>
+                    <h4 class="ecommerce-showcase-card-title">Reorden en 1 Minuto</h4>
+                  </div>
+                </div>
+                <p class="ecommerce-showcase-card-desc">
+                  Optimizado para la dinámica del tendero: puede repetir su pedido de la semana previa con un solo toque
+                  y
+                  agregar novedades en segundos.
+                </p>
+                <div class="ecommerce-showcase-card-bullet">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span>Confirmación de pedido en 3 toques</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Centro: Slider Celular -->
+            <div class="col-lg-4 col-md-8 order-1 order-lg-2 text-center mb-4 mb-lg-0">
+              <div class="ecommerce-mobile-mockup-standalone">
+                <div id="carouselEcommerceMobile" class="carousel slide carousel-fade" data-bs-touch="true"
+                  data-bs-interval="false">
+                  <div class="carousel-inner ecommerce-carousel-inner-mobile">
+                    <img class="carousel-item active ecommerce-front-image-mobile"
+                      src="https://www.tomapedidos.app/tomapedidos/media/images/interfaz-telefono-ecommerce-tomapedidos-0.png"
+                      alt="Captura 1 Tienda en Celular">
+                    <img class="carousel-item ecommerce-front-image-mobile"
+                      src="https://www.tomapedidos.app/tomapedidos/media/images/interfaz-telefono-ecommerce-tomapedidos-1.png"
+                      alt="Captura 2 Tienda en Celular">
+                    <img class="carousel-item ecommerce-front-image-mobile"
+                      src="https://www.tomapedidos.app/tomapedidos/media/images/interfaz-telefono-ecommerce-tomapedidos-2.png"
+                      alt="Captura 3 Tienda en Celular">
+                    <img class="carousel-item ecommerce-front-image-mobile"
+                      src="https://www.tomapedidos.app/tomapedidos/media/images/interfaz-telefono-ecommerce-tomapedidos-3.png"
+                      alt="Captura 4 Tienda en Celular">
+                    <img class="carousel-item ecommerce-front-image-mobile"
+                      src="https://www.tomapedidos.app/tomapedidos/media/images/interfaz-telefono-ecommerce-tomapedidos-4.png"
+                      alt="Captura 5 Tienda en Celular">
+                    <img class="carousel-item ecommerce-front-image-mobile"
+                      src="https://www.tomapedidos.app/tomapedidos/media/images/interfaz-telefono-ecommerce-tomapedidos-5.png"
+                      alt="Captura 6 Tienda en Celular">
+                  </div>
+                </div>
+
+                <!-- Flechas de navegación para Celular -->
                 <button class="carousel-control-prev ecommerce-carousel-control-prev-mobile" type="button"
                   data-bs-target="#carouselEcommerceMobile" data-bs-slide="prev">
                   <span class="carousel-control-prev-icon ecommerce-carousel-control-prev-icon-mobile"
@@ -377,223 +560,280 @@
                     aria-hidden="true"></span>
                   <span class="visually-hidden">Siguiente</span>
                 </button>
+
+                <!-- Previsualizador Ampliado Fuera del Mockup (Mobile) -->
+                <div class="ecommerce-popout-preview ecommerce-popout-mobile" id="popoutPreviewMobile"
+                  aria-hidden="true">
+                  <img id="popoutMobileImg"
+                    src="https://www.tomapedidos.app/tomapedidos/media/images/interfaz-telefono-ecommerce-tomapedidos-0.png"
+                    alt="Vista Ampliada Celular">
+                </div>
+
+                <div class="ecommerce-mockup-caption">
+                  <span>📱 Vista Móvil / Tenderos · <em>Pasa el cursor sobre la captura para ver en grande</em></span>
+                </div>
               </div>
-              <div class="ecommerce-mockup-caption">
-                <span>📱 Vista Móvil / Tenderos</span>
+            </div>
+
+            <!-- Costado Derecho: 2 Cards Celular -->
+            <div class="col-lg-4 col-md-6 order-3 order-lg-3 d-flex flex-column gap-3">
+              <div class="ecommerce-showcase-card">
+                <div class="ecommerce-showcase-card-header">
+                  <div class="ecommerce-showcase-card-icon">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path>
+                      <line x1="7" y1="7" x2="7.01" y2="7"></line>
+                    </svg>
+                  </div>
+                  <div>
+                    <span class="ecommerce-showcase-card-tag">Trato Preferencial</span>
+                    <h4 class="ecommerce-showcase-card-title">Precios por Cliente</h4>
+                  </div>
+                </div>
+                <p class="ecommerce-showcase-card-desc">
+                  Cada tendero visualiza sus listas de precios personalizadas, promociones acordadas y existencias
+                  reales
+                  al momento de pedir.
+                </p>
+                <div class="ecommerce-showcase-card-bullet">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span>Tarifas y promociones en tiempo real</span>
+                </div>
+              </div>
+
+              <div class="ecommerce-showcase-card">
+                <div class="ecommerce-showcase-card-header">
+                  <div class="ecommerce-showcase-card-icon">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round">
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <polyline points="12 6 12 12 16 14"></polyline>
+                    </svg>
+                  </div>
+                  <div>
+                    <span class="ecommerce-showcase-card-tag">Venta Continua</span>
+                    <h4 class="ecommerce-showcase-card-title">Ventas 24/7 sin Horario</h4>
+                  </div>
+                </div>
+                <p class="ecommerce-showcase-card-desc">
+                  Tus clientes piden de noche tras cerrar el local o los fines de semana, garantizando que su pedido
+                  entre
+                  en la primera ruta del día.
+                </p>
+                <div class="ecommerce-showcase-card-bullet">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span>Cero ventas perdidas fuera de horario</span>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- =========================================================================
+    <!-- =========================================================================
        PUNTO 3: FLUJO DE COMPRA EN 3 PASOS
        ========================================================================= -->
-  <section class="ecommerce-steps-section container-fluid">
-    <div class="container">
-      <div class="row">
-        <div class="col-12 text-center ecommerce-section-header">
-          <span class="ecommerce-section-badge">Simple y Directo</span>
-          <h2 class="ecommerce-section-title">¿Cómo Funciona para tus Clientes?</h2>
-          <p class="ecommerce-section-subtitle">
-            Diseñado sin barreras de entrada ni registros complicados: tus clientes compran tan fácil como enviar un mensaje.
-          </p>
+    <section class="ecommerce-steps-section container-fluid">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-center ecommerce-section-header">
+            <h2 class="ecommerce-section-title">¿Cómo Funciona para tus Clientes?</h2>
+            <p class="ecommerce-section-subtitle">
+              Diseñado sin barreras de entrada ni registros complicados: tus clientes compran tan fácil como enviar un
+              mensaje.
+            </p>
+          </div>
+        </div>
+
+        <div class="row g-4 ecommerce-steps-grid">
+          <!-- Paso 1 -->
+          <div class="col-md-4">
+            <div class="ecommerce-step-card">
+              <div class="ecommerce-step-header">
+                <span class="ecommerce-step-number">01</span>
+                <div class="ecommerce-step-icon">
+                  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+                    <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+                  </svg>
+                </div>
+              </div>
+              <h3 class="ecommerce-step-title">Compartes tu Enlace</h3>
+              <p class="ecommerce-step-text">
+                Envías el link directo de tu tienda por WhatsApp, SMS o correo a tu base de clientes y tenderos
+                habituales.
+                Sin apps que descargar ni procesos técnicos.
+              </p>
+              <div class="ecommerce-step-footer">
+                <span class="ecommerce-step-tag">Enlace único por negocio</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Paso 2 -->
+          <div class="col-md-4">
+            <div class="ecommerce-step-card">
+              <div class="ecommerce-step-header">
+                <span class="ecommerce-step-number">02</span>
+                <div class="ecommerce-step-icon">
+                  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="9" cy="21" r="1"></circle>
+                    <circle cx="20" cy="21" r="1"></circle>
+                    <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                  </svg>
+                </div>
+              </div>
+              <h3 class="ecommerce-step-title">El Tendero Elige y Pide</h3>
+              <p class="ecommerce-step-text">
+                Tu cliente entra, visualiza sus precios asignados, promociones del día y fotos de productos. Agrega al
+                carrito
+                y confirma su pedido en 3 simples clics.
+              </p>
+              <div class="ecommerce-step-footer">
+                <span class="ecommerce-step-tag">Precios y stock en tiempo real</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Paso 3 -->
+          <div class="col-md-4">
+            <div class="ecommerce-step-card">
+              <div class="ecommerce-step-header">
+                <span class="ecommerce-step-number">03</span>
+                <div class="ecommerce-step-icon">
+                  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                </div>
+              </div>
+              <h3 class="ecommerce-step-title">Entra Directo a Toma Pedidos</h3>
+              <p class="ecommerce-step-text">
+                El pedido llega automáticamente a tu Módulo Administrativo, listo para ser procesado, preparado en
+                bodega
+                y asignado a tus rutas con el Módulo de Entregadores.
+              </p>
+              <div class="ecommerce-step-footer">
+                <span class="ecommerce-step-tag">Sincronización instantánea</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
+    </section>
 
-      <div class="row g-4 ecommerce-steps-grid">
-        <!-- Paso 1 -->
-        <div class="col-md-4">
-          <div class="ecommerce-step-card">
-            <div class="ecommerce-step-header">
-              <span class="ecommerce-step-number">01</span>
-              <div class="ecommerce-step-icon">
-                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                  stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
-                  <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
-                </svg>
-              </div>
-            </div>
-            <h3 class="ecommerce-step-title">Compartes tu Enlace</h3>
-            <p class="ecommerce-step-text">
-              Envías el link directo de tu tienda por WhatsApp, SMS o correo a tu base de clientes y tenderos habituales.
-              Sin apps que descargar ni procesos técnicos.
-            </p>
-            <div class="ecommerce-step-footer">
-              <span class="ecommerce-step-tag">Enlace único por negocio</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Paso 2 -->
-        <div class="col-md-4">
-          <div class="ecommerce-step-card">
-            <div class="ecommerce-step-header">
-              <span class="ecommerce-step-number">02</span>
-              <div class="ecommerce-step-icon">
-                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                  stroke-linecap="round" stroke-linejoin="round">
-                  <circle cx="9" cy="21" r="1"></circle>
-                  <circle cx="20" cy="21" r="1"></circle>
-                  <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
-                </svg>
-              </div>
-            </div>
-            <h3 class="ecommerce-step-title">El Tendero Elige y Pide</h3>
-            <p class="ecommerce-step-text">
-              Tu cliente entra, visualiza sus precios asignados, promociones del día y fotos de productos. Agrega al carrito
-              y confirma su pedido en 3 simples clics.
-            </p>
-            <div class="ecommerce-step-footer">
-              <span class="ecommerce-step-tag">Precios y stock en tiempo real</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Paso 3 -->
-        <div class="col-md-4">
-          <div class="ecommerce-step-card">
-            <div class="ecommerce-step-header">
-              <span class="ecommerce-step-number">03</span>
-              <div class="ecommerce-step-icon">
-                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                  stroke-linecap="round" stroke-linejoin="round">
-                  <polyline points="20 6 9 17 4 12"></polyline>
-                </svg>
-              </div>
-            </div>
-            <h3 class="ecommerce-step-title">Entra Directo a Toma Pedidos</h3>
-            <p class="ecommerce-step-text">
-              El pedido llega automáticamente a tu Módulo Administrativo, listo para ser procesado, preparado en bodega
-              y asignado a tus rutas con el Módulo de Entregadores.
-            </p>
-            <div class="ecommerce-step-footer">
-              <span class="ecommerce-step-tag">Sincronización instantánea</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- =========================================================================
+    <!-- =========================================================================
        PUNTO 4: COMPARATIVA COMERCIAL (PREVENTA TRADICIONAL VS TIENDA ONLINE)
        ========================================================================= -->
-  <section class="ecommerce-compare-section container-fluid">
-    <div class="container">
-      <div class="row">
-        <div class="col-12 text-center ecommerce-section-header">
-          <span class="ecommerce-section-badge">Impacto en tu Negocio</span>
-          <h2 class="ecommerce-section-title">Preventa Tradicional vs. Tienda Online B2B</h2>
-          <p class="ecommerce-section-subtitle">
-            El Ecommerce no reemplaza a tus vendedores: multiplica su alcance y captura ventas en horarios donde antes no estabas presente.
-          </p>
-        </div>
-      </div>
-
-      <div class="row g-4 ecommerce-compare-grid justify-content-center">
-        <!-- Columna Tradicional -->
-        <div class="col-lg-5">
-          <div class="ecommerce-compare-card ecommerce-compare-traditional">
-            <div class="ecommerce-compare-badge ecommerce-badge-traditional">Canal Tradicional</div>
-            <h3 class="ecommerce-compare-title">Preventa Convencional</h3>
-            <p class="ecommerce-compare-subtitle">Limitaciones del modelo presencial exclusivo:</p>
-
-            <ul class="ecommerce-compare-list">
-              <li>
-                <span class="ecommerce-compare-bullet-icon ecommerce-bullet-cross">✕</span>
-                <div>
-                  <strong>Horario Restringido:</strong> Solo recibes pedidos cuando el preventista visita la tienda en horario laboral.
-                </div>
-              </li>
-              <li>
-                <span class="ecommerce-compare-bullet-icon ecommerce-bullet-cross">✕</span>
-                <div>
-                  <strong>Pedidos Perdidos:</strong> Mensajes de texto, notas en papel o audios de WhatsApp que se traspapelan.
-                </div>
-              </li>
-              <li>
-                <span class="ecommerce-compare-bullet-icon ecommerce-bullet-cross">✕</span>
-                <div>
-                  <strong>Errores de Digitación:</strong> Inconsistencias al transcribir códigos, unidades o precios a mano.
-                </div>
-              </li>
-              <li>
-                <span class="ecommerce-compare-bullet-icon ecommerce-bullet-cross">✕</span>
-                <div>
-                  <strong>Tiempo Ocupado en Reposición:</strong> Vendedores gastando horas en pedidos mecánicos en vez de prospectar clientes.
-                </div>
-              </li>
-            </ul>
+    <section class="ecommerce-compare-section container-fluid">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-center ecommerce-section-header">
+            <h2 class="ecommerce-section-title">Preventa Tradicional vs. Tienda Online B2B</h2>
+            <p class="ecommerce-section-subtitle">
+              El Ecommerce no reemplaza a tus vendedores: multiplica su alcance y captura ventas en horarios donde antes
+              no estabas presente.
+            </p>
           </div>
         </div>
 
-        <!-- Columna Tienda Online Toma Pedidos -->
-        <div class="col-lg-5">
-          <div class="ecommerce-compare-card ecommerce-compare-modern">
-            <div class="ecommerce-compare-badge ecommerce-badge-modern">Con Toma Pedidos</div>
-            <h3 class="ecommerce-compare-title">Tienda Online B2B 24/7</h3>
-            <p class="ecommerce-compare-subtitle">Venta continua y autogestionada para tus clientes:</p>
+        <div class="row g-4 ecommerce-compare-grid justify-content-center">
+          <!-- Columna Tradicional -->
+          <div class="col-lg-5">
+            <div class="ecommerce-compare-card ecommerce-compare-traditional">
+              <div class="ecommerce-compare-badge ecommerce-badge-traditional">Canal Tradicional</div>
+              <h3 class="ecommerce-compare-title">Preventa Convencional</h3>
+              <p class="ecommerce-compare-subtitle">Limitaciones del modelo presencial exclusivo:</p>
 
-            <ul class="ecommerce-compare-list">
-              <li>
-                <span class="ecommerce-compare-bullet-icon ecommerce-bullet-check">✓</span>
-                <div>
-                  <strong>Disponibilidad Total 24/7:</strong> Tus clientes piden de noche, los domingos o cuando se les agota un producto.
-                </div>
-              </li>
-              <li>
-                <span class="ecommerce-compare-bullet-icon ecommerce-bullet-check">✓</span>
-                <div>
-                  <strong>Cero Fricción en WhatsApp:</strong> El cliente ingresa a su link, arma el carrito y envía el pedido ordenado.
-                </div>
-              </li>
-              <li>
-                <span class="ecommerce-compare-bullet-icon ecommerce-bullet-check">✓</span>
-                <div>
-                  <strong>Integración Automática:</strong> Los pedidos entran limpios a tu Módulo Administrativo para despacho inmediato.
-                </div>
-              </li>
-              <li>
-                <span class="ecommerce-compare-bullet-icon ecommerce-bullet-check">✓</span>
-                <div>
-                  <strong>Vendedores Más Productivos:</strong> Tu equipo comercial se enfoca en abrir clientes nuevos y negociaciones de valor.
-                </div>
-              </li>
-            </ul>
+              <ul class="ecommerce-compare-list">
+                <li>
+                  <span class="ecommerce-compare-bullet-icon ecommerce-bullet-cross">✕</span>
+                  <div>
+                    <strong>Horario Restringido:</strong> Solo recibes pedidos cuando el preventista visita la tienda en
+                    horario laboral.
+                  </div>
+                </li>
+                <li>
+                  <span class="ecommerce-compare-bullet-icon ecommerce-bullet-cross">✕</span>
+                  <div>
+                    <strong>Pedidos Perdidos:</strong> Mensajes de texto, notas en papel o audios de WhatsApp que se
+                    traspapelan.
+                  </div>
+                </li>
+                <li>
+                  <span class="ecommerce-compare-bullet-icon ecommerce-bullet-cross">✕</span>
+                  <div>
+                    <strong>Errores de Digitación:</strong> Inconsistencias al transcribir códigos, unidades o precios a
+                    mano.
+                  </div>
+                </li>
+                <li>
+                  <span class="ecommerce-compare-bullet-icon ecommerce-bullet-cross">✕</span>
+                  <div>
+                    <strong>Tiempo Ocupado en Reposición:</strong> Vendedores gastando horas en pedidos mecánicos en vez
+                    de prospectar clientes.
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Columna Tienda Online Toma Pedidos -->
+          <div class="col-lg-5">
+            <div class="ecommerce-compare-card ecommerce-compare-modern">
+              <div class="ecommerce-compare-badge ecommerce-badge-modern">Con Toma Pedidos</div>
+              <h3 class="ecommerce-compare-title">Tienda Online B2B 24/7</h3>
+              <p class="ecommerce-compare-subtitle">Venta continua y autogestionada para tus clientes:</p>
+
+              <ul class="ecommerce-compare-list">
+                <li>
+                  <span class="ecommerce-compare-bullet-icon ecommerce-bullet-check">✓</span>
+                  <div>
+                    <strong>Disponibilidad Total 24/7:</strong> Tus clientes piden de noche, los domingos o cuando se
+                    les
+                    agota un producto.
+                  </div>
+                </li>
+                <li>
+                  <span class="ecommerce-compare-bullet-icon ecommerce-bullet-check">✓</span>
+                  <div>
+                    <strong>Cero Fricción en WhatsApp:</strong> El cliente ingresa a su link, arma el carrito y envía el
+                    pedido ordenado.
+                  </div>
+                </li>
+                <li>
+                  <span class="ecommerce-compare-bullet-icon ecommerce-bullet-check">✓</span>
+                  <div>
+                    <strong>Integración Automática:</strong> Los pedidos entran limpios a tu Módulo Administrativo para
+                    despacho inmediato.
+                  </div>
+                </li>
+                <li>
+                  <span class="ecommerce-compare-bullet-icon ecommerce-bullet-check">✓</span>
+                  <div>
+                    <strong>Vendedores Más Productivos:</strong> Tu equipo comercial se enfoca en abrir clientes nuevos
+                    y
+                    negociaciones de valor.
+                  </div>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- =========================================================================
-       CALL TO ACTION FINAL HACIA WHATSAPP
-       ========================================================================= -->
-  <section class="ecommerce-cta-section container-fluid">
-    <div class="container text-center">
-      <div class="ecommerce-cta-box">
-        <h2 class="ecommerce-cta-title">¿Listo para activar tu Tienda Online B2B?</h2>
-        <p class="ecommerce-cta-subtitle">
-          Empieza a recibir pedidos de tus clientes de forma automática y haz crecer tu negocio con Toma Pedidos.
-        </p>
-        <div class="d-flex justify-content-center">
-          <a href="https://api.whatsapp.com/send/?phone=573103258432&text=Hola!%20Deseo%20conocer%20m%C3%A1s%20sobre%20el%20m%C3%B3dulo%20de%20Ecommerce%20y%20activar%20mi%20tienda%20B2B.&utm_source=ecommerce-page&utm_medium=cta-footer&utm_campaign=modulo-ecommerce"
-            target="_blank" class="ecommerce-btn-whatsapp ecommerce-btn-whatsapp-large">
-            <span class="ecommerce-btn-whatsapp-inner">
-              <img src="https://www.tomapedidos.app/tomapedidos/media/images/WhatsApp_icon.png" alt="WhatsApp"
-                class="ecommerce-btn-whatsapp-img" />
-              <span>Solicitar Activación por WhatsApp</span>
-              <span class="ecommerce-btn-whatsapp-arrow">→</span>
-            </span>
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
+  </main>
 
   <!-- =========================================================================
        FOOTER INSTITUCIONAL
@@ -640,9 +880,292 @@
     </div>
   </footer>
 
+  <!-- =========================================================================
+       PREVISUALIZADOR MODAL EN ALTA DEFINICIÓN (LIGHTBOX)
+       ========================================================================= -->
+  <div class="ecommerce-lightbox-modal" id="ecommerceLightboxModal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="ecommerce-lightbox-backdrop" id="ecommerceLightboxBackdrop"></div>
+    <div class="ecommerce-lightbox-container">
+      <div class="ecommerce-lightbox-header">
+        <div class="ecommerce-lightbox-title-wrap">
+          <span class="ecommerce-lightbox-badge" id="ecommerceLightboxDeviceBadge">Computador</span>
+          <h4 class="ecommerce-lightbox-title" id="ecommerceLightboxTitle">Vista en Detalle</h4>
+          <span class="ecommerce-lightbox-counter" id="ecommerceLightboxCounter">1 / 6</span>
+        </div>
+        <div class="ecommerce-lightbox-actions">
+          <button type="button" class="ecommerce-lightbox-btn" id="ecommerceLightboxZoomBtn" title="Alternar Zoom">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              <line x1="11" y1="8" x2="11" y2="14"></line>
+              <line x1="8" y1="11" x2="14" y2="11"></line>
+            </svg>
+            <span id="ecommerceLightboxZoomText">Zoom 2x</span>
+          </button>
+          <button type="button" class="ecommerce-lightbox-close" id="ecommerceLightboxClose"
+            aria-label="Cerrar previsualizador">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div class="ecommerce-lightbox-body" id="ecommerceLightboxBody">
+        <button type="button" class="ecommerce-lightbox-nav ecommerce-lightbox-prev" id="ecommerceLightboxPrev"
+          aria-label="Captura anterior">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+            stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="15 18 9 12 15 6"></polyline>
+          </svg>
+        </button>
+
+        <div class="ecommerce-lightbox-img-wrapper" id="ecommerceLightboxImgWrapper">
+          <img src="" alt="Previsualización" class="ecommerce-lightbox-img" id="ecommerceLightboxImg" />
+        </div>
+
+        <button type="button" class="ecommerce-lightbox-nav ecommerce-lightbox-next" id="ecommerceLightboxNext"
+          aria-label="Captura siguiente">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+            stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </button>
+      </div>
+      <div class="ecommerce-lightbox-footer">
+        <span class="ecommerce-lightbox-hint">💡 Tip: Puedes mover el cursor sobre la imagen para explorar con zoom, o
+          navegar con las flechas del teclado (← / →).</span>
+      </div>
+    </div>
+  </div>
+
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous">
+    </script>
+
+  <!-- =========================================================================
+       SCRIPTS DE EXPERIENCIA MULTIDISPOSITIVO, ZOOM EN HOVER Y PREVISUALIZADOR
+       ========================================================================= -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // 1. SELECTOR TABS CHIPS (COMPUTADOR / CELULAR)
+      const chips = document.querySelectorAll('.ecommerce-device-chip');
+      const views = document.querySelectorAll('.ecommerce-device-view');
+
+      chips.forEach(function (chip) {
+        chip.addEventListener('click', function () {
+          const targetDevice = this.getAttribute('data-device');
+
+          chips.forEach(function (c) {
+            c.classList.remove('active');
+            c.setAttribute('aria-selected', 'false');
+          });
+          this.classList.add('active');
+          this.setAttribute('aria-selected', 'true');
+
+          views.forEach(function (view) {
+            if (view.id === 'ecommerce-view-' + targetDevice) {
+              view.classList.add('active');
+            } else {
+              view.classList.remove('active');
+            }
+          });
+        });
+      });
+
+      // 2. DATOS DE CAPTURAS PARA EL PREVISUALIZADOR
+      const galleryData = {
+        desktop: [
+          { src: 'https://www.tomapedidos.app/tomapedidos/media/images/interfaz-ecommerce-tomapedidos-0.png', title: 'Panel Administrativo y Métricas de Ventas en Vivo' },
+          { src: 'https://www.tomapedidos.app/tomapedidos/media/images/interfaz-ecommerce-tomapedidos-1.png', title: 'Catálogo Extendido de Productos y Gestión de Existencias' },
+          { src: 'https://www.tomapedidos.app/tomapedidos/media/images/interfaz-ecommerce-tomapedidos-2.png', title: 'Configuración de Precios y Descuentos por Cliente' },
+          { src: 'https://www.tomapedidos.app/tomapedidos/media/images/interfaz-ecommerce-tomapedidos-3.png', title: 'Módulo de Pedidos Entrantes y Asignación de Despacho' },
+          { src: 'https://www.tomapedidos.app/tomapedidos/media/images/interfaz-ecommerce-tomapedidos-4.png', title: 'Control de Cartera, Facturas y Cuentas por Cobrar' },
+          { src: 'https://www.tomapedidos.app/tomapedidos/media/images/interfaz-ecommerce-tomapedidos-5.png', title: 'Reportes Comerciales y Consolidado de Rutas' }
+        ],
+        mobile: [
+          { src: 'https://www.tomapedidos.app/tomapedidos/media/images/interfaz-telefono-ecommerce-tomapedidos-0.png', title: 'Inicio de Sesión y Acceso Rápido del Tendero' },
+          { src: 'https://www.tomapedidos.app/tomapedidos/media/images/interfaz-telefono-ecommerce-tomapedidos-1.png', title: 'Catálogo Móvil con Fotos y Precios en Tiempo Real' },
+          { src: 'https://www.tomapedidos.app/tomapedidos/media/images/interfaz-telefono-ecommerce-tomapedidos-2.png', title: 'Ficha de Producto y Selección de Unidades' },
+          { src: 'https://www.tomapedidos.app/tomapedidos/media/images/interfaz-telefono-ecommerce-tomapedidos-3.png', title: 'Carrito de Compras Visual y Resumen de Totales' },
+          { src: 'https://www.tomapedidos.app/tomapedidos/media/images/interfaz-telefono-ecommerce-tomapedidos-4.png', title: 'Promociones Especiales y Descuentos Activos' },
+          { src: 'https://www.tomapedidos.app/tomapedidos/media/images/interfaz-telefono-ecommerce-tomapedidos-5.png', title: 'Confirmación de Dirección y Franja de Entrega' }
+        ]
+      };
+
+      // 3. PREVISUALIZADOR FLOTANTE EN ALTA DEFINICIÓN (DESKTOP Y MOBILE AL PASAR EL CURSOR SOBRE LAS IMÁGENES PNG)
+      const popoutDesktop = document.getElementById('popoutPreviewDesktop');
+      const popoutDesktopImg = document.getElementById('popoutDesktopImg');
+      const popoutMobile = document.getElementById('popoutPreviewMobile');
+      const popoutMobileImg = document.getElementById('popoutMobileImg');
+
+      const carouselDesktop = document.getElementById('carouselEcommerceDesktop');
+      const carouselMobile = document.getElementById('carouselEcommerceMobile');
+
+      function syncDesktopPreview() {
+        if (!carouselDesktop || !popoutDesktopImg) return;
+        const activeImg = carouselDesktop.querySelector('.carousel-item.active.ecommerce-front-image-desktop') ||
+          carouselDesktop.querySelector('.carousel-item.active') ||
+          carouselDesktop.querySelector('.ecommerce-front-image-desktop');
+        if (activeImg) {
+          popoutDesktopImg.src = activeImg.src;
+          popoutDesktopImg.alt = activeImg.alt || 'Vista Ampliada Computador';
+        }
+      }
+
+      function syncMobilePreview() {
+        if (!carouselMobile || !popoutMobileImg) return;
+        const activeImg = carouselMobile.querySelector('.carousel-item.active.ecommerce-front-image-mobile') ||
+          carouselMobile.querySelector('.carousel-item.active') ||
+          carouselMobile.querySelector('.ecommerce-front-image-mobile');
+        if (activeImg) {
+          popoutMobileImg.src = activeImg.src;
+          popoutMobileImg.alt = activeImg.alt || 'Vista Ampliada Celular';
+        }
+      }
+
+      // Eventos Hover: ÚNICAMENTE sobre las capturas PNG del monitor de computador
+      const desktopImages = document.querySelectorAll('#carouselEcommerceDesktop .ecommerce-front-image-desktop');
+      desktopImages.forEach(function (img) {
+        img.addEventListener('mouseenter', function () {
+          syncDesktopPreview();
+          if (popoutDesktop) popoutDesktop.classList.add('active');
+        });
+        img.addEventListener('mouseleave', function () {
+          if (popoutDesktop) popoutDesktop.classList.remove('active');
+        });
+      });
+
+      // Eventos Hover: ÚNICAMENTE sobre las capturas PNG de la pantalla de celular
+      const mobileImages = document.querySelectorAll('#carouselEcommerceMobile .ecommerce-front-image-mobile');
+      mobileImages.forEach(function (img) {
+        img.addEventListener('mouseenter', function () {
+          syncMobilePreview();
+          if (popoutMobile) popoutMobile.classList.add('active');
+        });
+        img.addEventListener('mouseleave', function () {
+          if (popoutMobile) popoutMobile.classList.remove('active');
+        });
+      });
+
+      // Sincronizar imagen ampliada al cambiar de diapositiva en los sliders
+      if (carouselDesktop) {
+        carouselDesktop.addEventListener('slid.bs.carousel', syncDesktopPreview);
+      }
+      if (carouselMobile) {
+        carouselMobile.addEventListener('slid.bs.carousel', syncMobilePreview);
+      }
+
+      // 4. PREVISUALIZADOR MODAL EN ALTA DEFINICIÓN (LIGHTBOX)
+      const modal = document.getElementById('ecommerceLightboxModal');
+      const backdrop = document.getElementById('ecommerceLightboxBackdrop');
+      const closeBtn = document.getElementById('ecommerceLightboxClose');
+      const prevBtn = document.getElementById('ecommerceLightboxPrev');
+      const nextBtn = document.getElementById('ecommerceLightboxNext');
+      const modalImg = document.getElementById('ecommerceLightboxImg');
+      const modalTitle = document.getElementById('ecommerceLightboxTitle');
+      const modalBadge = document.getElementById('ecommerceLightboxDeviceBadge');
+      const modalCounter = document.getElementById('ecommerceLightboxCounter');
+      const zoomBtn = document.getElementById('ecommerceLightboxZoomBtn');
+      const zoomText = document.getElementById('ecommerceLightboxZoomText');
+      const imgWrapper = document.getElementById('ecommerceLightboxImgWrapper');
+
+      let currentDevice = 'desktop';
+      let currentIndex = 0;
+      let isModalZoomed = false;
+
+      function openLightbox(device, index) {
+        currentDevice = device;
+        currentIndex = index;
+        resetModalZoom();
+        updateLightboxContent();
+        modal.classList.add('active');
+        modal.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeLightbox() {
+        modal.classList.remove('active');
+        modal.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+      }
+
+      function updateLightboxContent() {
+        const list = galleryData[currentDevice];
+        if (!list || !list[currentIndex]) return;
+
+        const item = list[currentIndex];
+        modalImg.src = item.src;
+        modalImg.alt = item.title;
+        modalTitle.textContent = item.title;
+        modalBadge.textContent = currentDevice === 'desktop' ? 'Computador' : 'Celular';
+        modalCounter.textContent = (currentIndex + 1) + ' / ' + list.length;
+      }
+
+      function nextSlide() {
+        const list = galleryData[currentDevice];
+        currentIndex = (currentIndex + 1) % list.length;
+        resetModalZoom();
+        updateLightboxContent();
+      }
+
+      function prevSlide() {
+        const list = galleryData[currentDevice];
+        currentIndex = (currentIndex - 1 + list.length) % list.length;
+        resetModalZoom();
+        updateLightboxContent();
+      }
+
+      function resetModalZoom() {
+        isModalZoomed = false;
+        modalImg.classList.remove('zoomed');
+        modalImg.style.transform = 'scale(1)';
+        modalImg.style.transformOrigin = 'center center';
+        if (zoomText) zoomText.textContent = 'Zoom 2x';
+      }
+
+      function toggleModalZoom() {
+        isModalZoomed = !isModalZoomed;
+        if (isModalZoomed) {
+          modalImg.classList.add('zoomed');
+          modalImg.style.transform = 'scale(2)';
+          if (zoomText) zoomText.textContent = 'Alejar';
+        } else {
+          resetModalZoom();
+        }
+      }
+
+      if (closeBtn) closeBtn.addEventListener('click', closeLightbox);
+      if (backdrop) backdrop.addEventListener('click', closeLightbox);
+      if (nextBtn) nextBtn.addEventListener('click', nextSlide);
+      if (prevBtn) prevBtn.addEventListener('click', prevSlide);
+      if (zoomBtn) zoomBtn.addEventListener('click', toggleModalZoom);
+
+      if (modalImg) {
+        modalImg.addEventListener('click', toggleModalZoom);
+      }
+
+      if (imgWrapper) {
+        imgWrapper.addEventListener('mousemove', function (e) {
+          if (!isModalZoomed) return;
+          const rect = imgWrapper.getBoundingClientRect();
+          const x = Math.max(0, Math.min(100, ((e.clientX - rect.left) / rect.width) * 100));
+          const y = Math.max(0, Math.min(100, ((e.clientY - rect.top) / rect.height) * 100));
+          modalImg.style.transformOrigin = x.toFixed(1) + '% ' + y.toFixed(1) + '%';
+        });
+      }
+
+      // Atajos de teclado para el previsualizador
+      document.addEventListener('keydown', function (e) {
+        if (!modal.classList.contains('active')) return;
+        if (e.key === 'Escape') closeLightbox();
+        if (e.key === 'ArrowRight') nextSlide();
+        if (e.key === 'ArrowLeft') prevSlide();
+      });
+    });
   </script>
 </body>
 

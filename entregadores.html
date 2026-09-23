@@ -75,372 +75,378 @@
     </div>
   </nav>
 
+  <main id="main-content">
+    <!-- HERO SECTION WITH FLUID MESH GRADIENT & YOUTUBE VIDEO -->
+    <header class="entregadores-hero-banner container-fluid">
+      <!-- Fluid Wave Layers en código SVG & CSS (inspirado en las imágenes de referencia) -->
+      <div class="entregadores-hero-wave-layer">
+        <svg class="entregadores-hero-wave-svg" viewBox="0 0 1440 900" fill="none" xmlns="http://www.w3.org/2000/svg"
+          preserveAspectRatio="none">
+          <defs>
+            <linearGradient id="waveGradient1" x1="0%" y1="100%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#B43809" stop-opacity="0.95" />
+              <stop offset="35%" stop-color="#F04A0C" stop-opacity="0.9" />
+              <stop offset="70%" stop-color="#F04A0C" stop-opacity="0.6" />
+              <stop offset="100%" stop-color="#1057A4" stop-opacity="0" />
+            </linearGradient>
+            <linearGradient id="waveGradient2" x1="100%" y1="100%" x2="0%" y2="0%">
+              <stop offset="0%" stop-color="#F04A0C" stop-opacity="0.85" />
+              <stop offset="45%" stop-color="#B43809" stop-opacity="0.75" />
+              <stop offset="100%" stop-color="#0C417B" stop-opacity="0" />
+            </linearGradient>
+            <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+              <feGaussianBlur stdDeviation="35" result="blur" />
+              <feComposite in="SourceGraphic" in2="blur" operator="over" />
+            </filter>
+          </defs>
+          <!-- Ambient Glow Wave 1 -->
+          <path d="M-100,520 C220,380 480,660 800,500 C1100,340 1300,560 1550,440 L1550,950 L-100,950 Z"
+            fill="url(#waveGradient1)" filter="url(#softGlow)" />
+          <!-- Vibrant Wave Ribbon 2 -->
+          <path d="M-50,590 C260,450 510,720 830,560 C1130,420 1330,540 1500,480 L1500,950 L-50,950 Z"
+            fill="url(#waveGradient2)" />
+          <!-- Curved White Accent Line (como en la referencia de los celulares) -->
+          <path d="M-30,640 C240,540 480,750 800,600 C1100,450 1300,620 1500,520" stroke="rgba(255, 255, 255, 0.45)"
+            stroke-width="2.5" stroke-linecap="round" fill="none" />
+          <!-- Subtle Map Pin Graphic in top-right (estilo Image 2) -->
+          <g opacity="0.35" transform="translate(1220, 80) scale(1.4)">
+            <path
+              d="M24 0C10.745 0 0 10.745 0 24c0 18 24 40 24 40s24-22 24-40c0-13.255-10.745-24-24-24zm0 33c-4.971 0-9-4.029-9-9s4.029-9 9-9 9 4.029 9 9-4.029 9-9 9z"
+              fill="#4079B6" />
+          </g>
+          <!-- Subtle Dotted Route Indicator -->
+          <path d="M1100,160 C1160,210 1200,180 1250,220 C1280,245 1250,300 1210,330" stroke="rgba(64, 121, 182, 0.45)"
+            stroke-width="2" stroke-dasharray="6,6" fill="none" />
+        </svg>
+      </div>
 
-
-  <!-- HERO SECTION WITH FLUID MESH GRADIENT & YOUTUBE VIDEO -->
-  <header class="entregadores-hero-banner container-fluid">
-    <!-- Fluid Wave Layers en código SVG & CSS (inspirado en las imágenes de referencia) -->
-    <div class="entregadores-hero-wave-layer">
-      <svg class="entregadores-hero-wave-svg" viewBox="0 0 1440 900" fill="none" xmlns="http://www.w3.org/2000/svg"
-        preserveAspectRatio="none">
-        <defs>
-          <linearGradient id="waveGradient1" x1="0%" y1="100%" x2="100%" y2="0%">
-            <stop offset="0%" stop-color="#B43809" stop-opacity="0.95" />
-            <stop offset="35%" stop-color="#F04A0C" stop-opacity="0.9" />
-            <stop offset="70%" stop-color="#F04A0C" stop-opacity="0.6" />
-            <stop offset="100%" stop-color="#1057A4" stop-opacity="0" />
-          </linearGradient>
-          <linearGradient id="waveGradient2" x1="100%" y1="100%" x2="0%" y2="0%">
-            <stop offset="0%" stop-color="#F04A0C" stop-opacity="0.85" />
-            <stop offset="45%" stop-color="#B43809" stop-opacity="0.75" />
-            <stop offset="100%" stop-color="#0C417B" stop-opacity="0" />
-          </linearGradient>
-          <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
-            <feGaussianBlur stdDeviation="35" result="blur" />
-            <feComposite in="SourceGraphic" in2="blur" operator="over" />
-          </filter>
-        </defs>
-        <!-- Ambient Glow Wave 1 -->
-        <path d="M-100,520 C220,380 480,660 800,500 C1100,340 1300,560 1550,440 L1550,950 L-100,950 Z"
-          fill="url(#waveGradient1)" filter="url(#softGlow)" />
-        <!-- Vibrant Wave Ribbon 2 -->
-        <path d="M-50,590 C260,450 510,720 830,560 C1130,420 1330,540 1500,480 L1500,950 L-50,950 Z"
-          fill="url(#waveGradient2)" />
-        <!-- Curved White Accent Line (como en la referencia de los celulares) -->
-        <path d="M-30,640 C240,540 480,750 800,600 C1100,450 1300,620 1500,520" stroke="rgba(255, 255, 255, 0.45)"
-          stroke-width="2.5" stroke-linecap="round" fill="none" />
-        <!-- Subtle Map Pin Graphic in top-right (estilo Image 2) -->
-        <g opacity="0.35" transform="translate(1220, 80) scale(1.4)">
-          <path
-            d="M24 0C10.745 0 0 10.745 0 24c0 18 24 40 24 40s24-22 24-40c0-13.255-10.745-24-24-24zm0 33c-4.971 0-9-4.029-9-9s4.029-9 9-9 9 4.029 9 9-4.029 9-9 9z"
-            fill="#4079B6" />
-        </g>
-        <!-- Subtle Dotted Route Indicator -->
-        <path d="M1100,160 C1160,210 1200,180 1250,220 C1280,245 1250,300 1210,330" stroke="rgba(64, 121, 182, 0.45)"
-          stroke-width="2" stroke-dasharray="6,6" fill="none" />
-      </svg>
-    </div>
-
-    <div class="container entregadores-hero-container">
-      <div class="row align-items-center">
-        <!-- Left Column: Value Proposition & Features -->
-        <div class="col-lg-6 text-white pe-lg-4 mb-5 mb-lg-0">
-          <div class="entregadores-hero-badge">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#25D366" stroke-width="2"
-              stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-              <polyline points="9 12 11 14 15 10"></polyline>
-            </svg>
-            <span>Integración nativa con tu cuenta actual de Toma Pedidos.</span>
-          </div>
-          <h1 class="entregadores-hero-title">
-            Controla tus entregas, rutas y recaudos en tiempo real con <span class="entregadores-text-highlight">Entregadores</span>
-          </h1>
-          <div class="entregadores-hero-divider"></div>
-          <p class="entregadores-hero-description">
-            La <strong>solución móvil conectada al Módulo Administrativo de Toma Pedidos</strong> para
-            agilizar despachos TAT, optimizar trayectos de entrega, registrar
-            devoluciones y gestionar el recaudo de cartera directamente en calle.
-          </p>
-
-          <!-- Features Grid -->
-          <div class="entregadores-hero-features-grid">
-            <div class="entregadores-hero-feature-card">
-              <div class="entregadores-hero-feature-icon">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                  stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                  <circle cx="12" cy="10" r="3"></circle>
-                </svg>
-              </div>
-              <div class="entregadores-hero-feature-text">
-                <h4>Rutas & Georreferenciación</h4>
-                <p>Optimización y mapa 1 a 1 de entrega</p>
-              </div>
+      <div class="container entregadores-hero-container">
+        <div class="row align-items-center">
+          <!-- Left Column: Value Proposition & Features -->
+          <div class="col-lg-6 text-white pe-lg-4 mb-5 mb-lg-0">
+            <div class="entregadores-hero-badge">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#25D366" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                <polyline points="9 12 11 14 15 10"></polyline>
+              </svg>
+              <span>Integración nativa con tu cuenta actual de Toma Pedidos.</span>
             </div>
-
-            <div class="entregadores-hero-feature-card">
-              <div class="entregadores-hero-feature-icon">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                  stroke-linecap="round" stroke-linejoin="round">
-                  <line x1="12" y1="1" x2="12" y2="23"></line>
-                  <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
-                </svg>
-              </div>
-              <div class="entregadores-hero-feature-text">
-                <h4>Recaudo en Calle</h4>
-                <p>Cobro de cartera y recibos desde la app</p>
-              </div>
-            </div>
-
-            <div class="entregadores-hero-feature-card">
-              <div class="entregadores-hero-feature-icon">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                  stroke-linecap="round" stroke-linejoin="round">
-                  <polyline points="17 1 21 5 17 9"></polyline>
-                  <path d="M3 11V9a4 4 0 0 1 4-4h14"></path>
-                  <polyline points="7 23 3 19 7 15"></polyline>
-                  <path d="M21 13v2a4 4 0 0 1-4 4H3"></path>
-                </svg>
-              </div>
-              <div class="entregadores-hero-feature-text">
-                <h4>Devoluciones y Cambios</h4>
-                <p>Registro y recogida ágil de productos</p>
-              </div>
-            </div>
-
-            <div class="entregadores-hero-feature-card">
-              <div class="entregadores-hero-feature-icon">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                  stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"></path>
-                </svg>
-              </div>
-              <div class="entregadores-hero-feature-text">
-                <h4>Sincronización Total</h4>
-                <p>Conexión directa con Toma Pedidos</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Right Column: Video Card & Direct WhatsApp Card -->
-        <div class="col-lg-6 ps-lg-4">
-          <!-- Video Card -->
-          <div class="entregadores-hero-video-card">
-            <div class="entregadores-hero-video-wrapper">
-              <iframe id="hero-yt-video" src="https://www.youtube.com/embed/ghIkheyo5yc?rel=0&modestbranding=1"
-                title="Video Publicitario Módulo Entregadores"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-              </iframe>
-            </div>
-          </div>
-
-          <!-- WhatsApp Contact Card -->
-          <div class="entregadores-hero-whatsapp-card">
-            <h3 class="entregadores-hero-whatsapp-title">¿Te interesa activar Entregadores?</h3>
-            <p class="entregadores-hero-whatsapp-desc">
-              Habla directamente con nuestro equipo por WhatsApp para conocer más detalles o activarlo en tu cuenta.
+            <h1 class="entregadores-hero-title">
+              Controla tus entregas, rutas y recaudos en tiempo real con <span
+                class="entregadores-text-highlight">Entregadores</span>
+            </h1>
+            <div class="entregadores-hero-divider"></div>
+            <p class="entregadores-hero-description">
+              La <strong>solución móvil conectada al Módulo Administrativo de Toma Pedidos</strong> para
+              agilizar despachos TAT, optimizar trayectos de entrega, registrar
+              devoluciones y gestionar el recaudo de cartera directamente en calle.
             </p>
-            <a href="https://api.whatsapp.com/send/?phone=573103258432&text=Hola!%20Vi%20el%20m%C3%B3dulo%20de%20Entregadores%20en%20el%20dashboard%20y%20quiero%20conocer%20m%C3%A1s%20detalles%20para%20mi%20negocio.&utm_source=dashboard-slider&utm_medium=hero-video&utm_campaign=modulo-entregadores"
-              target="_blank" class="entregadores-btn-whatsapp">
-              <span class="entregadores-btn-whatsapp-inner">
-                <img src="https://www.tomapedidos.app/tomapedidos/media/images/WhatsApp_icon.png" alt="WhatsApp"
-                  class="entregadores-btn-whatsapp-img" />
-                <span>Solicitar activación por WhatsApp</span>
-                <span class="entregadores-btn-whatsapp-arrow">→</span>
-              </span>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </header>
 
-  <div class="entregadores-wrapper">
-    <!-- Entregadores Principal Information (Texto y Camión) -->
-    <main class="entregadores-main container container-sm">
-      <div class="row">
-        <h1 class="text-center">
-          Entregadores
-        </h1>
-        <h2 class="text-center">
-          Nuestra App ideal para entregas precisas con Toma Pedidos
-        </h2>
-        <p class="text-left">
-          Esta app permite <strong>automatizar todo el proceso de entregas</strong>, facilitando al repartidor la
-          coordinación de rutas de entrega. Se podrá montar los pedidos de manera más rápida y completa, evitando
-          posibles errores.
-          <strong>Además, se pueden agregar devoluciones o cambios que el repartidor deba recoger. Si tienes cuentas por
-            cobrar, el repartidor puede recaudar esos pagos</strong>, y más funciones
-          que facilitarán el proceso de tus ventas.
-        </p>
-        <div class="entregadores-illustrations col-lg-12 d-flex justify-content-center">
-          <img class="entregadores-truck-illustration" src="media/images/entregadores-truck.svg" height="500px"
-            alt="ilustracion de un camión de entrega de pedidos">
-        </div>
-      </div>
-    </main>
-
-    <!-- Section Mobile Module -->
-    <section class="entregadores-app container container-sm">
-      <div class="row">
-        <div class="entregadores-app-information">
-          <h3>
-            Módulo Aplicación Móvil para Entregadores - Canal T.A.T (Tienda a Tienda)
-          </h3>
-          <p>
-            Entregadores ofrece a los usuarios una plataforma intuitiva y poderosa que optimiza cada etapa del proceso
-            de entrega.
-            Con la integración perfecta entre Entregadores y Toma Pedidos, ahora es más fácil que nunca coordinar y
-            completar entregas
-            de manera rápida y confiable, asegurando la satisfacción tanto de los clientes como de los entregadores.
-          </p>
-        </div>
-        <div class="col-lg-12 entregadores-illustrations-part-2 d-flex align-items-end">
-          <div class="entregadores-deliverers-illustration col-lg-8">
-            <img class="entregadores-image-mobile" src="media/images/entregadores-deliverers.svg" height="350px"
-              alt="Ilustración de entrega de pedidos">
-          </div>
-          <div class="entregadores-illustration-mobile col-lg-4">
-            <div id="carouselControlTouchingMobileEntregadores" class="carousel slide carousel-fade"
-              data-bs-touch="false" data-bs-interval="false">
-              <div class="carousel-inner entregadores-carousel-inner-mobile">
-                <img class="carousel-item active entregadores-front-image-mobile"
-                  src="media/images/entregadores-app-1.png" class="d-block w-100" alt="imagen 1 de la app tomapedidos">
-                <img class="carousel-item entregadores-front-image-mobile" src="media/images/entregadores-app-2.png"
-                  class="d-block w-100" alt="imagen 2 de la app tomapedidos">
-                <img class="carousel-item entregadores-front-image-mobile" src="media/images/entregadores-app-3.png"
-                  class="d-block w-100" alt="imagen 3 de la app tomapedidos">
-                <img class="carousel-item entregadores-front-image-mobile" src="media/images/entregadores-app-4.png"
-                  class="d-block w-100" alt="imagen 4 de la app tomapedidos">
-                <img class="carousel-item entregadores-front-image-mobile" src="media/images/entregadores-app-5.png"
-                  class="d-block w-100" alt="imagen 5 de la app tomapedidos">
+            <!-- Features Grid -->
+            <div class="entregadores-hero-features-grid">
+              <div class="entregadores-hero-feature-card">
+                <div class="entregadores-hero-feature-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                </div>
+                <div class="entregadores-hero-feature-text">
+                  <h4>Rutas & Georreferenciación</h4>
+                  <p>Optimización y mapa 1 a 1 de entrega</p>
+                </div>
               </div>
-              <button class="carousel-control-prev entregadores-prev-mobile" type="button"
-                data-bs-target="#carouselControlTouchingMobileEntregadores" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon entregadores-prev-icon-mobile" aria-hidden="true"></span>
-              </button>
-              <button class="carousel-control-next entregadores-next-mobile" type="button"
-                data-bs-target="#carouselControlTouchingMobileEntregadores" data-bs-slide="next">
-                <span class="carousel-control-next-icon entregadores-next-icon-mobile" aria-hidden="true"></span>
-              </button>
+
+              <div class="entregadores-hero-feature-card">
+                <div class="entregadores-hero-feature-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="12" y1="1" x2="12" y2="23"></line>
+                    <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                  </svg>
+                </div>
+                <div class="entregadores-hero-feature-text">
+                  <h4>Recaudo en Calle</h4>
+                  <p>Cobro de cartera y recibos desde la app</p>
+                </div>
+              </div>
+
+              <div class="entregadores-hero-feature-card">
+                <div class="entregadores-hero-feature-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="17 1 21 5 17 9"></polyline>
+                    <path d="M3 11V9a4 4 0 0 1 4-4h14"></path>
+                    <polyline points="7 23 3 19 7 15"></polyline>
+                    <path d="M21 13v2a4 4 0 0 1-4 4H3"></path>
+                  </svg>
+                </div>
+                <div class="entregadores-hero-feature-text">
+                  <h4>Devoluciones y Cambios</h4>
+                  <p>Registro y recogida ágil de productos</p>
+                </div>
+              </div>
+
+              <div class="entregadores-hero-feature-card">
+                <div class="entregadores-hero-feature-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"></path>
+                  </svg>
+                </div>
+                <div class="entregadores-hero-feature-text">
+                  <h4>Sincronización Total</h4>
+                  <p>Conexión directa con Toma Pedidos</p>
+                </div>
+              </div>
             </div>
+          </div>
+
+          <!-- Right Column: Video Card & Direct WhatsApp Card -->
+          <div class="col-lg-6 ps-lg-4">
+            <!-- Video Card -->
+            <div class="entregadores-hero-video-card">
+              <div class="entregadores-hero-video-wrapper">
+                <iframe id="hero-yt-video" src="https://www.youtube.com/embed/ghIkheyo5yc?rel=0&modestbranding=1"
+                  title="Video Publicitario Módulo Entregadores"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                </iframe>
+              </div>
+            </div>
+
+            <!-- WhatsApp Contact Card -->
+            <div class="entregadores-hero-whatsapp-card">
+              <h3 class="entregadores-hero-whatsapp-title">¿Te interesa activar Entregadores?</h3>
+              <p class="entregadores-hero-whatsapp-desc">
+                Habla directamente con nuestro equipo por WhatsApp para conocer más detalles o activarlo en tu cuenta.
+              </p>
+              <a href="https://api.whatsapp.com/send/?phone=573103258432&text=Hola!%20Vi%20el%20m%C3%B3dulo%20de%20Entregadores%20en%20el%20dashboard%20y%20quiero%20conocer%20m%C3%A1s%20detalles%20para%20mi%20negocio.&utm_source=dashboard-slider&utm_medium=hero-video&utm_campaign=modulo-entregadores"
+                target="_blank" class="entregadores-btn-whatsapp">
+                <span class="entregadores-btn-whatsapp-inner">
+                  <img src="https://www.tomapedidos.app/tomapedidos/media/images/WhatsApp_icon.png" alt="WhatsApp"
+                    class="entregadores-btn-whatsapp-img" />
+                  <span>Solicitar activación por WhatsApp</span>
+                  <span class="entregadores-btn-whatsapp-arrow">→</span>
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="entregadores-wrapper">
+      <!-- Entregadores Principal Information (Texto y Camión) -->
+      <main class="entregadores-main container container-sm">
+        <div class="row">
+          <h1 class="text-center">
+            Entregadores
+          </h1>
+          <h2 class="text-center">
+            Nuestra App ideal para entregas precisas con Toma Pedidos
+          </h2>
+          <p class="text-left">
+            Esta app permite <strong>automatizar todo el proceso de entregas</strong>, facilitando al repartidor la
+            coordinación de rutas de entrega. Se podrá montar los pedidos de manera más rápida y completa, evitando
+            posibles errores.
+            <strong>Además, se pueden agregar devoluciones o cambios que el repartidor deba recoger. Si tienes cuentas
+              por
+              cobrar, el repartidor puede recaudar esos pagos</strong>, y más funciones
+            que facilitarán el proceso de tus ventas.
+          </p>
+          <div class="entregadores-illustrations col-lg-12 d-flex justify-content-center">
+            <img class="entregadores-truck-illustration" src="media/images/entregadores-truck.svg" height="500px"
+              alt="ilustracion de un camión de entrega de pedidos">
+          </div>
+        </div>
+      </main>
+
+      <!-- Section Mobile Module -->
+      <section class="entregadores-app container container-sm">
+        <div class="row">
+          <div class="entregadores-app-information">
+            <h3>
+              Módulo Aplicación Móvil para Entregadores - Canal T.A.T (Tienda a Tienda)
+            </h3>
+            <p>
+              Entregadores ofrece a los usuarios una plataforma intuitiva y poderosa que optimiza cada etapa del proceso
+              de entrega.
+              Con la integración perfecta entre Entregadores y Toma Pedidos, ahora es más fácil que nunca coordinar y
+              completar entregas
+              de manera rápida y confiable, asegurando la satisfacción tanto de los clientes como de los entregadores.
+            </p>
+          </div>
+          <div class="col-lg-12 entregadores-illustrations-part-2 d-flex align-items-end">
+            <div class="entregadores-deliverers-illustration col-lg-8">
+              <img class="entregadores-image-mobile" src="media/images/entregadores-deliverers.svg" height="350px"
+                alt="Ilustración de entrega de pedidos">
+            </div>
+            <div class="entregadores-illustration-mobile col-lg-4">
+              <div id="carouselControlTouchingMobileEntregadores" class="carousel slide carousel-fade"
+                data-bs-touch="false" data-bs-interval="false">
+                <div class="carousel-inner entregadores-carousel-inner-mobile">
+                  <img class="carousel-item active entregadores-front-image-mobile"
+                    src="media/images/entregadores-app-1.png" class="d-block w-100"
+                    alt="imagen 1 de la app tomapedidos">
+                  <img class="carousel-item entregadores-front-image-mobile" src="media/images/entregadores-app-2.png"
+                    class="d-block w-100" alt="imagen 2 de la app tomapedidos">
+                  <img class="carousel-item entregadores-front-image-mobile" src="media/images/entregadores-app-3.png"
+                    class="d-block w-100" alt="imagen 3 de la app tomapedidos">
+                  <img class="carousel-item entregadores-front-image-mobile" src="media/images/entregadores-app-4.png"
+                    class="d-block w-100" alt="imagen 4 de la app tomapedidos">
+                  <img class="carousel-item entregadores-front-image-mobile" src="media/images/entregadores-app-5.png"
+                    class="d-block w-100" alt="imagen 5 de la app tomapedidos">
+                </div>
+                <button class="carousel-control-prev entregadores-prev-mobile" type="button"
+                  data-bs-target="#carouselControlTouchingMobileEntregadores" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon entregadores-prev-icon-mobile" aria-hidden="true"></span>
+                </button>
+                <button class="carousel-control-next entregadores-next-mobile" type="button"
+                  data-bs-target="#carouselControlTouchingMobileEntregadores" data-bs-slide="next">
+                  <span class="carousel-control-next-icon entregadores-next-icon-mobile" aria-hidden="true"></span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Call To Action 2 -->
+    <section class="call-to-action-2 container-fluid">
+      <div class="row">
+        <div class="call-to-action-information align-items-center d-md-flex">
+          <div class="call-to-action-illustration-1 col-md-2">
+            <img src="media/images/call-to-action-illustration-1.svg" alt="Ilustración 1 call to action">
+          </div>
+          <div class="call-to-action-principal-text col-md-5 text-white">
+            <h3>¿Estás interesado? Prueba la aplicación GRATIS AHORA.</h3>
+          </div>
+          <div class="call-to-action-button col-md-3 text-end">
+            <a href="#" class="btn call-to-action-btn">CREAR CUENTA</a>
+          </div>
+          <div class="call-to-action-illustration-2 col-md-2">
+            <img src="media/images/call-to-action-illustration-2.svg" alt="Ilustración 2 call to action">
           </div>
         </div>
       </div>
     </section>
-  </div>
 
-  <!-- Call To Action 2 -->
-  <section class="call-to-action-2 container-fluid">
-    <div class="row">
-      <div class="call-to-action-information align-items-center d-md-flex">
-        <div class="call-to-action-illustration-1 col-md-2">
-          <img src="media/images/call-to-action-illustration-1.svg" alt="Ilustración 1 call to action">
-        </div>
-        <div class="call-to-action-principal-text col-md-5 text-white">
-          <h3>¿Estás interesado? Prueba la aplicación GRATIS AHORA.</h3>
-        </div>
-        <div class="call-to-action-button col-md-3 text-end">
-          <a href="#" class="btn call-to-action-btn">CREAR CUENTA</a>
-        </div>
-        <div class="call-to-action-illustration-2 col-md-2">
-          <img src="media/images/call-to-action-illustration-2.svg" alt="Ilustración 2 call to action">
+    <!-- Section Benefits -->
+    <section class="entregadores-benefits container container-sm">
+      <div class="row">
+        <div class="mobile-module-principal-text col">
+          <h2 class="text-center">
+            Entregas Eficientes
+          </h2>
+          <h3 class="text-center">
+            Descubre cómo el Módulo Aplicación Móvil de Entregadores Mejora tu Operación
+          </h3>
+          <p>
+            <strong>¿Imagina una herramienta que automatice cada paso del camino, desde la coordinación de rutas hasta
+              el
+              control de inventario?</strong> Con nuestro Módulo de Entregadores,
+            esta visión se convierte en realidad. Pero eso no es todo. Descubre a continuación los beneficios que harán
+            que tu operación de entrega sea más eficiente,
+            precisa y satisfactoria.
+          </p>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- Section Benefits -->
-  <section class="entregadores-benefits container container-sm">
-    <div class="row">
-      <div class="mobile-module-principal-text col">
-        <h2 class="text-center">
-          Entregas Eficientes
-        </h2>
-        <h3 class="text-center">
-          Descubre cómo el Módulo Aplicación Móvil de Entregadores Mejora tu Operación
+      <div class="row">
+        <h3>
+          Beneficios
         </h3>
-        <p>
-          <strong>¿Imagina una herramienta que automatice cada paso del camino, desde la coordinación de rutas hasta el
-            control de inventario?</strong> Con nuestro Módulo de Entregadores,
-          esta visión se convierte en realidad. Pero eso no es todo. Descubre a continuación los beneficios que harán
-          que tu operación de entrega sea más eficiente,
-          precisa y satisfactoria.
-        </p>
-      </div>
-    </div>
-    <div class="row">
-      <h3>
-        Beneficios
-      </h3>
-      <div class="mobile-module-text col-lg-5">
-        <div class="row mobile-module-part-1">
-          <div class="mobile-module-icon col-1 me-sm-4">
-            <img class="mobile-module-icon" src="media/icons/mobile-module-icon-number-1.svg" height="25">
+        <div class="mobile-module-text col-lg-5">
+          <div class="row mobile-module-part-1">
+            <div class="mobile-module-icon col-1 me-sm-4">
+              <img class="mobile-module-icon" src="media/icons/mobile-module-icon-number-1.svg" height="25">
+            </div>
+            <div class="mobile-module-text col-10">
+              <p>
+                <strong>Mayor control de entregas o despachos</strong><br>
+                Con Entregadores, tendrás un control total sobre todas tus entregas y despachos. Desde el momento en que
+                se asigna un pedido
+                hasta su entrega final, tendrás visibilidad completa.
+              </p>
+            </div>
           </div>
-          <div class="mobile-module-text col-10">
-            <p>
-              <strong>Mayor control de entregas o despachos</strong><br>
-              Con Entregadores, tendrás un control total sobre todas tus entregas y despachos. Desde el momento en que
-              se asigna un pedido
-              hasta su entrega final, tendrás visibilidad completa.
-            </p>
+          <div class="row mobile-module-part-2">
+            <div class="mobile-module-icon col-1 me-sm-4">
+              <img class="mobile-module-icon" src="media/icons/mobile-module-icon-number-2.svg" height="25">
+            </div>
+            <div class="mobile-module-text col-10">
+              <p>
+                <strong>Automatizaciones</strong><br>
+                Automatización del proceso de picking de ventas y consolidado de pedidos desde el Módulo Administrativo
+                hacia la Aplicación Móvil para Entregadores.
+              </p>
+            </div>
+          </div>
+          <div class="row mobile-module-part-3">
+            <div class="mobile-module-icon col-1 me-sm-4">
+              <img class="mobile-module-icon" src="media/icons/mobile-module-icon-number-3.svg" height="25">
+            </div>
+            <div class="mobile-module-text col-10">
+              <p>
+                <strong>Georeferenciación</strong><br>
+                Optimización de tiempo mediante el sistema de georeferenciación de clientes para órdenes de entrega (Uno
+                a
+                Uno).
+              </p>
+            </div>
+          </div>
+          <div class="row mobile-module-part-4">
+            <div class="mobile-module-icon col-1 me-sm-4">
+              <img class="mobile-module-icon" src="media/icons/mobile-module-icon-number-4.svg" height="25">
+            </div>
+            <div class="mobile-module-text col-10">
+              <p>
+                <strong>Programación de rutas</strong><br>
+                Con la función de programación de rutas de Entregadores, podrás optimizar la distribución de pedidos
+                asignando rutas específicas a cada repartidor.
+              </p>
+              </p>
+            </div>
+          </div>
+          <div class="row mobile-module-part-5">
+            <div class="mobile-module-icon col-1 me-sm-4">
+              <img class="mobile-module-icon" src="media/icons/mobile-module-icon-number-5.svg" height="25">
+            </div>
+            <div class="mobile-module-text col-10">
+              <p>
+                <strong>Monitoreo en tiempo real</strong><br>
+                Gracias al monitoreo en tiempo real de Entregadores, podrás seguir el progreso de cada entrega en vivo.
+                Esto te permite estar al tanto de cualquier cambio o
+                imprevisto que pueda surgir durante el proceso de entrega.
+              </p>
+            </div>
+          </div>
+          <div class="row mobile-module-part-6">
+            <div class="mobile-module-icon col-1 me-sm-4">
+              <img class="mobile-module-icon" src="media/icons/mobile-module-icon-number-6.svg" height="25">
+            </div>
+            <div class="mobile-module-text col-10">
+              <p>
+                <strong>Devoluciones o Cambios</strong><br>
+                Con Entregadores, gestionar devoluciones o cambios es más fácil que nunca. La aplicación te permite
+                coordinar la recogida de productos devueltos o realizar intercambios de manera
+                eficiente.
+              </p>
+            </div>
           </div>
         </div>
-        <div class="row mobile-module-part-2">
-          <div class="mobile-module-icon col-1 me-sm-4">
-            <img class="mobile-module-icon" src="media/icons/mobile-module-icon-number-2.svg" height="25">
-          </div>
-          <div class="mobile-module-text col-10">
-            <p>
-              <strong>Automatizaciones</strong><br>
-              Automatización del proceso de picking de ventas y consolidado de pedidos desde el Módulo Administrativo
-              hacia la Aplicación Móvil para Entregadores.
-            </p>
-          </div>
-        </div>
-        <div class="row mobile-module-part-3">
-          <div class="mobile-module-icon col-1 me-sm-4">
-            <img class="mobile-module-icon" src="media/icons/mobile-module-icon-number-3.svg" height="25">
-          </div>
-          <div class="mobile-module-text col-10">
-            <p>
-              <strong>Georeferenciación</strong><br>
-              Optimización de tiempo mediante el sistema de georeferenciación de clientes para órdenes de entrega (Uno a
-              Uno).
-            </p>
-          </div>
-        </div>
-        <div class="row mobile-module-part-4">
-          <div class="mobile-module-icon col-1 me-sm-4">
-            <img class="mobile-module-icon" src="media/icons/mobile-module-icon-number-4.svg" height="25">
-          </div>
-          <div class="mobile-module-text col-10">
-            <p>
-              <strong>Programación de rutas</strong><br>
-              Con la función de programación de rutas de Entregadores, podrás optimizar la distribución de pedidos
-              asignando rutas específicas a cada repartidor.
-            </p>
-            </p>
-          </div>
-        </div>
-        <div class="row mobile-module-part-5">
-          <div class="mobile-module-icon col-1 me-sm-4">
-            <img class="mobile-module-icon" src="media/icons/mobile-module-icon-number-5.svg" height="25">
-          </div>
-          <div class="mobile-module-text col-10">
-            <p>
-              <strong>Monitoreo en tiempo real</strong><br>
-              Gracias al monitoreo en tiempo real de Entregadores, podrás seguir el progreso de cada entrega en vivo.
-              Esto te permite estar al tanto de cualquier cambio o
-              imprevisto que pueda surgir durante el proceso de entrega.
-            </p>
-          </div>
-        </div>
-        <div class="row mobile-module-part-6">
-          <div class="mobile-module-icon col-1 me-sm-4">
-            <img class="mobile-module-icon" src="media/icons/mobile-module-icon-number-6.svg" height="25">
-          </div>
-          <div class="mobile-module-text col-10">
-            <p>
-              <strong>Devoluciones o Cambios</strong><br>
-              Con Entregadores, gestionar devoluciones o cambios es más fácil que nunca. La aplicación te permite
-              coordinar la recogida de productos devueltos o realizar intercambios de manera
-              eficiente.
-            </p>
-          </div>
+        <div class="entregadores-benefits-illustration col-lg-7">
+          <img class="entregadores-locations" src="media/icons/entregadores-locations.svg" height="200"
+            alt="Icono de localización">
+          <img src="media/images/entregadores-benefits.svg" alt="Ilustracion de un entregador feliz">
         </div>
       </div>
-      <div class="entregadores-benefits-illustration col-lg-7">
-        <img class="entregadores-locations" src="media/icons/entregadores-locations.svg" height="200"
-          alt="Icono de localización">
-        <img src="media/images/entregadores-benefits.svg" alt="Ilustracion de un entregador feliz">
-      </div>
-    </div>
-  </section>
+    </section>
+
+  </main>
 
   <!-- ======= Footer ======= -->
   <footer class="site-footer">
