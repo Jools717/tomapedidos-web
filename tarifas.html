@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Toma Pedidos</title>
+   <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" />
+  <!-- Css -->
+  <link href="css/toma-pedidos-bootstrap.css" rel="stylesheet" />
+  <!-- Title -->
+  <title>Toma Pedidos</title>
+  <!-- Icon -->
+  <link rel="icon" type="image/x-icon" href="media/icons/logo_basket48x48.png" />
+</head>
+
+<body>
+<!-- Navbar -->
+  <nav class="navbar nav-bar-other-page navbar-expand-lg navbar-dark fixed-top">
+    <div class="container-fluid">
+      <!-- Logo -->
+      <a class="navbar-brand" href="index.html">
+        <img src="media/icons/logo_horizontal296x93.svg" width="146" alt="Logo Toma Pedidos" />
+      </a>
+      <!-- Hamburger Menu -->
+      <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="offcanvas"
+        data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- SideBar -->
+      <div class="sidebar offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
+        aria-labelledby="title-navbar">
+        <!-- SideBar -->
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="title-navbar">  
+            <a class="navbar-brand" href="index.html">
+              <img class="logo-2" src="media/icons/logo_horizontal296x93.svg" alt="Logo Toma Pedidos" />
+            </a>  
+          </h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <!-- SideBar Body -->
+        <div class="offcanvas-body d-flex flex-column flex-lg-row p-4 p-lg-0">
+          <ul class="navbar-nav justify-content-center align-items-center  flex-grow-1 ">
+            <li class="nav-item mx-3">
+              <a class="nav-link" aria-current="page" href="index.html">Inicio</a>
+            </li>
+            <li class="nav-item mx-2">
+              <a class="nav-link" href="como-funciona.html">Cómo Funciona</a>
+            </li>
+            <li class="nav-item mx-2">
+              <a class="nav-link" href="beneficios.html">Beneficios</a>
+            </li>
+            <li class="nav-item mx-2">
+              <a class="nav-link" href="tarifas.html">Tarifas</a>
+            </li>
+            <li class="nav-item mx-2">
+              <a class="nav-link" href="preguntas.html">Preguntas</a>
+            </li>
+            <li class="nav-item mx-2">
+              <a class="nav-link" href="contacto.html">Contactos</a>
+            </li>
+          </ul>
+          <!-- Login / Create Account -->
+          <div class="d-flex flex-lg-row justify-content-center align-items-center ">
+            <a href="#" class="btn btn-first me-4">Iniciar Sesión</a>
+            <a href="#" class="btn btn-second">Crear Cuenta</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+<!-- Section Rates -->
+  <main class="tarifas container container-sm ">
+    <h1 class="tarifas-title text-center">
+      Tarifas Toma Pedidos - Colombia
+    </h1>  
+    <div class="tarifas-part-1 row justify-content-center">      
+        <div class="tarifas-card-1 col-lg-3 col-md-6 d-flex flex-column text-white align-self-start">
+            <div class="tarifas-part-1-content-1-image d-flex align-items-end justify-content-center">
+              <img src="media/images/tarifas-scenario-14.svg" alt="Ilustración de Toma Pedidos - Tarifa Vendedor-Demo">              
+            </div>
+            <div class="tarifas-part-1-content-1-title">
+              <h2>Vendedor-Demo</h2>
+            </div>
+            <div class="tarifas-part-1-content-2 d-flex align-items-center">
+                <h3 class="tarifas-subtitle-text text-center">Ideal para quienes quieren probar la plataforma GRATIS.</h3>
+            </div>
+            <div class="tarifas-part-1-content-3">
+                <div class="tarifas-part-1-information-content-3 row">
+                    <div class="tarifas-part-1-icon col-1 me-sm-4">
+                        <img src="media/icons/tarifas-icon-check.svg" height="25">
+                    </div>
+                    <div class="col-10">
+                        <p>
+                            Usuarios Vendedores ilimitados (quienes toman pedidos).
+                        </p>
+                    </div>
+                </div>                
+                <div class="tarifas-part-1-information-content-3 row">
+                    <div class="tarifas-part-1-icon col-1 me-sm-4">
+                        <img src="media/icons/tarifas-icon-check.svg" height="25">
+                    </div>
+                    <div class="col-10">
+                        <p>
+                            1 Usuario Administrador (quien recibe los pedidos).
+                        </p>
+                    </div>
+                </div>
+                <div class="tarifas-part-1-information-content-3 row">
+                    <div class="tarifas-part-1-icon col-1 me-sm-4">
+                        <img src="media/icons/tarifas-icon-check.svg" height="25">
+                    </div>
+                    <div class="tarifas-part-1-text-color col-10">
+                        <p>
+                            <strong style="color: #D60439;">15 dias de prueba.</strong> 
+                        </p>
+                    </div>
+                </div>
+                <div class="tarifas-part-1-information-content-3 row">
+                    <div class="tarifas-part-1-icon col-1 me-sm-4">
+                        <img src="media/icons/tarifas-icon-check.svg" height="25">
+                    </div>
+                    <div class="col-10">
+                        <p>
+                            Videos tutoriales para aprender a configurar y utilizar la plataforma
+                        </p>
+                    </div>
+                </div>
+                <div class="tarifas-part-1-information-content-3 row">
+                  <div class="tarifas-part-1-icon col-1 me-sm-4">
+                      <img src="media/icons/tarifas-icon-check.svg" height="25">
+                  </div>
+                  <div class="col-10">
+                      <p>
+                          Acceso a todas las fundionalidades del <strong>vendedor Plus</strong>
+                      </p>
+                  </div>
+              </div>
+            </div>
+            <div class="tarifas-part-1-content-4 d-flex justify-content-center">
+                <a href="#" class="btn btn-second">Regístrate Gratis</a>
+            </div>
+        </div>
+        <div class="tarifas-card-2 col-lg-3 col-md-6 d-flex flex-column text-white align-self-start">
+            <div class="tarifas-part-2-content-1-image d-flex align-items-end justify-content-center">
+              <img src="media/images/tarifas-scenario-15.svg" alt="Ilustración de Toma Pedidos - Tarifa Vendedor-Plus">              
+            </div>
+            <div class="tarifas-part-2-content-1-title">
+              <h2>Vendedor-Plus</h2>
+            </div>
+            <div class="tarifas-part-2-content-2 d-flex align-items-center justify-content-center">
+                <h3 class="tarifas-subtitle-text text-center">$28.000+IVA <br>mensuales por cada vendedor <br>o administrador.</h3>
+            </div>
+            <div class="tarifas-part-2-content-3">
+                <div class="tarifas-part-2-information-content-3 row">
+                    <div class="tarifas-part-2-icon col-1 me-sm-4">
+                        <img src="media/icons/tarifas-icon-check.svg" height="25">
+                    </div>
+                    <div class="col-10">
+                        <p>
+                          Carga de información ilimitada y sin costos adicionales (productos, clientes, inventarios, etc.)
+                        </p>
+                    </div>
+                </div>
+                <div class="tarifas-part-2-information-content-3 row">
+                    <div class="tarifas-part-2-icon col-1 me-sm-4">
+                        <img src="media/icons/tarifas-icon-check.svg" height="25">
+                    </div>
+                    <div class="tarifas-part-2-text-color col-10">
+                        <p>
+                            <strong style="color: #FD3C00;">Sin costo de implementación.</strong> 
+                        </p>
+                    </div>
+                </div>
+                <div class="tarifas-part-2-information-content-3 row">
+                    <div class="tarifas-part-2-icon col-1 me-sm-4">
+                        <img src="media/icons/tarifas-icon-check.svg" height="25">
+                    </div>
+                    <div class="col-10">
+                        <p>
+                          Te enseñamos a manejar y a configurar la plataforma.
+                        </p>
+                    </div>
+                </div>
+                <div class="tarifas-part-2-information-content-3 row">
+                  <div class="tarifas-part-2-icon col-1 me-sm-4">
+                      <img src="media/icons/tarifas-icon-check.svg" height="25">
+                  </div>
+                  <div class="col-10">
+                      <p>
+                        Capacitación y acompañamiento continuo y personalizado.
+                      </p>
+                  </div>
+                </div>
+                <div class="tarifas-part-2-information-content-3 row">
+                  <div class="tarifas-part-2-icon col-1 me-sm-4">
+                      <img src="media/icons/tarifas-icon-check.svg" height="25">
+                  </div>
+                  <div class="col-10">
+                      <p>
+                        $28.000+IVA mensuales por cada vendedor o administrador.
+                      </p>
+                  </div>
+                </div>
+                <div class="tarifas-part-2-information-content-3 row">
+                  <div class="tarifas-part-2-icon col-1 me-sm-4">
+                      <img src="media/icons/tarifas-icon-check.svg" height="25">
+                  </div>
+                  <div class="col-10">
+                      <p>
+                        Aplicación móvil para tomar pedidos
+                      </p>
+                  </div>
+                </div>        
+            </div>
+            <div class="tarifas-part-2-content-4 d-flex justify-content-center">
+                <a href="#" class="btn btn-second">Adquirir</a>
+            </div>
+        </div>
+        <div class="tarifas-card-3 col-lg-3 col-md-6 d-flex flex-column text-white align-self-start">
+          <div class="tarifas-part-3-content-1-image d-flex align-items-end justify-content-center">
+            <img src="media/images/tarifas-scenario-16.svg" alt="Ilustración de Toma Pedidos - Tarifa Vendedor-Premium">              
+          </div>
+          <div class="tarifas-part-3-content-1-title">
+            <h2>Vendedor-Premium</h2>
+          </div>
+          <div class="tarifas-part-3-content-2 d-flex align-items-center justify-content-center">
+              <h3 class="tarifas-subtitle-text text-center">$30.000+IVA <br>mensuales por cada vendedor <br>o administrador.</h3>
+          </div>
+          <div class="tarifas-part-3-content-3">
+            <div class="tarifas-part-3-information-content-3 row">
+                <div class="tarifas-part-3-icon col-1 me-sm-4">
+                    <img src="media/icons/tarifas-icon-check.svg" height="25">
+                </div>
+                <div class="col-10">
+                    <p>
+                      Carga de información ilimitada y sin costos adicionales (productos, clientes, inventarios, etc.)
+                    </p>
+                </div>
+            </div>
+            <div class="tarifas-part-3-information-content-3 row">
+                <div class="tarifas-part-2-icon col-1 me-sm-4">
+                    <img src="media/icons/tarifas-icon-check.svg" height="25">
+                </div>
+                <div class="tarifas-part-3-text-color col-10">
+                    <p>
+                        <strong style="color: #0c417b;">Sin costo de implementación.</strong> 
+                    </p>
+                </div>
+            </div>
+            <div class="tarifas-part-3-information-content-3 row">
+                <div class="tarifas-part-3-icon col-1 me-sm-4">
+                    <img src="media/icons/tarifas-icon-check.svg" height="25">
+                </div>
+                <div class="col-10">
+                    <p>
+                      Te enseñamos a manejar y a configurar la plataforma.
+                    </p>
+                </div>
+            </div>
+            <div class="tarifas-part-3-information-content-3 row">
+              <div class="tarifas-part-3-icon col-1 me-sm-4">
+                  <img src="media/icons/tarifas-icon-check.svg" height="25">
+              </div>
+              <div class="col-10">
+                  <p>
+                    Capacitación y acompañamiento continuo y personalizado.
+                  </p>
+              </div>
+            </div>
+            <div class="tarifas-part-3-information-content-3 row">
+              <div class="tarifas-part-3-icon col-1 me-sm-4">
+                  <img src="media/icons/tarifas-icon-check.svg" height="25">
+              </div>
+              <div class="col-10">
+                  <p>
+                    $30.000+IVA mensuales por cada vendedor o administrador.
+                  </p>
+              </div>
+            </div>
+            <div class="tarifas-part-3-information-content-3 row">
+              <div class="tarifas-part-3-icon col-1 me-sm-4">
+                  <img src="media/icons/tarifas-icon-check.svg" height="25">
+              </div>
+              <div class="col-10">
+                  <p>
+                    Aplicación móvil para tomar pedidos
+                  </p>
+              </div>
+            </div>
+            <div class="tarifas-part-3-information-content-3 row">
+              <div class="tarifas-part-3-icon col-1 me-sm-4">
+                  <img src="media/icons/tarifas-icon-check.svg" height="25">
+              </div>
+              <div class="col-10">
+                  <p>
+                    Personalización de las remisiones o notas de pedidos
+                  </p>
+              </div>
+            </div>
+            <div class="tarifas-part-3-information-content-3 row">
+              <div class="tarifas-part-3-icon col-1 me-sm-4">
+                  <img src="media/icons/tarifas-icon-check.svg" height="25">
+              </div>
+              <div class="col-10">
+                  <p>
+                    Duplicar pedidos historicos o pasados
+                  </p>
+              </div>
+            </div>
+            <div class="tarifas-part-3-information-content-3 row">
+              <div class="tarifas-part-3-icon col-1 me-sm-4">
+                  <img src="media/icons/tarifas-icon-check.svg" height="25">
+              </div>
+              <div class="col-10">
+                  <p>
+                    Mago de Venta (IA)
+                  </p>
+              </div>
+            </div>     
+          </div>
+          <div class="tarifas-part-3-content-4 d-flex justify-content-center">
+            <a href="#" class="btn btn-second">Adquirir</a>
+          </div> 
+      </div>        
+    </div>    
+  </main>
+
+<!-- Section International Rates-->
+  <section class="tarifas-international container container-sm ">
+    <h1 class="tarifas-title-international text-center">
+      Tarifas Toma Pedidos - Internacional
+    </h1>  
+    <div class="tarifas-part-1 row justify-content-center">      
+        <div class="tarifas-card-1 col-lg-3 col-md-6 d-flex flex-column text-white align-self-start">
+            <div class="tarifas-part-1-content-1-image d-flex align-items-end justify-content-center">
+              <img src="media/images/tarifas-scenario-14.svg" alt="Ilustración de Toma Pedidos - Tarifa Vendedor-Demo">              
+            </div>
+            <div class="tarifas-part-1-content-1-title">
+              <h2>Vendedor-Demo</h2>
+            </div>
+            <div class="tarifas-part-1-content-2 d-flex align-items-center">
+                <h3 class="tarifas-subtitle-text text-center">Ideal para quienes quieren probar la plataforma GRATIS.</h3>
+            </div>
+            <div class="tarifas-part-1-content-3">
+                <div class="tarifas-part-1-information-content-3 row">
+                    <div class="tarifas-part-1-icon col-1 me-sm-4">
+                        <img src="media/icons/tarifas-icon-check.svg" height="25">
+                    </div>
+                    <div class="col-10">
+                        <p>
+                            Usuarios Vendedores ilimitados (quienes toman pedidos).
+                        </p>
+                    </div>
+                </div>                
+                <div class="tarifas-part-1-information-content-3 row">
+                    <div class="tarifas-part-1-icon col-1 me-sm-4">
+                        <img src="media/icons/tarifas-icon-check.svg" height="25">
+                    </div>
+                    <div class="col-10">
+                        <p>
+                            1 Usuario Administrador (quien recibe los pedidos).
+                        </p>
+                    </div>
+                </div>
+                <div class="tarifas-part-1-information-content-3 row">
+                    <div class="tarifas-part-1-icon col-1 me-sm-4">
+                        <img src="media/icons/tarifas-icon-check.svg" height="25">
+                    </div>
+                    <div class="tarifas-part-1-text-color col-10">
+                        <p>
+                            <strong style="color: #D60439;">15 dias de prueba.</strong> 
+                        </p>
+                    </div>
+                </div>
+                <div class="tarifas-part-1-information-content-3 row">
+                    <div class="tarifas-part-1-icon col-1 me-sm-4">
+                        <img src="media/icons/tarifas-icon-check.svg" height="25">
+                    </div>
+                    <div class="col-10">
+                        <p>
+                            Te enseñamos a manejar y configurar la plataforma en sus dos módulos.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="tarifas-part-1-content-4 d-flex justify-content-center">
+                <a href="#" class="btn btn-second">Regístrate Gratis</a>
+            </div>
+        </div>
+        <div class="tarifas-card-2 col-lg-3 col-md-6 d-flex flex-column text-white align-self-start">
+            <div class="tarifas-part-2-content-1-image d-flex align-items-end justify-content-center">
+              <img src="media/images/tarifas-scenario-15.svg" alt="Ilustración de Toma Pedidos - Tarifa Vendedor-Plus">              
+            </div>
+            <div class="tarifas-part-2-content-1-title">
+              <h2>Vendedor-Plus</h2>
+            </div>
+            <div class="tarifas-part-2-content-2 d-flex align-items-center justify-content-center">
+                <h3 class="tarifas-subtitle-text text-center">$8 USD (dólares) <br>mensuales por cada vendedor o administrador</h3>
+            </div>
+            <div class="tarifas-part-2-content-3">
+              <div class="tarifas-part-2-information-content-3 row">
+                  <div class="tarifas-part-2-icon col-1 me-sm-4">
+                      <img src="media/icons/tarifas-icon-check.svg" height="25">
+                  </div>
+                  <div class="col-10">
+                      <p>
+                        Carga de información ilimitada y sin costos adicionales (productos, clientes, inventarios, etc.)
+                      </p>
+                  </div>
+              </div>
+              <div class="tarifas-part-2-information-content-3 row">
+                  <div class="tarifas-part-2-icon col-1 me-sm-4">
+                      <img src="media/icons/tarifas-icon-check.svg" height="25">
+                  </div>
+                  <div class="tarifas-part-2-text-color col-10">
+                      <p>
+                          <strong style="color: #FD3C00;">Sin costo de implementación.</strong> 
+                      </p>
+                  </div>
+              </div>
+              <div class="tarifas-part-2-information-content-3 row">
+                  <div class="tarifas-part-2-icon col-1 me-sm-4">
+                      <img src="media/icons/tarifas-icon-check.svg" height="25">
+                  </div>
+                  <div class="col-10">
+                      <p>
+                        Te enseñamos a manejar y a configurar la plataforma.
+                      </p>
+                  </div>
+              </div>
+              <div class="tarifas-part-2-information-content-3 row">
+                <div class="tarifas-part-2-icon col-1 me-sm-4">
+                    <img src="media/icons/tarifas-icon-check.svg" height="25">
+                </div>
+                <div class="col-10">
+                    <p>
+                      Capacitación y acompañamiento continuo y personalizado.
+                    </p>
+                </div>
+              </div>
+              <div class="tarifas-part-2-information-content-3 row">
+                <div class="tarifas-part-2-icon col-1 me-sm-4">
+                    <img src="media/icons/tarifas-icon-check.svg" height="25">
+                </div>
+                <div class="col-10">
+                    <p>
+                      8 USD (dólares) mensuales por cada vendedor o administrador.
+                    </p>
+                </div>
+              </div>
+              <div class="tarifas-part-2-information-content-3 row">
+                <div class="tarifas-part-2-icon col-1 me-sm-4">
+                    <img src="media/icons/tarifas-icon-check.svg" height="25">
+                </div>
+                <div class="col-10">
+                    <p>
+                      Aplicación móvil para tomar pedidos
+                    </p>
+                </div>
+              </div>        
+          </div>
+            <div class="tarifas-part-2-content-4 d-flex justify-content-center">
+                <a href="#" class="btn btn-second">Adquirir</a>
+            </div>
+        </div>
+        <div class="tarifas-card-3 col-lg-3 col-md-6 d-flex flex-column text-white align-self-start">
+          <div class="tarifas-part-3-content-1-image d-flex align-items-end justify-content-center">
+            <img src="media/images/tarifas-scenario-16.svg" alt="Ilustración de Toma Pedidos - Tarifa Vendedor-Premium">              
+          </div>
+          <div class="tarifas-part-3-content-1-title">
+            <h2>Vendedor-Premium</h2>
+          </div>
+          <div class="tarifas-part-3-content-2 d-flex align-items-center justify-content-center">
+              <h3 class="tarifas-subtitle-text text-center">$10 USD (dólares) <br>mensuales por cada vendedor o administrador</h3>
+          </div>
+          <div class="tarifas-part-3-content-3">
+            <div class="tarifas-part-3-information-content-3 row">
+                <div class="tarifas-part-3-icon col-1 me-sm-4">
+                    <img src="media/icons/tarifas-icon-check.svg" height="25">
+                </div>
+                <div class="col-10">
+                    <p>
+                      Carga de información ilimitada y sin costos adicionales (productos, clientes, inventarios, etc.)
+                    </p>
+                </div>
+            </div>
+            <div class="tarifas-part-3-information-content-3 row">
+                <div class="tarifas-part-2-icon col-1 me-sm-4">
+                    <img src="media/icons/tarifas-icon-check.svg" height="25">
+                </div>
+                <div class="tarifas-part-3-text-color col-10">
+                    <p>
+                        <strong style="color: #0c417b;">Sin costo de implementación.</strong> 
+                    </p>
+                </div>
+            </div>
+            <div class="tarifas-part-3-information-content-3 row">
+                <div class="tarifas-part-3-icon col-1 me-sm-4">
+                    <img src="media/icons/tarifas-icon-check.svg" height="25">
+                </div>
+                <div class="col-10">
+                    <p>
+                      Te enseñamos a manejar y a configurar la plataforma.
+                    </p>
+                </div>
+            </div>
+            <div class="tarifas-part-3-information-content-3 row">
+              <div class="tarifas-part-3-icon col-1 me-sm-4">
+                  <img src="media/icons/tarifas-icon-check.svg" height="25">
+              </div>
+              <div class="col-10">
+                  <p>
+                    Capacitación y acompañamiento continuo y personalizado.
+                  </p>
+              </div>
+            </div>
+            <div class="tarifas-part-3-information-content-3 row">
+              <div class="tarifas-part-3-icon col-1 me-sm-4">
+                  <img src="media/icons/tarifas-icon-check.svg" height="25">
+              </div>
+              <div class="col-10">
+                  <p>
+                    10 USD (dólares) mensuales por cada vendedor o administrador.
+                  </p>
+              </div>
+            </div>
+            <div class="tarifas-part-3-information-content-3 row">
+              <div class="tarifas-part-3-icon col-1 me-sm-4">
+                  <img src="media/icons/tarifas-icon-check.svg" height="25">
+              </div>
+              <div class="col-10">
+                  <p>
+                    Aplicación móvil para tomar pedidos
+                  </p>
+              </div>
+            </div>
+            <div class="tarifas-part-3-information-content-3 row">
+              <div class="tarifas-part-3-icon col-1 me-sm-4">
+                  <img src="media/icons/tarifas-icon-check.svg" height="25">
+              </div>
+              <div class="col-10">
+                  <p>
+                    Personalización de las remisiones o notas de pedidos
+                  </p>
+              </div>
+            </div>
+            <div class="tarifas-part-3-information-content-3 row">
+              <div class="tarifas-part-3-icon col-1 me-sm-4">
+                  <img src="media/icons/tarifas-icon-check.svg" height="25">
+              </div>
+              <div class="col-10">
+                  <p>
+                    Duplicar pedidos historicos o pasados
+                  </p>
+              </div>
+            </div>
+            <div class="tarifas-part-3-information-content-3 row">
+              <div class="tarifas-part-3-icon col-1 me-sm-4">
+                  <img src="media/icons/tarifas-icon-check.svg" height="25">
+              </div>
+              <div class="col-10">
+                  <p>
+                    Mago de Venta (IA)
+                  </p>
+              </div>
+            </div>     
+          </div>
+          <div class="tarifas-part-3-content-4 d-flex justify-content-center">
+            <a href="#" class="btn btn-second">Adquirir</a>
+          </div> 
+      </div>        
+    </div>    
+  </section>
+
+
+<!-- ======= Footer ======= -->
+  <footer class="site-footer">
+
+    <div class="container">
+        <div class="footer-logo text-center">
+            <img class="logo" src="media/images/footer-logo.svg" width="136" alt="Logo footer">
+        </div>
+        <div class="contact row">
+            <div class="information-footer col-md-4 text-center">
+                <div class="contact-info text-light">
+                    <div class="footer-icon">
+                      <img class="size-icon" src="media/icons/address.svg" height="89" alt="Address Icon">
+                    </div>
+                    <p>Bogotá, Cundinamarca, Colombia</p>
+                    <h6>Cll. 151 No. 18A-34 Ofc. 301</h6>                                            
+                </div>
+            </div>
+            <div class="information-footer principal-text col-md-4 text-center border-left border-right">
+                <div class="contact-info text-light">
+                    <div class="footer-icon">
+                      <img class="size-icon" src="media/icons/email.svg" height="89" alt="Address Icon">
+                    </div>
+                    <p>Contáctanos a nuestro Email</p>
+                    <h6>tomapedidos@comtor.com</h6>                                            
+                </div>
+            </div>
+            <div class="col-md-4 text-center">
+                <div class="contact-info text-light">
+                    <div class="footer-icon">
+                      <img class="size-icon" src="media/icons/whatsapp.svg" height="89" alt="Address Icon">
+                    </div>
+                    <p>Contáctanos a nuestro whatsapp</p>
+                    <h6><a class="link-footer-information" href="https://api.whatsapp.com/send/?phone=573103258432&text=Hola+.Estoy+interesado+en+la+aplicacion&type=phone_number&app_absent=0" target="_blank">+57 3103258432</a></h6>                                          
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-menu">
+          <ul class="menu justify-content-between text-light">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about-us.html">Cómo Funciona</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="portfolio-grid.html">Beneficios</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="faqs.html">Tarifas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contacts.html">Preguntas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contacts.html">Contactos</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-social d-flex justify-content-center">
+          <a class="footer-social-icon" href="#" target="_blank">
+            <img class="size-icon" src="media/icons/facebook.svg" height="40" alt="Address Icon">
+          </a>
+          <a class="footer-social-icon" href="#" target="_blank">
+            <img class="size-icon" src="media/icons/instagram.svg" height="40" alt="Address Icon">
+          </a>
+          <a class="footer-social-icon" href="#" target="_blank">
+            <img class="size-icon" src="media/icons/linkedin.svg" height="40" alt="Address Icon">
+          </a>
+        </div>
+
+        <p class="copyright text-light text-center">Copyright © 2023 Comtor - Toma Pedidos.</p>
+    </div>
+  </footer>
+<!-- End Footer -->
+
+  <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous">
+  </script>
+   <script src="js/main.js"></script>
+</body>
+</html>

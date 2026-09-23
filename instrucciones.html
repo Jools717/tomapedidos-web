@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Toma Pedidos</title>
+   <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" />
+  <!-- Css -->
+  <link href="css/toma-pedidos-bootstrap.css" rel="stylesheet" />
+  <!-- Title -->
+  <title>Toma Pedidos</title>
+  <!-- Icon -->
+  <link rel="icon" type="image/x-icon" href="media/icons/logo_basket48x48.png" />
+</head>
+
+<body>
+<!-- Navbar -->
+  <nav class="navbar nav-bar-other-page navbar-expand-lg navbar-dark fixed-top">
+    <div class="container-fluid">
+      <!-- Logo -->
+      <a class="navbar-brand" href="index.html">
+        <img src="media/icons/logo_horizontal296x93.svg" width="146" alt="Logo Toma Pedidos" />
+      </a>
+      <!-- Hamburger Menu -->
+      <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="offcanvas"
+        data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- SideBar -->
+      <div class="sidebar offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
+        aria-labelledby="title-navbar">
+        <!-- SideBar -->
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="title-navbar">  
+            <a class="navbar-brand" href="index.html">
+              <img class="logo-2" src="media/icons/logo_horizontal296x93.svg" alt="Logo Toma Pedidos" />
+            </a>  
+          </h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <!-- SideBar Body -->
+        <div class="offcanvas-body d-flex flex-column flex-lg-row p-4 p-lg-0">
+          <ul class="navbar-nav justify-content-center align-items-center  flex-grow-1 ">
+            <li class="nav-item mx-3">
+              <a class="nav-link" aria-current="page" href="index.html">Inicio</a>
+            </li>
+            <li class="nav-item mx-2">
+              <a class="nav-link" href="como-funciona.html">Cómo Funciona</a>
+            </li>
+            <li class="nav-item mx-2">
+              <a class="nav-link" href="beneficios.html">Beneficios</a>
+            </li>
+            <li class="nav-item mx-2">
+              <a class="nav-link" href="tarifas.html">Tarifas</a>
+            </li>
+            <li class="nav-item mx-2">
+              <a class="nav-link" href="preguntas.html">Preguntas</a>
+            </li>
+            <li class="nav-item mx-2">
+              <a class="nav-link" href="contacto.html">Contactos</a>
+            </li>
+          </ul>
+          <!-- Login / Create Account -->
+          <div class="d-flex flex-lg-row justify-content-center align-items-center ">
+            <a href="#" class="btn btn-first me-4">Iniciar Sesión</a>
+            <a href="#" class="btn btn-second">Crear Cuenta</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <!--Title-->
+    <h1> INSTRUCCIONES PARA CREAR TU CUENTA </h1>
+    <hr>
+
+    <a href="#web_module"><p>¿Ya creaste tu cuenta?, ¡aprende algunos pasos básicos!<i class="fa fa-arrow-down fa-2x" style="display:inline;"></i></p></a>
+
+    <!--Paso 1-->
+    <div id="Paso 1">
+        <h3> Paso 1 </h3>
+        <h4 style="margin-bottom: 0px; text-align: justify;font-weight: normal;font-size: 14pt;">Diligencia el
+            formulario con tus datos
+            personales.</h4>
+
+        <div class="image-instructions" id="image-instructions-web-imgs" style="margin-bottom: 30px;"><img
+                src="media/img/form_create_account.png" alt="crear cuenta" style="width: 100%;"></div>
+
+
+        <br>
+        <i id="left-icons" class="fa fa-eye fa-3x"> </i>
+        <p>
+        <h4 style="font-weight: normal;padding-top: 0.5%;" id="p-next-to-icon">
+            Ten en cuenta que:
+        </h4>
+        </p>
+        <br>
+        <ol class="list-numbered">
+            <li>
+                <h4> Nombre del negocio:</h4> <i id="left-icons" class="fa fa-building fa-3x"></i>
+                <div id="p-next-to-icon">Ingresa el nombre del negocio que desea utilizar el servicio. </div>
+                <br> Por ejemplo la <b>raz&oacute;n social</b> del negocio en caso de tenerla.
+            </li>
+            <li>
+                <h4> Nombre de la cuenta: </h4> <i id="left-icons" class="fa fa-user-circle fa-3x"></i>
+                <div id="p-next-to-icon" style="padding-left: 65px;">Debes ingresar un nombre de cuenta para el uso de
+                    la
+                    aplicación móvil.</div>
+                Por ejemplo: <b>distribuidorala13</b>
+            </li>
+            <li>
+                <h4> Nombre de usuario:</h4> <i id="left-icons" class="fa fa-user fa-3x"></i>
+                <div id="p-next-to-icon"> Ingresa un nombre de usuario para ingresar al administrador web. </div>
+                Por ejemplo: <b> victor19</b>
+            </li>
+        </ol>
+        </p>
+
+
+        <br>
+
+    </div>
+    <!--End Paso 1-->
+
+    <!--Paso 2-->
+    <div id="Paso2">
+        <h3> Paso 2 </h3>
+
+        <p ALIGN="justify">Una vez diligenciado el formulario, te enviaremos al <strong>correo
+                electr&oacute;nico</strong> registrado un enlace para la
+            activaci&oacute;n de tu cuenta, con un encabezado como el siguente:</p>
+        <img src="media/img/header-message.png" class="center" style="width: 100%;">
+        <p ALIGN="justify"> Debes seguir las instrucciones que te indica el mensaje para <b>activar tu cuenta</b>.</p>
+        <img src="media/img/message_activation.png" class="center" style="width: 50%;">
+
+        <div class="alert alert-warning " role="alert" ALIGN="justify"> <strong>Nota:</strong> Si el correo no se
+            encuentra en la
+            bandeja principal, revisa tu carpeta de <b>correo no deseado</b> o spam. </div>
+
+    </div>
+    <!--End Paso 2-->
+
+    <!--Paso 3-->
+    <div id="Paso3">
+        <h3> Paso 3 </h3>
+        <br>
+
+        <p ALIGN="justify"> Una vez <b>activada tu cuenta</b>, te enviaremos al correo electr&oacute;nico las
+            instrucciones de acceso tanto para la aplicación web como para la aplicacion m&oacute;vil con un encabezado
+            como el
+            siguente:</p>
+        <img src="media/img/instructions-header-message.png" alt="encabezado mensaje" class="center"
+            style="width: 100%;">
+        <p ALIGN="justify"> Debes seguir las instrucciones que te indica el mensaje.</p>
+        <p ALIGN="justify"> Ten en cuenta que <b>usuario</b> y <b>contraseña</b> corresponden a los del admininistrador
+            de la aplicación web, mientras <b>vendedor</b> y <b> contraseña</b> corresponden a las credenciales
+            iniciales para el login del vendedor enla aplicaci&oacute;n m&oacute;vil.
+        </p>
+
+        <img src="media/img/instructions-message.png" alt="contenido del mensaje" class="center" style="width: 60%;">
+
+        <div ALIGN="justify" class="alert alert-warning" role="alert"> <b> Nota:</b> Si el correo no se encuentra en la
+            bandeja principal,
+            revisa tu carpeta de <b>correo no deseado</b> o spam. </div>
+
+    </div>
+    <!--End Paso 3-->
+
+    <!--Paso 4-->
+    <div id="Paso4">
+        <div class="page-title text-left">
+            <h2> Aplicación Web</h2>
+        </div>
+        <br>
+
+        <p ALIGN="justify"> Debes tener a la mano el <b>correo electr&oacute;nico</b> que te enviamos con las
+            credenciales de usuario.</p>
+
+        <p ALIGN="justify"> Una vez hayas ingresado en la aplicaci&oacute;n web, te aparecer&aacute; una ventana en la
+            que deber&aacute;s
+            colocar las credenciales de empresa que te lleg&oacute; en el correo electr&oacute;nico: <br>
+            <b>usuario</b> y <b>contraseña</b> corresponden a los del admininistrador de la aplicación web.
+        </p>
+
+        <img src="media/img/tomapedidos-web-application.png" alt="Aplicación web" class="center" style="width: 60%;">
+        <br>
+
+        <div class="alert alert-warning" role="alert"> <strong>Nota:</strong> Si el correo no se encuentra en la bandeja
+            principal, revisa tu carpeta de correo no deseado o spam. </div>
+
+        <p ALIGN="justify"> Recuerda que el <b>m&oacute;dulo web</b> te ofrece las siguientes opciones:</p><br>
+
+        <ul class="list">
+            <li>
+                <p>Administrar clientes.</p>
+            </li>
+            <li>
+                <p>Administrar vendedores y rutas.</p>
+            </li>
+            <li>
+                <p>Administrar productos y listas de precios.</p>
+            </li>
+            <li>
+                <p>Ver resúmenes diarios de ventas, reportes generales, por producto, por cliente, por vendedor, por
+                    recaudo de cartera, etc.</p>
+            </li>
+            <li>
+                <p>Ver resúmenes diarios de ventas, reportes generales, por producto, por cliente, por vendedor, por
+                    recaudo de cartera, etc.</p>
+            </li>
+        </ul>
+
+
+    </div>
+    <!--End Paso 4-->
+
+    <!--Paso 5-->
+    <div id="Paso5">
+        <div class="page-title text-left">
+            <h2> Aplicación m&oacute;vil </h2>
+        </div>
+        <br>
+
+        <div class="image-instructions" id="image-instructions-web-imgs-mobile" style="margin-bottom: 30px;">
+            <img src="media/img/login-client-code-mov.jpg" alt="crear cuenta" style="width: 100%;"></div>
+        <!--
+        <i id="left-icons" class="fa fa-mobile fa-5x"></i>
+        <h3 id="p-next-to-icon"> Aplicaci&oacute;n m&oacute;vil</h3>
+    -->
+        <p ALIGN="justify">Una vez hayas instalado a la aplicaci&oacute;n m&oacute;vil en tu dispositivo <b
+                style="color:#3f0;">Android</b>, te aparecera
+            una ventana en la que deber&aacute;s digitar el <b> código de empresa</b> que te llegó en el correo
+            electrónico. <br>
+        </p>
+        <br>
+
+        <p ALIGN="justify"> Recuerda que la <b>aplicaci&oacute;n m&oacute;vil</b> te ofrece las siguientes opciones:</p>
+        <br>
+        <ul class="list">
+            <li>
+                <p>Administrar la captura de pedidos.</p>
+            </li>
+            <li>
+                <p>Seguimiento por GPS:</p>
+            </li>
+            <li>
+                <p>Pedidos históricos</p>
+            </li>
+            <li>
+                <p>Asignar l&iacute;mite de cr&eacute;dito:</p>
+            </li>
+
+        </ul>
+        <br><br>
+
+    </div>
+    <!--End Paso 5-->
+    <h3> Ya est&aacute;s listo, <strong>¡Crea tu cuenta ahora mismo!</strong></h3>
+    <div>
+        <a href="registrarse.page" class="btn btn-success"> Crear Cuenta</a>
+    </div>
+    <br><br><br><br>
+    <h1 id="web_module"> INSTRUCCIONES TOMAPEDIDOS </h1>
+    <hr>
+    <div class="page-title text-left">
+        <h2>Crear vendedor</h2>
+    </div>
+    <p>Desde el módulo web debes seleccionar la casilla <b>Vendedores</b>, luego en <b>Crear Vendedor</b>, allí deberás
+        diligenciar los campos que se muestran
+        en el siguiente formulario: </p>
+    <img src="media/img/crear-vendedor.png" class="center" alt="crear vendedor" style="width: 100%;">
+    <div class="alert alert-warning " role="alert" ALIGN="justify"> <strong>Nota:</strong> Recuerda que debes llenar
+        obligatoriamente los campos <b>Usuario</b>, <b>Nombre</b> y <b>Contraseña</b> del vendedor. </div>
+
+    <div class="page-title text-left">
+        <h2>Crear cliente</h2>
+    </div>
+    <p>Desde el módulo web debes seleccionar la casilla <b>Clientes</b>, luego en <b>Crear Cliente</b>, allí deberás
+        diligenciar los campos que se muestran
+        en el siguiente formulario: </p>
+    <img src="media/img/crear-cliente.png" class="center" alt="crear cliente" style="width: 100%;">
+    <div class="alert alert-warning " role="alert" ALIGN="justify"> <strong>Nota:</strong> Recuerda que debes llenar
+        obligatoriamente los campos <b>Código</b>, <b>Número de Documento</b>, <b>Nombre del negocio</b>,<b>Primer
+            Nombre</b>, <b>Dirección</b>, <b>Teléfono</b> y <b>Celular</b> del cliente nuevo. </div>
+
+
+    <div class="page-title text-left">
+        <h2>Crear producto</h2>
+    </div>
+    <p>Desde el módulo web debes seleccionar la casilla <b>Productos</b>, luego en <b>Crear Producto</b>, allí
+        deberás
+        diligenciar los campos que se muestran
+        en el siguiente formulario: </p>
+    <img src="media/img/crear-producto.png" class="center" alt="crear producto" style="width: 100%;">
+    <div class="alert alert-warning " role="alert" ALIGN="justify"> <strong>Nota:</strong> Recuerda que debes llenar
+        obligatoriamente los campos <b>Código</b>, <b>Nombre</b> y <b>Precio Base</b> del producto nuevo. </div>
+
+
+
+  </div>
+
+
+
+<!-- ======= Footer ======= -->
+  <footer class="site-footer">
+
+    <div class="container">
+        <div class="footer-logo text-center">
+            <img class="logo" src="media/images/footer-logo.svg" width="136" alt="Logo footer">
+        </div>
+        <div class="contact row">
+            <div class="information-footer col-md-4 text-center">
+                <div class="contact-info text-light">
+                    <div class="footer-icon">
+                      <img class="size-icon" src="media/icons/address.svg" height="89" alt="Address Icon">
+                    </div>
+                    <p>Bogotá, Cundinamarca, Colombia</p>
+                    <h6>Cll. 151 No. 18A-34 Ofc. 301</h6>                                            
+                </div>
+            </div>
+            <div class="information-footer principal-text col-md-4 text-center border-left border-right">
+                <div class="contact-info text-light">
+                    <div class="footer-icon">
+                      <img class="size-icon" src="media/icons/email.svg" height="89" alt="Address Icon">
+                    </div>
+                    <p>Contáctanos a nuestro Email</p>
+                    <h6>tomapedidos@comtor.com</h6>                                            
+                </div>
+            </div>
+            <div class="col-md-4 text-center">
+                <div class="contact-info text-light">
+                    <div class="footer-icon">
+                      <img class="size-icon" src="media/icons/whatsapp.svg" height="89" alt="Address Icon">
+                    </div>
+                    <p>Contáctanos a nuestro whatsapp</p>
+                    <h6><a class="link-footer-information" href="https://api.whatsapp.com/send/?phone=573103258432&text=Hola+.Estoy+interesado+en+la+aplicacion&type=phone_number&app_absent=0" target="_blank">+57 3103258432</a></h6>                                          
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-menu">
+          <ul class="menu justify-content-between text-light">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about-us.html">Cómo Funciona</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="portfolio-grid.html">Beneficios</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="faqs.html">Tarifas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contacts.html">Preguntas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contacts.html">Contactos</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-social d-flex justify-content-center">
+          <a class="footer-social-icon" href="#" target="_blank">
+            <img class="size-icon" src="media/icons/facebook.svg" height="40" alt="Address Icon">
+          </a>
+          <a class="footer-social-icon" href="#" target="_blank">
+            <img class="size-icon" src="media/icons/instagram.svg" height="40" alt="Address Icon">
+          </a>
+          <a class="footer-social-icon" href="#" target="_blank">
+            <img class="size-icon" src="media/icons/linkedin.svg" height="40" alt="Address Icon">
+          </a>
+        </div>
+
+        <p class="copyright text-light text-center">Copyright © 2023 Comtor - Toma Pedidos.</p>
+    </div>
+  </footer>
+<!-- End Footer -->
+
+  <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous">
+  </script>
+   <script src="js/main.js"></script>
+</body>
+</html>

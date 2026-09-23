@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Toma Pedidos</title>
+   <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" />
+  <!-- Css -->
+  <link href="css/toma-pedidos-bootstrap.css" rel="stylesheet" />
+  <!-- Title -->
+  <title>Toma Pedidos</title>
+  <!-- Icon -->
+  <link rel="icon" type="image/x-icon" href="media/icons/logo_basket48x48.png" />
+</head>
+
+<body>
+
+   <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container-fluid">
+      <!-- Logo -->
+      <a class="navbar-brand" href="index.html">
+        <img src="media/icons/logo_horizontal296x93.svg" width="146" alt="Logo Toma Pedidos" />
+      </a>
+      <!-- Hamburger Menu -->
+      <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="offcanvas"
+        data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- SideBar -->
+      <div class="sidebar offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
+        aria-labelledby="title-navbar">
+        <!-- SideBar -->
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="title-navbar">  
+            <a class="navbar-brand" href="index.html">
+              <img class="logo-2" src="media/icons/logo_horizontal296x93.svg" alt="Logo Toma Pedidos" />
+            </a>  
+          </h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <!-- SideBar Body -->
+        <div class="offcanvas-body d-flex flex-column flex-lg-row p-4 p-lg-0">
+          <ul class="navbar-nav justify-content-center align-items-center  flex-grow-1 ">
+            <li class="nav-item mx-3">
+              <a class="nav-link" aria-current="page" href="index.html">Inicio</a>
+            </li>
+            <li class="nav-item mx-2">
+              <a class="nav-link" href="como-funciona.html">Cómo Funciona</a>
+            </li>
+            <li class="nav-item mx-2">
+              <a class="nav-link" href="beneficios.html">Beneficios</a>
+            </li>
+            <li class="nav-item mx-2">
+              <a class="nav-link" href="tarifas.html">Tarifas</a>
+            </li>
+            <li class="nav-item mx-2">
+              <a class="nav-link" href="preguntas.html">Preguntas</a>
+            </li>
+            <li class="nav-item mx-2">
+              <a class="nav-link" href="contacto.html">Contactos</a>
+            </li>
+          </ul>
+          <div class="youtube-channel-mobile">
+            <a href="https://www.youtube.com/channel/UCmWC3VomOBwNen0Bb7n7GjA" target="_blank">
+              <img height="250" src="https://tomapedidos.app/tomapedidos/media/images/youtube-channel-web.svg" alt="Ilustración para el canal de youtube">
+            </a>
+          </div>
+          <!-- Login / Create Account -->
+          <div class="d-flex flex-lg-row justify-content-center align-items-center ">
+            <a href="#" class="btn btn-first me-4">Iniciar Sesión</a>
+            <a href="#" class="btn btn-second">Empieza Gratis</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Section Hero-->
+  <section class=" container-fluid principal-banner text-center  text-md-start">
+    <div class="row item">
+      <div class="align-items-center d-md-flex">
+        <div class="tittle-banner col-md-5 mb-5">
+          <h1>TOMA PEDIDOS</h1>
+          <h2 class="subtitle-hero">APLICACIÓN MÓVIL Y DE ESCRITORIO PARA TOMA DE PEDIDOS Y CONTROL DE VENDEDORES TAT <br>(TIENDA A TIENDA)</h2>
+          <a href="#" class="btn btn-second my-5">Descubre Más</a>
+        </div>
+        <div class="illustration-banner col-md-7">
+          <img src="media/images/Home-ilustracion-principal.svg"  alt="Ilustración Banner" >
+        </div>
+      </div>
+    </div>
+  </section>
+
+ <!-- Section About Us -->
+  <main class="about-us container container-sm">
+    <div class="row">
+      <div class="about-us-scenario-1 col-md-6">
+          <img src="media/images/home-about-us-scenario-1.svg" alt="ilustracion 1"/>
+      </div>
+      <div class="about-us-text-scenario-1 col-md-5 offset-lg-1">
+        <h2 class="about-us-title text-center">¿Por qué TOMA PEDIDOS?</h2>
+        <h3>Automatización y toma de pedidos en tiempo real</h3>
+        <p>La aplicación TOMA PEDIDOS le va a permitir a tus vendedores tomarle 
+          los pedidos a los diferentes clientes desde su celular o dispositivo 
+          móvil en tiempo real.</p>
+        <h3>Optimización y administración de equipos de venta para empresas de cualquier tamaño</h2>
+        <p>La aplicación está diseñada principalmente para: Comercializacoras, 
+          distribuidoras, importadoras o fabricantes de cualquier tamaño y con
+          fuerzas de ventas T.A.T. (preventa y autoventa) que estén en busca de
+          eliminar la toma de pedidos manual y mejorar la administración y 
+          gestión de equipos de ventas. 
+          <br><br><strong>Nuestros diferenciales:</strong><br><strong>1.</strong> Es una aplicación 
+          muy intuitiva y fácil de aprender a usar.<br>
+          <strong>2.</strong> El proceso de implementación es rápido y te ofrecemos un acompañamiento 
+          personalizado en todo momento.
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <!-- Section Custom Tomapedidos-->
+  <section id="carouselClientes" class="carousel-custom container container-sm carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselClientes" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#carouselClientes" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#carouselClientes" data-bs-slide-to="2"></button>
+    </div>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+          <a href="">
+            <img src="logo1.png" class="d-block" alt="Cliente 1">
+          </a>
+        </div>
+        <div class="carousel-item">
+          <a href="">
+            <img src="logo1.png" class="d-block" alt="Cliente 1">
+          </a>
+        </div>
+        <div class="carousel-item">
+          <a href="">
+            <img src="logo1.png" class="d-block" alt="Cliente 1">
+          </a>
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselClientes" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselClientes" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+    </button>
+  </section>
+
+<!-- Section website module -->
+  <section class="web-module container container-sm">
+    <div class="row">
+      <div class="web-module-principal-text col">
+        <h2 class="text-center">La aplicación cuenta con dos modulos</h2>
+        <h3>Módulo Administrativo Web</h3>
+        <p>Es un módulo web que está en la nube, esto quiere decir que no requiere instalación y 
+          al cual se ingresa mediante un enlace        o URL desde cualquier dispositivo con conexión 
+          a internet (compuradot, tablet o celular). <br>
+          <strong>Este módulo te va a permitir recepcionar todos los pedidos que toman los vendedores 
+            en ruta y administrar toda la operación de tu fuerza de ventas.
+          </strong>
+        </p>
+      </div>
+    </div>
+    <div class="web-module-parte-1 row">
+      <h3>
+        Características Principales:
+      </h3>
+      <div class="web-module-colum-1 col-md-3">
+          <div class="row">
+              <div class="web-module-icon-part-1">
+                  <div class="d-flex flex-column align-items-center text-start">
+                    <img class="web-module-icon" src="media/icons/web-module-users.svg" height="72" alt="Icono Usuarios"/>
+                    <p class="web-module-text-icon align-self-start"><br>Crear y administrar otros usuarios administrativos</p>
+                  </div>
+              </div>      
+          </div>
+      </div>
+      <div class="web-module-colum-2 col-md-6">
+          <div class="row">
+              <div class="web-module-icon-part-1">
+                  <div class="d-flex flex-column align-items-center text-center">
+                    <img class="web-module-icon" src="media/icons/web-module-inventory.svg" height="72" alt="Icono Usuarios"/>
+                    <p class="web-module-text-icon"><br>Administrar y controlar el inventario de tu empresa</p>
+                  </div>
+              </div>      
+          </div>
+      </div>
+      <div class="web-module-colum-3 col-md-3">
+          <div class="row">
+              <div class="web-module-icon-part-1">
+                  <div class="d-flex flex-column align-items-center text-end">
+                    <img class="web-module-icon" src="media/icons/web-module-manage-products.svg" height="72" alt="Icono Usuarios"/>
+                    <p class="web-module-text-icon"><br>Cargar y administrar productos, listas de precios y promociones</p>
+                  </div>
+              </div>      
+          </div>
+      </div>           
+    </div>
+    <div class="web-module-parte-2 row">
+      <div class="web-module-colum-4 col-lg-3">
+          <div class="row">
+              <div class="web-module-icon-part-2">
+                  <div class="d-flex flex-column align-items-center">
+                    <img class="web-module-icon" src="media/icons/web-module-manage-clients.svg" height="72" alt="Icono Usuarios"/>
+                    <p class="web-module-text-icon"><br>Cargar y administrar todos tus clientes</p>
+                  </div>
+              </div>
+              <div class="web-module-icon-part-2">
+                  <div class="d-flex flex-column align-items-center text-start">
+                    <img class="web-module-icon" src="media/icons/web-module-receive-orders.svg" height="72" alt="Icono Usuarios"/>
+                    <p class="web-module-text-icon"><br>Recepcionar los pedidos tomados por tus vendedores en ruta</p>
+                  </div>
+              </div>
+              <div class="web-module-icon-part-2">
+                  <div class="d-flex flex-column align-items-center text-start">
+                    <img class="web-module-icon" src="media/icons/web-module-delivery.svg" height="72" alt="Icono Usuarios"/>
+                    <p class="web-module-text-icon"><br>Hacer seguimiento GPS a tus vendedores para validar si están cumpliendo con la ruta programada</p>
+                  </div>
+              </div>           
+          </div>
+      </div>
+      <div class="web-module-colum-5 col-lg-6 d-flex align-items-center justify-content-center">
+      <img class="web-module-escenario-2" src="media/images/home-web-module-escenario-2.svg" height="455" alt="Ilustración 2" />
+      </div>
+      <div class="web-module-colum-6 col-lg-3">
+          <div class="row">
+              <div class="web-module-icon-part-2">
+                  <div class="d-flex flex-column align-items-center text-end"">
+                    <img class="web-module-icon" src="media/icons/web-module-program-routes.svg" height="72" alt="Icono Usuarios"/>
+                    <p class="web-module-text-icon align-self-end"><br>Programar rutas de vendedores</p>
+                  </div>
+              </div>
+              <div class="web-module-icon-part-2">
+                  <div class="d-flex flex-column align-items-center text-end"">
+                    <img class="web-module-icon" src="media/icons/web-module-manage-sales.svg" height="72" alt="Icono Usuarios"/>
+                    <p class="web-module-text-icon"><br>Administrar y gestionar las ventas de crédito y recaudo a clientes</p>
+                  </div>
+              </div>
+              <div class="web-module-icon-part-2">
+                  <div class="d-flex flex-column align-items-center text-end"">
+                    <img class="web-module-icon" src="media/icons/web-module-reports.svg" height="72" alt="Icono Usuarios"/>
+                    <p class="web-module-text-icon"><br>Descargar reportes de gestión como:
+                      Consolidación de ventas, cargue - picking, remisiones o reportes de utilidades, productos, clientes y vendedores</p>
+                  </div>
+              </div>           
+          </div>
+      </div>
+    </div>        
+  </section>
+
+<!-- Section Mobile Module -->
+  <section class="mobile-module container container-sm">
+    <div class="row">
+      <div class="mobile-module-principal-text col">
+        <h3>
+          Módulo Aplicación Móvil para Vendedores (desde donde se toman los pedidos)
+        </h3>
+        <p>Es una aplicación que el vendedor descarga desde Google Play Store en su celular o dispositivo 
+          móvil e ingresa a su cuenta con un usuario y contraseña previamente creada desde el administrador.
+          <strong>¡Y listo, ya puede empezar a tomar pedidos!</strong>
+        </p>        
+      </div>
+    </div>
+    <div class="row">
+      <h3>
+        Características Principales:
+      </h3>
+      <div class="mobile-module-text col-lg-5">
+        <div class="row mobile-module-part-1">
+          <div class="mobile-module-icon col-1 me-sm-4">
+            <img class="mobile-module-icon" src="media/icons/mobile-module-icon-number-1.svg" height="33">
+          </div>
+          <div class="mobile-module-text col-10">
+            <p>
+              La aplicación es muy amigable e intuitiva en su uso, lo que permite que la pueda usar fácilmente 
+              cualquier persona.
+            </p>
+          </div>
+        </div>
+        <div class="row mobile-module-part-2">
+          <div class="mobile-module-icon col-1 me-sm-4">
+            <img class="mobile-module-icon" src="media/icons/mobile-module-icon-number-2.svg" height="33">
+          </div>
+          <div class="mobile-module-text col-10">
+            <p>
+              Los pedidos que tomen los vendedores son enviados en tiempo real.
+            </p>
+          </div>
+        </div>
+        <div class="row mobile-module-part-3">
+          <div class="mobile-module-icon col-1 me-sm-4">
+            <img class="mobile-module-icon" src="media/icons/mobile-module-icon-number-3.svg" height="33">
+          </div>
+          <div class="mobile-module-text col-10">
+            <p>
+              <strong>Rutas programadas: </strong>El vendedor podrá seleccionar una ruta previamente configurada 
+              por el usuario “administrador”, en la cual encontrará el listado de clientes a visitar. Generalemente 
+              una ruta se asigna a un determinado día de la semana o zona.
+            </p>
+          </div>
+        </div>
+        <div class="row mobile-module-part-4">
+          <div class="mobile-module-icon col-1 me-sm-4">
+            <img class="mobile-module-icon" src="media/icons/mobile-module-icon-number-4.svg" height="33">
+          </div>
+          <div class="mobile-module-text col-10">
+            <p>
+              <strong>Toma de pedidos sin conexión a internet:</strong> El vendedor podrá tomar pedidos sin conexión 
+              a internet y estos no se perderán ya que quedan almacenados localmente en el celular y se envían de 
+              manera automatica en cuanto la conexión se restablezca
+            </p>
+            </p>
+          </div>
+        </div>
+        <div class="row mobile-module-part-5">
+          <div class="mobile-module-icon col-1 me-sm-4">
+            <img class="mobile-module-icon" src="media/icons/mobile-module-icon-number-5.svg" height="33">
+          </div>
+          <div class="mobile-module-text col-10">
+            <p>
+              <strong>Impresión Tickets de venta, pedidos en impresoras térmicas o de bolsillo: </strong> El vendedor 
+              podrá imprimir el pedido a través de una impresora térmica o de bolsillo para entregarle el ticket al 
+              cliente directamente en el punto.
+            </p>
+          </div>
+        </div>
+        <div class="row mobile-module-part-6">
+          <div class="mobile-module-icon col-1 me-sm-4">
+            <img class="mobile-module-icon" src="media/icons/mobile-module-icon-number-6.svg" height="33">
+          </div>
+          <div class="mobile-module-text col-10">
+            <p>
+              <strong>Validación del inventario: </strong>La aplicación muestra a cada vendedor las cantidades disponibles
+               en inventario. Además, valida si las cantidades seleccionadas por el vendedor justo antes de enviar el 
+               pedido aún están disponibles. Esto se hace para evitar que el pedido se realice si las cantidades solicitadas
+                ya no están disponibles, evitando así tener valores negativos en el inventario.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="about-us-scenario-1 col-lg-6 offset-lg-1">
+          <img src="media/images/home-mobile-module-escenario-3.svg" alt="ilustracion 3"/>
+      </div>
+    </div>
+    <div class="other col-lg-3">
+        
+    </div>
+  </section>
+
+<!-- Section other feature -->
+  <section class="other-features container container-sm ">
+    <h3 class="text-center">
+      Otras Características
+    </h3>  
+    <div class="other-features-part-1 row justify-content-center ">      
+      <div class="other-features-card-1 col-lg-3 d-flex flex-column text-white justify-content-center">
+        <img class="other-features-icon" src="media/icons/home-gps-sellers.svg" height="72" alt="Icono Usuarios"/>
+        <div class="other-features-text-card-1">
+          <h4 class="text-center">
+            Georeferenciación de los clientes:
+          </h4>
+          <h5 class="text-center">
+            <br>El vendedor podrá georeferenciar a los diferentes clientes, para tener una ubicación más exacta de 
+            los mismo
+          </h5>
+        </div>
+      </div>
+      <div class="other-features-card-2 col-lg-3 d-flex flex-column text-white justify-content-center">
+        <img class="other-features-icon" src="media/icons/home-users.svg" height="72" alt="Icono Usuarios"/>
+        <div class="other-features-text-card-2">
+          <h4 class="text-center">
+            Creación de clientes:
+          </h4>
+          <h5 class="text-center">
+            <br>El vendedor podrá crear clientes nuevos desde la aplicación móvil siempre y cuando el administrador 
+            lo haya autorizado previamente
+          </h5>
+        </div>
+      </div>
+      <div class="other-features-card-3 col-lg-3 d-flex flex-column text-white justify-content-center">
+        <img class="other-features-icon" src="media/icons/home-discounts.svg" height="72" alt="Icono Usuarios"/>
+        <div class="other-features-text-card-3">
+          <h4 class="text-center">
+            Descuentos y Listas de Precios:
+          </h4>
+          <h5 class="text-center">
+            <br>Se implementa la opción de aplicar descuentos a determinados productos
+          </h5>
+        </div>
+      </div>
+      <div class="other-features-card-4 col-lg-3 d-flex flex-column text-white justify-content-center">
+        <img class="other-features-icon" src="media/icons/home-budget.svg" height="72" alt="Icono Usuarios"/>
+        <div class="other-features-text-card-4">
+          <h4 class="text-center">
+            Presupuesto de ventas:
+          </h4>
+          <h5 class="text-center">
+            <br>El administrador podrá asignarle un presupuesto de ventas diario a cada vendedor
+          </h5>
+        </div>
+      </div>
+      <div class="other-features-card-5 col-lg-3 d-flex flex-column text-white justify-content-center">
+        <img class="other-features-icon" src="media/icons/home-client-assignment.svg" height="72" alt="Icono Usuarios"/>
+        <div class="other-features-text-card-5">
+          <h4 class="text-center">
+            "Robo" de Clientes entre vendedores:
+          </h4>
+          <h5 class="text-center">
+            <br>Cada vendedor tiene sus clientes asignados previamente definidos por el administrador. Solo el 
+            supervisor o vendedores que cuentes con el permiso podrán visualizar todos los clientes
+          </h5>
+        </div>
+      </div>
+      <div class="other-features-card-6 col-lg-3 d-flex flex-column text-white justify-content-center">
+        <img class="other-features-icon" src="media/icons/home-historical-orders.svg" height="72" alt="Icono Usuarios"/>
+        <div class="other-features-text-card-6">
+          <h4 class="text-center">
+            Pedidos históricos:
+          </h4>
+          <h5 class="text-center">
+            <br>Se puede observar el historial de pedidos de un determinado cliente.
+          </h5>
+        </div>
+      </div>
+      <div class="other-features-card-7 col-lg-3 d-flex flex-column text-white justify-content-center">
+        <img class="other-features-icon" src="media/icons/home-credit-limit.svg" height="72" alt="Icono Usuarios"/>
+        <div class="other-features-text-card-7">
+          <h4 class="text-center">
+            Límite de crédito:
+          </h4>
+          <h5 class="text-center">
+            <br>Cada cliente tiene un cupo de crédito previamente establecido por el administrador por lo cual 
+            el vendendor no podrá realizar pedidos a crédito por encima de este
+          </h5>
+        </div>
+      </div>
+      <div class="other-features-card-8 col-lg-3 d-flex flex-column text-white justify-content-center">
+        <img class="other-features-icon" src="media/icons/home-payment.svg" height="72" alt="Icono Usuarios"/>
+        <div class="other-features-text-card-8">
+          <h4 class="text-center">
+            Cobro de cartera:
+          </h4>
+          <h5 class="text-center">
+            <br>El vendedor podrá hacer recaudos de cartera asociados a pedidos anteriores. El recaudo se notifica 
+            tanto al cliente como al administrador para evitar posibles fraudes
+          </h5>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- Section Software -->
+  <section class="software-brands container container-sm">
+    <div class="software-information-text row">
+      <h2 class="text-center">
+        Integración con diferentes Software Contables <br>o de facturación electrónica
+      </h2>
+      <p>
+        TOMA PEDIDOS se puede integrar o conectar con cualquier ERP, software contable o de facturación electrónica. Esto se hace mediante 
+        un desarrollo a la medida, permitiendo que la información: <strong>Clientes, productos inventario, cuentas por cobrar, recaudos y pedidos 
+        quede enlazado entre ambos sistemas.<br><br>Los costos de desarrollo e integración varian dependiendo del sistema y tipo de desarrollo que se requiera.</strong>
+      </p>
+    </div>
+    <div class="row ">
+      <h3 class="text-center mb-3">
+        Software que podemos integrar con Toma Pedidos
+      </h3>
+      <div class="software-brand-item col-lg col-md-6  mb-md-4">
+        <img class="software-image" src="media/images/home-world-office.png" alt="Marca 1" />
+      </div>
+      <div class="software-brand-item col-lg col-md-6 d-flex justify-content-center">
+        <img class="software-image" src="media/images/home-sap.png"  alt="Marca 2" /> 
+      </div>
+      <div class="software-brand-item col-lg col-md-6 mb-md-4 d-flex justify-content-center">
+        <img class="software-image" src="media/images/home-siigo.png"  alt="Marca 3" />
+      </div>
+      <div class="software-brand-item col-lg col-md-6 d-flex justify-content-center">
+        <img class="software-image" src="media/images/home-sistema-uno.png"  alt="Marca 4" />
+      </div>
+      <div class="software-brand-item col-lg col-md-6 d-flex justify-content-center">
+        <img class="software-image" src="media/images/home-dms-software.png"  alt="Marca 5" />
+      </div>
+      <div class="software-brand-item col-lg col-md-6">
+        <img class="software-image" src="media/images/home-logotipo-alegra.png"  alt="Marca 6" />
+      </div>
+    </div>
+  </section>
+
+<!-- Section Call To Action -->
+  <section class="call-to-action container container-sm d-flex justify-content-center">
+    <div class="row">
+        <div class="col text-center">
+            <a class="call-to-action-url" href="#">              
+              <img class="call-to-action-illustration" src="media/images/home-call-to-action-scenario-4.svg" height="310" alt="Boton-escenario-4">
+              <img class="call-to-action-illustration-hover" src="media/images/home-call-to-action-hover-scenario-4.svg" height="310" alt="Boton-escenario-4">
+            </a>
+        </div>
+    </div>
+  </section>
+
+
+<!-- ======= Footer ======= -->
+  <footer class="site-footer">
+
+    <div class="container">
+        <div class="footer-logo text-center">
+            <img class="logo" src="media/images/footer-logo.svg" width="136" alt="Logo footer">
+        </div>
+        <div class="contact row">
+            <div class="information-footer col-md-4 text-center">
+                <div class="contact-info text-light">
+                    <div class="footer-icon">
+                      <img class="size-icon" src="media/icons/address.svg" height="89" alt="Address Icon">
+                    </div>
+                    <p>Bogotá, Cundinamarca, Colombia</p>
+                    <h6>Cll. 151 No. 18A-34 Ofc. 301</h6>                                            
+                </div>
+            </div>
+            <div class="information-footer principal-text col-md-4 text-center border-left border-right">
+                <div class="contact-info text-light">
+                    <div class="footer-icon">
+                      <img class="size-icon" src="media/icons/email.svg" height="89" alt="Address Icon">
+                    </div>
+                    <p>Contáctanos a nuestro Email</p>
+                    <h6>tomapedidos@comtor.com</h6>                                            
+                </div>
+            </div>
+            <div class="col-md-4 text-center">
+                <div class="contact-info text-light">
+                    <div class="footer-icon">
+                      <img class="size-icon" src="media/icons/whatsapp.svg" height="89" alt="Address Icon">
+                    </div>
+                    <p>Contáctanos a nuestro whatsapp</p>
+                    <h6><a class="link-footer-information" href="https://api.whatsapp.com/send/?phone=573103258432&text=Hola+.Estoy+interesado+en+la+aplicacion&type=phone_number&app_absent=0" target="_blank">+57 3103258432</a></h6>                                          
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-menu">
+          <ul class="menu justify-content-between text-light">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about-us.html">Cómo Funciona</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="portfolio-grid.html">Beneficios</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="faqs.html">Tarifas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contacts.html">Preguntas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contacts.html">Contactos</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-social d-flex justify-content-center">
+          <a class="footer-social-icon" href="#" target="_blank">
+            <img class="size-icon" src="media/icons/facebook.svg" height="40" alt="Address Icon">
+          </a>
+          <a class="footer-social-icon" href="#" target="_blank">
+            <img class="size-icon" src="media/icons/instagram.svg" height="40" alt="Address Icon">
+          </a>
+          <a class="footer-social-icon" href="#" target="_blank">
+            <img class="size-icon" src="media/icons/linkedin.svg" height="40" alt="Address Icon">
+          </a>
+        </div>
+
+        <p class="copyright text-light text-center">Copyright © 2023 Comtor - Toma Pedidos.</p>
+    </div>
+    <div class="youtube-channel-web">
+      <a href="https://www.youtube.com/channel/UCmWC3VomOBwNen0Bb7n7GjA" target="_blank">
+        <img height="300" src="https://tomapedidos.app/tomapedidos/media/images/youtube-channel-web.svg" alt="Ilustración para el canal de youtube">
+      </a>
+    </div>
+  </footer>
+<!-- End Footer -->
+
+  <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous">
+  </script>
+   <script src="js/main.js"></script>
+  <script>
+    const navEL = document.querySelector('.navbar');
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY >= 56) {
+        navEL.classList.add('navbar-scrolled');
+      } else if (window.scrollY < 56) {
+        navEL.classList.remove('navbar-scrolled');
+      }
+    });
+  </script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+  const youtubeChannelEL = document.querySelector('.youtube-channel-web');
+  const remInPixels = parseFloat(getComputedStyle(document.documentElement).fontSize);
+  const scrollThreshold = 10.3 * remInPixels;
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY >= scrollThreshold) {
+      youtubeChannelEL.classList.add('youtube-visible');
+    } else {
+      youtubeChannelEL.classList.remove('youtube-visible');
+    }
+    });
+  });
+</script>
+
+</body>
+</html>

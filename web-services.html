@@ -1,0 +1,1569 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Toma Pedidos</title>
+   <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" />
+  <!-- Css -->
+  <link href="css/toma-pedidos-bootstrap.css" rel="stylesheet" />
+  <!-- Title -->
+  <title>Toma Pedidos</title>
+  <!-- Icon -->
+  <link rel="icon" type="image/x-icon" href="media/icons/logo_basket48x48.png" />
+</head>
+
+<body>
+<!-- Navbar -->
+  <nav class="navbar nav-bar-other-page navbar-expand-lg navbar-dark fixed-top">
+    <div class="container-fluid">
+      <!-- Logo -->
+      <a class="navbar-brand" href="index.html">
+        <img src="media/icons/logo_horizontal296x93.svg" width="146" alt="Logo Toma Pedidos" />
+      </a>
+      <!-- Hamburger Menu -->
+      <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="offcanvas"
+        data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- SideBar -->
+      <div class="sidebar offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
+        aria-labelledby="title-navbar">
+        <!-- SideBar -->
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="title-navbar">  
+            <a class="navbar-brand" href="index.html">
+              <img class="logo-2" src="media/icons/logo_horizontal296x93.svg" alt="Logo Toma Pedidos" />
+            </a>  
+          </h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <!-- SideBar Body -->
+        <div class="offcanvas-body d-flex flex-column flex-lg-row p-4 p-lg-0">
+          <ul class="navbar-nav justify-content-center align-items-center  flex-grow-1 ">
+            <li class="nav-item mx-3">
+              <a class="nav-link" aria-current="page" href="index.html">Inicio</a>
+            </li>
+            <li class="nav-item mx-2">
+              <a class="nav-link" href="como-funciona.html">Cómo Funciona</a>
+            </li>
+            <li class="nav-item mx-2">
+              <a class="nav-link" href="beneficios.html">Beneficios</a>
+            </li>
+            <li class="nav-item mx-2">
+              <a class="nav-link" href="tarifas.html">Tarifas</a>
+            </li>
+            <li class="nav-item mx-2">
+              <a class="nav-link" href="preguntas.html">Preguntas</a>
+            </li>
+            <li class="nav-item mx-2">
+              <a class="nav-link" href="contacto.html">Contactos</a>
+            </li>
+          </ul>
+          <!-- Login / Create Account -->
+          <div class="d-flex flex-lg-row justify-content-center align-items-center ">
+            <a href="#" class="btn btn-first me-4">Iniciar Sesión</a>
+            <a href="#" class="btn btn-second">Crear Cuenta</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="webservices container container-sm">
+    <div>
+      <h2 class="text-star">
+        Introducción
+      </h2>
+      <pre>
+        La plataforma Toma Pedidos permite la integración con software de terceros a través de Webservices REST 
+
+        Para usar la plataforma cada cliente recibe:
+        <strong>URL BASE:</strong> Coresponde a la url de acceso al sistema. Ejemplo: https://tp4.comtor.net/miempresa/
+        usuario:  Creado desde el modulo de usuarios.
+        contraseña: Creado desde el modulo de usuarios.
+
+        Las transacciones necesitan un token de autenticación que debe enviarse como encabezado en la transacción. La llave del encabezado es Auth-Token
+        El token se obtiene llamando el Webservice de login. 
+      </pre>
+      <h2>
+        webservices:   
+      </h2>
+      <div>
+          <h3 class="werbservice-title">
+            Login POST: /webservices/io/login
+          </h3>
+          <h4>
+            Descripción
+          </h4>
+          <pre>
+            Se envía en JSON el usuario y la contraseña así:
+          </pre>
+          <h4>
+            Request
+          </h4>
+          <pre>
+            {
+              "username"  : "pepe",
+              "password" : "ConTr4seNa"
+            }          
+          </pre>
+          <h4>
+            Response 
+          </h4>
+          <pre>
+            {"result":"ok","token":"0AF769B3BBE6257FC87603219330813C85B5CAF5D3B999AB13E2852F95ED6188C0173B2355FF77893A0CBE1305FAC5B5D26F61E11A175DAF
+            5C385822ACD1261FDB53EED9B5169DFEC6B1C8E6ACA88558AFFDE73AA839A6BFBAA0F5C5868ACBBFB682B0B60CEB6ED5DF2B53881778F38AABC6078E5F0
+            6099022571CA09DA360BE"}r
+          </pre>
+          <h4>
+            Ejemplo
+          </h4>
+          <pre>
+            POST /miempresa/webservices/io/login HTTP/1.1
+            Host: tp4.comtor.net/miempresa/
+            Content-Type: application/json
+            Accept: */*
+            {
+              "username"  : "pepe",
+              "password" : "ConTr4seNa"
+            }            
+          </pre>
+      </div>
+      <div>
+        <h3 class="werbservice-title">
+          Consulta GET: /webservices/io/listProducts
+        </h3>
+        <h4>
+          Descripción
+        </h4>
+        <pre>
+          Retorna el listado de Productos.
+
+          Se debe enviar el token de autenticación en el encabezado Auth-Token 
+
+          Request
+
+          GET /miempresa/webservices/io/listProducts HTTP/1.1 
+          Host: tp4.comtor.net/miempresa/
+          Auth-Token: D896915F9E696E67AD768B55EC8F089197A51
+          Accept: */*
+
+        </pre>
+        <h4>
+          Request
+        </h4>
+        <p>
+          {
+            "username"  : "pepe",
+            "password" : "ConTr4seNa"
+          }          
+        </p>
+        <h4>
+          Response 
+        </h4>
+        <pre>
+          [
+            {
+              "accounting_code": "",
+              "active": 0,
+              "allow_change_base_price": 0,
+              "allow_decimal": 0,
+              "amount_per_unit": 0,
+              "base_price": 11345,
+              "code": "01047",
+              "factory_reference": "",
+              "last_update": 1625580325091,
+              "manufacturer": "distrimarkas",
+              "max_discount_percentage": 0,
+              "max_qty": 0,
+              "min_qty": 0,
+              "name": "PH Señorial x12un S.E",
+              "presentations": "",
+              "presentationsArray": [
+                ""
+              ],
+              "productCategoryInfo": "",
+              "product_category": "",
+              "product_category_name": "",
+              "purchase_cost": 2426,
+              "reorder_point": 0,
+              "stock_qty": 0,
+              "tax1Value": 0,
+              "tax1_percentage": 0,
+              "tax2Value": 0,
+              "tax2_percentage": 0,
+              "total": 13500.55,
+              "um": "",
+              "use_price_list": 0,
+              "validate_stock": 1,
+              "vatValue": 2155.55,
+              "vat_percentage": 19,
+              "weight_per_unit": 0
+            },
+            {
+              "accounting_code": "",
+              "active": 1,
+              "allow_change_base_price": 0,
+              "allow_decimal": 0,
+              "amount_per_unit": 0,
+              "base_price": 10200,
+              "code": "0526",
+              "factory_reference": "",
+              "last_update": 1625580325094,
+              "manufacturer": "FAMILIA",
+              "max_discount_percentage": 0,
+              "max_qty": 0,
+              "min_qty": 0,
+              "name": "Nosotras Canagel x30un",
+              "presentations": "",
+              "presentationsArray": [
+                ""
+              ],
+              "productCategoryInfo": "",
+              "product_category": "",
+              "product_category_name": "",
+              "purchase_cost": 7221,
+              "reorder_point": 0,
+              "stock_qty": 12,
+              "tax1Value": 0,
+              "tax1_percentage": 0,
+              "tax2Value": 0,
+              "tax2_percentage": 0,
+              "total": 10200,
+              "um": "",
+              "use_price_list": 0,
+              "validate_stock": 1,
+              "vatValue": 0,
+              "vat_percentage": 0,
+              "weight_per_unit": 0
+            }
+          ]                 
+        </pre>
+      </div>
+      <div>
+        <h3 class="werbservice-title">
+          Consulta GET: /webservices/io/listProductCategories
+        </h3>
+        <h4>
+          Descripción
+        </h4>
+        <pre>
+          Retorna el listado de categorias de productos. 
+
+          Se debe enviar el token de autenticación en el encabezado Auth-Token
+        </pre>
+        <h4>
+          Request
+        </h4>
+        <pre>          
+          GET /miempresa/webservices/io/listProductCategories HTTP/1.1
+          Host: tp4.comtor.net/miempresa/
+          Auth-Token: D896915F9E696E67AD768B55EC8F089197A51
+          Accept: */*         
+        </pre>
+        <h4>
+          Response 
+        </h4>
+        <pre>
+          [
+            {
+            "code": "COM",
+            "name": "COMESTIBLE"
+
+            },
+            {
+            "code": "DES",
+            "name": "DESECHABLE"
+            },
+            {
+            "code": "BEB",
+            "name": "BEBIDAS"
+            },
+          ]              
+        </pre>
+      </div>
+      <div>
+        <h3 class="werbservice-title">
+          Consulta GET: /webservices/io/listPriceListDetails
+        </h3>
+        <h4>
+          Descripción
+        </h4>
+        <pre>
+          Retorna el listado de listas de precios
+
+          Se debe enviar el token de autenticación en el encabezado Auth-Token
+        </pre>
+        <h4>
+          Request
+        </h4>
+        <pre>          
+          GET /miempresa/webservices/io/listPriceListDetails HTTP/1.1
+          Host: tp4.comtor.net/miempresa/
+          Auth-Token: D896915F9E696E67AD768B55EC8F089197A51
+          Accept: */*                  
+        </pre>
+        <h4>
+          Response 
+        </h4>
+        <pre>
+          [
+            {
+                "base_price": 10000.0,
+                "id": 1,
+                "last_update": 1565140850082,
+                "max_qty": 100.0,
+                "min_qty": 34.0,
+                "price_list": "DET",
+                
+                "product": "1003",
+                "product_base_price": 160.0,
+                
+                "product_tax1_percentage": 0.0,
+                "product_tax2_percentage": 0.0,
+                "product_vat_percentage": 0.0
+            },
+            {
+                "base_price": 400.0,
+                "id": 2,
+                "last_update": 1565140874809,
+                "max_qty": 30.0,
+                "min_qty": 3.0,
+                "price_list": "MAY",
+              
+                "product": "1003",
+                "product_base_price": 160.0,
+                
+                "product_tax1_percentage": 0.0,
+                "product_tax2_percentage": 0.0,
+                "product_vat_percentage": 0.0
+            }
+          ]      
+        </pre>
+      </div>
+      <div>
+        <h3 class="werbservice-title">
+          Consulta POST: /webservices/io/updatePriceListDetails
+        </h3>
+        <h4>
+          Descripción
+        </h4>
+        <pre>
+          Actualiza(crea o modifica) los detalles de las listas de precios de los productos
+
+          Se debe enviar el token de autenticación en el encabezado Auth-Token          
+        </pre>
+        <h4>
+          Request
+        </h4>
+        <pre>          
+          POST /webservices/io/updatePriceListDetails HTTP/1.1
+          Host: tp4.comtor.net/miempresa/
+          Auth-Token: D896915F9E696E67AD768B55EC8F089197A51
+          tp_code: miempresa
+          Accept: */*
+          
+          [
+            {
+                "base_price": 10000.0,
+                "id": 1,
+                "last_update": 1565140850082,
+                "max_qty": 100.0,
+                "min_qty": 34.0,
+                "price_list": "DET",
+                
+                "product": "1003",
+                "product_base_price": 160.0,
+                
+                "product_tax1_percentage": 0.0,
+                "product_tax2_percentage": 0.0,
+                "product_vat_percentage": 0.0
+            },
+            {
+                "base_price": 400.0,
+                "id": 2,
+                "last_update": 1565140874809,
+                "max_qty": 30.0,
+                "min_qty": 3.0,
+                "price_list": "MAY",
+              
+                "product": "1003",
+                "product_base_price": 160.0,
+                
+                "product_tax1_percentage": 0.0,
+                "product_tax2_percentage": 0.0,
+                "product_vat_percentage": 0.0
+            }
+          ]
+        </pre>
+        <h4>
+          Response 
+        </h4>
+        <pre>
+          {
+            "detail": "SAVED",
+            "message": "2 SAVED PRICE LIST DETAILS",
+            "result": "ok"
+          }          
+        </pre>
+      </div>
+      <div>
+        <h3 class="werbservice-title">
+          Consulta GET: /webservices/io/listPurchaseOrders
+        </h3>
+        <h4>
+          Descripción
+        </h4>
+        <pre>
+          Retorna el listado de las ordenes de compra capturadas por los vendedores sin incluir los productos.
+
+          Se debe enviar el token de autenticación en el encabezado Auth-Token.         
+        </pre>
+        <h4>
+          Request
+        </h4>
+        <pre>          
+          GET /webservices/io/listPurchaseOrders?creation_date=2022-02-22 HTTP/1.1
+          Host: tp4.comtor.net/miempresa/
+          Auth-Token: D896915F9E696E67AD768B55EC8F089197A51
+        </pre>
+        <h4>
+          Response 
+        </h4>
+        <pre>
+          [
+            {
+              "all_taxes": 0,
+              "comments": "",
+              "creation_date": "2022-02-22",
+              "creation_time": "08:17:42",
+              "customer": "24167379",
+              "customer_doc_num": "24167379",
+              "customer_doc_type": "CC",
+              "customer_owner_name": "Sandra",
+              "customer_owner_surname": "Milena",
+              "customer_owner_surname2": "Perez",
+              "customer_person_in_charge": "",
+              "customer_trade_name": "Drogueria koldescuentos",
+              "details": [],
+              "end_time": "08:17:42",
+              "id": 36833,
+              "init_time": "08:16:52",
+              "milliseconds": 1645535861562,
+              "no_sale_type": 0,
+              "no_sale_type_description": "",
+              "payment_method": "CONTADO",
+              "payment_method_days": 7,
+              "payment_method_name": "Pago a contado",
+              "seller": "1003",
+              "seller_name": "WALTER COLMENARES 3186056072",
+              "status": "Creado",
+              "subtotal": 0,
+              "synced": false,
+              "tax": 0,
+              "total": 0,
+              "vat": 0
+            },
+            {
+              "all_taxes": 0,
+              "comments": "",
+              "creation_date": "2022-02-22",
+              "creation_time": "08:20:25",
+              "customer": "926",
+              "customer_doc_num": "139",
+              "customer_doc_type": "NIT",
+              "customer_owner_name": "YAMILE CRISTANCHO",
+              "customer_owner_name2": "",
+              "customer_owner_surname": "",
+              "customer_owner_surname2": "",
+              "customer_person_in_charge": "",
+              "customer_trade_name": "YAMILE CRISTANCHO",
+              "details": [],
+              "end_time": "08:20:25",
+              "id": 36834,
+              "init_time": "08:20:16",
+              "milliseconds": 1645536025985,
+              "no_sale_type": 0,
+              "no_sale_type_description": "",
+              "payment_method": "CONTADO",
+              "payment_method_days": 7,
+              "payment_method_name": "Pago a contado",
+              "seller": "1005",
+              "seller_name": "LUZ MIRYAM SAENZ 3212908148",
+              "status": "Creado",
+              "subtotal": 0,
+              "synced": false,
+              "tax": 0,
+              "total": 0,
+              "vat": 0
+            }
+          ]                
+        </pre>
+      </div>
+      <div>
+        <h3 class="werbservice-title">
+          Consulta GET: /webservices/io/listPurchaseOrdersFull
+        </h3>
+        <h4>
+          Descripción
+        </h4>
+        <pre>
+          Retorna el listado de las ordenes de compra capturadas por los vendedores incluido los detalles (items).
+
+          Se debe enviar el token de autenticación en el encabezado Auth-Token.
+        </pre>
+        <h4>
+          Request
+        </h4>
+        <pre>          
+          GET /miempresa/webservices/io/listPurchaseOrdersFull?creation_date=2022-02-22 HTTP/1.1
+          Host: tp4.comtor.net
+          Auth-Token: D896915F9E696E67AD768B55EC8F089197A51          
+        </pre>
+        <h4>
+          Response 
+        </h4>
+        <pre>
+          [
+            {
+              "all_taxes": 6840.759914159775,
+              "comments": "",
+              "creation_date": "2022-02-22",
+              "creation_time": "08:17:42",
+              "customer": "24167379",
+              "customer_doc_num": "24167379",
+              "customer_doc_type": "CC",
+              "customer_owner_name": "Sandra",
+              "customer_owner_surname": "Milena",
+              "customer_owner_surname2": "Perez",
+              "customer_person_in_charge": "",
+              "customer_trade_name": "Drogueria koldescuentos",
+              "details": [
+                {
+                  "base_price": 2195,
+                  "id": 171001,
+                  "original_price": 2195,
+                  "presentation": "",
+                  "price_list": "",
+                  "product": "139",
+                  "product_category": "",
+                  "product_name": "",
+                  "purchase_cost": 2017,
+                  "purchase_order": 36833,
+                  "quantity": 6,
+                  "subtotal": 13170,
+                  "tax1_percentage": 0,
+                  "tax2_percentage": 0,
+                  "total": 15672.3,
+                  "unitVatValue": 417.05,
+                  "vatValue": 2502.3,
+                  "vat_percentage": 19
+                },
+                {
+                  "base_price": 2195,
+                  "id": 171002,
+                  "original_price": 2195,
+                  "presentation": "",
+                  "price_list": "",
+                  "product": "140",
+                  "product_category": "",
+                  "product_name": "",
+                  "purchase_cost": 1946.41,
+                  "purchase_order": 36833,
+                  "quantity": 6,
+                  "subtotal": 13170,
+                  "tax1_percentage": 0,
+                  "tax2_percentage": 0,
+                  "total": 15672.3,
+                  "unitVatValue": 417.05,
+                  "vatValue": 2502.3,
+                  "vat_percentage": 19
+                }
+              ],
+              "end_time": "08:17:42",
+              "id": 36833,
+              "init_time": "08:16:52",
+              "milliseconds": 1645535861562,
+              "no_sale_type": 0,
+              "no_sale_type_description": "",
+              "payment_method": "CONTADO",
+              "payment_method_days": 7,
+              "payment_method_name": "Pago a contado",
+              "seller": "1003",
+              "seller_name": "WALTER COLMENARES 3186056072",
+              "status": "Creado",
+              "subtotal": 36004,
+              "synced": false,
+              "tax": 6840.759914159775,
+              "total": 42844.759914159775,
+              "vat": 6840.759914159775
+              },
+              {
+              "all_taxes": 0,
+              "comments": "",
+              "creation_date": "2022-02-22",
+              "creation_time": "08:20:25",
+              "customer": "926",
+              "customer_doc_num": "139",
+              "customer_doc_type": "NIT",
+              "customer_owner_name": "YAMILE CRISTANCHO",
+              "customer_owner_name2": "",
+              "customer_owner_surname": "",
+              "customer_owner_surname2": "",
+              "customer_person_in_charge": "",
+              "customer_trade_name": "YAMILE CRISTANCHO",
+              "details":[
+                {
+                  "base_price": 19827,
+                  "id": 170997,
+                  "original_price": 19827,
+                  "presentation": "",
+                  "price_list": "",
+                  "product": "4027",
+                  "product_category": "",
+                  "product_name": "",
+                  "purchase_cost": 13000,
+                  "purchase_order": 36831,
+                  "quantity": 1,
+                  "subtotal": 19827,
+                  "tax1_percentage": 0,
+                  "tax2_percentage": 0,
+                  "total": 19827,
+                  "unitVatValue": 0,
+                  "vatValue": 0,
+                  "vat_percentage": 0
+                }
+              ],
+              "end_time": "08:20:25",
+              "id": 36834,
+              "init_time": "08:20:16",
+              "milliseconds": 1645536025985,
+              "no_sale_type": 0,
+              "no_sale_type_description": "",
+              "payment_method": "CONTADO",
+              "payment_method_days": 7,
+              "payment_method_name": "Pago a contado",
+              "seller": "1005",
+              "seller_name": "LUZ MIRYAM SAENZ 3212908148",
+              "status": "Creado",
+              "subtotal": 19827,
+              "synced": false,
+              "tax": 0,
+              "total": 19827,
+              "vat": 0
+            }
+          ]        
+        </pre>
+      </div>
+      <div>
+        <h3 class="werbservice-title">
+          Consulta GET: /webservices/io/listPurchaseOrdersFull/forSync
+        </h3>
+        <h4>
+          Descripción
+        </h4>
+        <pre>
+          Retorna la lista de pedidos que no han sido sincronizados.
+
+          Se debe enviar el token de autenticación en el encabezado Auth-Token.
+        </pre>
+        <h4>
+          Request
+        </h4>
+        <pre>          
+          GET /miempresa/webservices/io/listPurchaseOrdersFull/forSync HTTP/1.1
+          Host: tp4.comtor.net
+          Auth-Token: D896915F9E696E67AD768B55EC8F089197A51          
+        </pre>
+        <h4>
+          Response 
+        </h4>
+        <pre>
+          [
+            {
+              "all_taxes": 6840.759914159775,
+              "comments": "",
+              "creation_date": "2022-02-22",
+              "creation_time": "08:17:42",
+              "customer": "24167379",
+              "customer_doc_num": "24167379",
+              "customer_doc_type": "CC",
+              "customer_owner_name": "Sandra",
+              "customer_owner_surname": "Milena",
+              "customer_owner_surname2": "Perez",
+              "customer_person_in_charge": "",
+              "customer_trade_name": "Drogueria koldescuentos",
+              "details": [
+                {
+                  "base_price": 2195,
+                  "id": 171001,
+                  "original_price": 2195,
+                  "presentation": "",
+                  "price_list": "",
+                  "product": "139",
+                  "product_category": "",
+                  "product_name": "",
+                  "purchase_cost": 2017,
+                  "purchase_order": 36833,
+                  "quantity": 6,
+                  "subtotal": 13170,
+                  "tax1_percentage": 0,
+                  "tax2_percentage": 0,
+                  "total": 15672.3,
+                  "unitVatValue": 417.05,
+                  "vatValue": 2502.3,
+                  "vat_percentage": 19
+                },
+                {
+                  "base_price": 2195,
+                  "id": 171002,
+                  "original_price": 2195,
+                  "presentation": "",
+                  "price_list": "",
+                  "product": "140",
+                  "product_category": "",
+                  "product_name": "",
+                  "purchase_cost": 1946.41,
+                  "purchase_order": 36833,
+                  "quantity": 6,
+                  "subtotal": 13170,
+                  "tax1_percentage": 0,
+                  "tax2_percentage": 0,
+                  "total": 15672.3,
+                  "unitVatValue": 417.05,
+                  "vatValue": 2502.3,
+                  "vat_percentage": 19
+                }
+              ],
+              "end_time": "08:17:42",
+              "id": 36833,
+              "init_time": "08:16:52",
+              "milliseconds": 1645535861562,
+              "no_sale_type": 0,
+              "no_sale_type_description": "",
+              "payment_method": "CONTADO",
+              "payment_method_days": 7,
+              "payment_method_name": "Pago a contado",
+              "seller": "1003",
+              "seller_name": "WALTER COLMENARES 3186056072",
+              "status": "Creado",
+              "subtotal": 36004,
+              "synced": false,
+              "tax": 6840.759914159775,
+              "total": 42844.759914159775,
+              "vat": 6840.759914159775
+            },
+            {
+              "all_taxes": 0,
+              "comments": "",
+              "creation_date": "2022-02-22",
+              "creation_time": "08:20:25",
+              "customer": "926",
+              "customer_doc_num": "139",
+              "customer_doc_type": "NIT",
+              "customer_owner_name": "YAMILE CRISTANCHO",
+              "customer_owner_name2": "",
+              "customer_owner_surname": "",
+              "customer_owner_surname2": "",
+              "customer_person_in_charge": "",
+              "customer_trade_name": "YAMILE CRISTANCHO",
+              "details": [
+                {
+                  "base_price": 19827,
+                  "id": 170997,
+                  "original_price": 19827,
+                  "presentation": "",
+                  "price_list": "",
+                  "product": "4027",
+                  "product_category": "",
+                  "product_name": "",
+                  "purchase_cost": 13000,
+                  "purchase_order": 36831,
+                  "quantity": 1,
+                  "subtotal": 19827,
+                  "tax1_percentage": 0,
+                  "tax2_percentage": 0,
+                  "total": 19827,
+                  "unitVatValue": 0,
+                  "vatValue": 0,
+                  "vat_percentage": 0
+                }
+              ],
+              "end_time": "08:20:25",
+              "id": 36834,
+              "init_time": "08:20:16",
+              "milliseconds": 1645536025985,
+              "no_sale_type": 0,
+              "no_sale_type_description": "",
+              "payment_method": "CONTADO",
+              "payment_method_days": 7,
+              "payment_method_name": "Pago a contado",
+              "seller": "1005",
+              "seller_name": "LUZ MIRYAM SAENZ 3212908148",
+              "status": "Creado",
+              "subtotal": 19827,
+              "synced": false,
+              "tax": 0,
+              "total": 19827,
+              "vat": 0
+            }
+          ]        
+        </pre>
+      </div>
+      <div>
+        <h3 class="werbservice-title">
+          Consulta GET: /webservices/io/listPurchaseOrdersWCFull
+        </h3>
+        <h4>
+          Descripción
+        </h4>
+        <pre>
+          Retorna la lista de pedidos según filtros de petición con toda la información del cliente.
+
+          Los filtros pueden darse por cliente, vendedor, fecha de creación, fecha de entrega, estado o si el pedido está sincronizado.
+
+          Se debe enviar el token de autenticación en el encabezado Auth-Token.
+        </pre>
+        <h4>
+          Request
+        </h4>
+        <pre>          
+          GET /webservices/io/listPurchaseOrdersWCFull?seller=46669726&customer=-2147478325 
+          HTTP/1.1
+          Host: tp4.comtor.net
+          Auth-Token: D896915F9E696E67AD768B55EC8F089197A51
+          tp_code: business_code         
+        </pre>
+        <h4>
+          Response 
+        </h4>
+        <pre>
+          [ 
+            {
+              "all_taxes": 0.0,
+              "comments": "",
+              "creation_date": "2023-10-13",
+              "creation_time": "10:46:23",
+              "customer": {
+                "active": 1,
+                "address": "CARRERA 1 #2-3",
+                "branch_code": "",
+                "business_type": "",
+                "can_take_order_with_due_accounts": 0,
+                "city": "PEREIRA",
+                "code": "-2147478325",
+                "country": "COLOMBIA",
+                "creation_time": 1696521862368,
+                "credit_limit": 0.0,
+                "department": "RISARALDA",
+                "doc_num": "1234567",
+                "doc_type": "CC",
+                "email": "realemail@mail.com",
+                "last_purchase": 0,
+                "last_update": 1700239030210,
+                "latitude": 4.75567,
+                "longitude": -74.21234,
+                "minimum_order": 0.0,
+                "mobile": "3200000000",
+                "neighborhood": "",
+                "ownerFullName": "NOMBRE CLIENTE APELLIDO CLIENTE",
+                "owner_name": "NOMBRE",
+                "owner_name2": "CLIENTE",
+                "owner_surname": "APELLIDO",
+                "owner_surname2": "CLIENTE",
+                "payment_method": "",
+                "person_in_charge": "C",
+                "phone": "",
+                "priceListInfo": "[] null",
+                "price_list": "",
+                "route": "",
+                "routeInfo": "",
+                "seller": "987654",
+                "sellerInfo": "[987654] NOMBRE VENDEDOR",
+                "seller_name": "NOMBRE VENDEDOR",
+                "trade_name": "NOMBRE DE NEGOCIO DE CLIENTE",
+                "visit_order": 0
+              },
+              "details": [{
+                  "base_price": 6800.0,
+                  "id": 84,
+                  "original_price": 6800.0,
+                  "presentation": "",
+                  "price_list": "",
+                  "product": "1001",
+                  "product_category": "",
+                  "product_name": "1001-PRODUCTO 1",
+                  "purchase_cost": 0.0,
+                  "purchase_order": 120,
+                  "quantity": 1.0,
+                  "subtotal": 6800.0,
+                  "tax1_percentage": 0.0,
+                  "tax2_percentage": 0.0,
+                  "total": 6800.0,
+                  "unitVatValue": 0.0,
+                  "vatValue": 0.0,
+                  "vat_percentage": 0.0
+                },
+                {
+                  "base_price": 7200.0,
+                  "id": 85,
+                  "original_price": 7200.0,
+                  "presentation": "",
+                  "price_list": "",
+                  "product": "1006",
+                  "product_category": "",
+                  "product_name": "1006-PRODUCTO 6",
+                  "purchase_cost": 0.0,
+                  "purchase_order": 120,
+                  "quantity": 10.0,
+                  "subtotal": 72000.0,
+                  "tax1_percentage": 0.0,
+                  "tax2_percentage": 0.0,
+                  "total": 72000.0,
+                  "unitVatValue": 0.0,
+                  "vatValue": 0.0,
+                  "vat_percentage": 0.0
+                }
+              ],
+              "end_time": "10:46:23",
+              "id": 20,
+              "init_time": "10:46:23",
+              "milliseconds": 1697211983137,
+              "no_sale_type": 0,
+              "no_sale_type_description": "",
+              "payment_method": "CONTADO",
+              "payment_method_days": 7,
+              "payment_method_name": "Pago a contado",
+              "seller": "987654",
+              "seller_name": "NOMBRE VENDEDOR",
+              "status": "CREATED",
+              "subtotal": 78800.0,
+              "synced": false,
+              "tax": 0.0,
+              "total": 78800.0,
+              "vat": 0.0
+            },
+            {
+              "all_taxes": 0.0,
+              "comments": "",
+              "creation_date": "2023-11-17",
+              "creation_time": "11:37:38",
+              "customer": {
+                "active": 1,
+                "address": "DIRECCION 1",
+                "branch_code": "",
+                "business_type": "",
+                "can_take_order_with_due_accounts": 0,
+                "city": "BOGOTA",
+                "code": "-7544567890",
+                "country": "COLOMBIA",
+                "creation_time": 1696521862368,
+                "credit_limit": 0.0,
+                "department": "BOGOTA",
+                "doc_num": "6776589",
+                "doc_type": "CC",
+                "email": "correoreal@mail.com",
+                "last_purchase": 0,
+                "last_update": 1700239030210,
+                "latitude": 0.0,
+                "longitude": 0.0,
+                "minimum_order": 0.0,
+                "mobile": "3200000000",
+                "neighborhood": "",
+                "ownerFullName": "NOMBRE CLIENTE DOS",
+                "owner_name": "NOMBRE",
+                "owner_name2": "CLIENTE",
+                "owner_surname": "DOS",
+                "owner_surname2": "",
+                "payment_method": "",
+                "person_in_charge": "C",
+                "phone": "",
+                "priceListInfo": "[] null",
+                "price_list": "",
+                "route": "",
+                "routeInfo": "",
+                "seller": "987654",
+                "sellerInfo": "[987654] NOMBRE VENDEDOR DOS",
+                "seller_name": "NOMBRE VENDEDOR DOS",
+                "trade_name": "NOMBRE DE NEGOCIO DOS",
+                "visit_order": 0
+              },
+              "details": [{
+                "base_price": 12850.0,
+                "id": 94,
+                "original_price": 12850.0,
+                "presentation": "",
+                "price_list": "",
+                "product": "1127",
+                "product_category": "",
+                "product_name": "1127-PRODUCTO 127",
+                "purchase_cost": 0.0,
+                "purchase_order": 124,
+                "quantity": 5.0,
+                "subtotal": 64250.0,
+                "tax1_percentage": 0.0,
+                "tax2_percentage": 0.0,
+                "total": 64250.0,
+                "unitVatValue": 0.0,
+                "vatValue": 0.0,
+                "vat_percentage": 0.0
+              }],
+              "end_time": "11:37:38",
+              "id": 24,
+              "init_time": "11:37:27",
+              "milliseconds": 1700239058134,
+              "no_sale_type": 0,
+              "no_sale_type_description": "",
+              "payment_method": "CONTADO",
+              "payment_method_days": 7,
+              "payment_method_name": "Pago a contado",
+              "seller": "987654",
+              "seller_name": "NOMBRE VENDEDOR DOS",
+              "status": "CREATED",
+              "subtotal": 64250.0,
+              "synced": true,
+              "tax": 0.0,
+              "total": 64250.0,
+              "vat": 0.0
+            }
+          ]
+        </pre>
+      </div>
+      <div>
+        <h3 class="werbservice-title">
+          NotifySync POST: /webservices/io/purchaseOrders/notifySync
+        </h3>
+        <h4>
+          Descripción
+        </h4>
+        <pre>
+          Se envía en JSON la información del pedido. El pedido se marca como sincronizado.
+
+          Se debe enviar el token de autenticación en el encabezado Auth-Token.
+        </pre>
+        <h4>
+          Request
+        </h4>
+        <pre>          
+          POST /miempresa/webservices/io/purchaseOrders/notifySync HTTP/1.1
+          Host: apps3.comtor.net:8080
+          Auth-Token: D896915F9E69197A9E69197A9E69197A51
+          Content-Type: application/json
+          Accept: */*                 
+        </pre>
+        <pre>
+          {
+            "all_taxes": 6840.759914159775,
+            "comments": "",
+            "creation_date": "2022-02-22",
+            "creation_time": "08:17:42",
+            "customer": "24167379",
+            "customer_doc_num": "24167379",
+            "customer_doc_type": "CC",
+            "customer_owner_name": "Sandra",
+            "customer_owner_surname": "Milena",
+            "customer_owner_surname2": "Perez",
+            "customer_person_in_charge": "",
+            "customer_trade_name": "Drogueria koldescuentos",
+            "details": [],
+            "end_time": "08:17:42",
+            "id": 36833,
+            "init_time": "08:16:52",
+            "milliseconds": 1645535861562,
+            "no_sale_type": 0,
+            "no_sale_type_description": "",
+            "payment_method": "CONTADO",
+            "payment_method_days": 7,
+            "payment_method_name": "Pago a contado",
+            "seller": "1003",
+            "seller_name": "WALTER COLMENARES 3186056072",
+            "status": "Creado",
+            "subtotal": 36004,
+            "synced": false,
+            "tax": 6840.759914159775,
+            "total": 42844.759914159775,
+            "vat": 6840.759914159775
+          }        
+        </pre>
+      </div>
+      <div>
+        <h3 class="werbservice-title">
+          SaveProduct POST: /webservices/io/saveProduct
+        </h3>
+        <h4>
+          Descripción
+        </h4>
+        <pre>
+          Se envía en JSON la información del producto. Si el producto existe lo actualiza, si no existe lo crea
+        </pre>
+        <h4>
+          Request
+        </h4>
+        <pre>          
+          POST /miempresa/webservices/io/saveProduct HTTP/1.1
+          Host: apps3.comtor.net:8080
+          Auth-Token: D896915F9E69197A9E69197A9E69197A51
+          Content-Type: application/json
+          Accept: */*
+          
+          
+            {
+              "accounting_code": "",
+              "active": 0,
+              "allow_change_base_price": 0,
+              "allow_decimal": 0,
+              "amount_per_unit": 0,
+              "base_price": 11345,
+              "code": "01047",
+              "factory_reference": "",
+              "last_update": 1625580325091,
+              "manufacturer": "distrimarkas",
+              "max_discount_percentage": 0,
+              "max_qty": 0,
+              "min_qty": 0,
+              "name": "PH Señorial x12un S.E",
+              "presentations": "",
+              "product_category": "",
+              "purchase_cost": 2426,
+              "reorder_point": 0,
+              "stock_qty": 0,
+              "tax1_percentage": 0,
+              "tax2_percentage": 0,
+              "um": "",
+              "use_price_list": 0,
+              "validate_stock": 1,
+              "vat_percentage": 19,
+              "weight_per_unit": 0
+            }                         
+        </pre>
+        <h4>
+          Response 
+        </h4>
+        <pre>
+          {
+            "detail": "CREATE",
+            "message": "",
+            "result": "ok"
+          }            
+        </pre>
+      </div>
+      <div>
+        <h3 class="werbservice-title">
+          SaveProduct POST: /webservices/io/deleteProduct
+        </h3>
+        <h4>
+          Descripción
+        </h4>
+        <pre>
+          Se envía en JSON la información del producto. Si el producto existe lo borra, si no existe retorna un error. El producto lo busca por code (código).
+        </pre>
+        <h4>
+          Request
+        </h4>
+        <pre>
+          POST /miempresa/webservices/io/deleteProduct HTTP/1.1
+          Host: apps3.comtor.net:8080
+          Auth-Token: D896915F9E69197A9E69197A9E69197A51
+          Content-Type: application/json
+          Accept: */*
+ 
+          {
+            "accounting_code": "",
+            "active": 0,
+            "allow_change_base_price": 0,
+            "allow_decimal": 0,
+            "amount_per_unit": 0,
+            "base_price": 11345,
+            "code": "01047",
+            "factory_reference": "",
+            "last_update": 1625580325091,
+            "manufacturer": "distrimarkas",
+            "max_discount_percentage": 0,
+            "max_qty": 0,
+            "min_qty": 0,
+            "name": "PH Señorial x12un S.E",
+            "presentations": "",
+            "product_category": "",
+            "purchase_cost": 2426,
+            "reorder_point": 0,
+            "stock_qty": 0,
+            "tax1_percentage": 0,
+            "tax2_percentage": 0,
+            "um": "",
+            "use_price_list": 0,
+            "validate_stock": 1,
+            "vat_percentage": 19,
+            "weight_per_unit": 0
+          }        
+        </pre>
+        <h4>
+          Response 
+        </h4>
+        <pre>
+          {
+            "detail": "DELETE",
+            "message": "",
+            "result": "ok"
+          }            
+        </pre>
+      </div>
+      <div>
+        <h3 class="werbservice-title">
+          Consulta GET: /webservices/io/listCustomers
+        </h3>
+        <h4>
+          Descripción
+        </h4>
+        <pre>
+          Retorna el listado de clientes.
+
+          Se debe enviar el token de autenticación en el encabezado Auth-Token.
+        </pre>
+        <h4>
+          Request
+        </h4>
+        <pre>
+          GET /miempresa/webservices/io/listCustomers HTTP/1.1
+          Host: tp4.comtor.net
+          Auth-Token: D896915F9E696E67AD768B55EC8F089197A51
+        </pre>
+        <h4>
+          Response 
+        </h4>
+        <pre>
+          [
+            {
+              "active": 1,
+              "address": "frente concretos nobsa",
+              "branch_code": "",
+              "business_type": "",
+              "can_take_order_with_due_accounts": 0,
+              "city": "Nobsa",
+              "code": " 3124424188",
+              "country": "Colombia ",
+              "creation_time": 0,
+              "credit_limit": 0,
+              "department": "Boyaca",
+              "doc_num": "3124424188",
+              "doc_type": "CC",
+              "email": "",
+              "last_purchase": 0,
+              "last_update": 1626982449064,
+              "latitude": 0,
+              "longitude": 0,
+              "minimum_order": 0,
+              "mobile": "",
+              "neighborhood": "concretos",
+              "ownerFullName": "ROCIO HERNANDEZ",
+              "owner_name": "ROCIO",
+              "owner_surname": "HERNANDEZ",
+              "person_in_charge": "",
+              "phone": "3124424188",
+              "priceListInfo": "[null] null",
+              "route": "JUEVES 02",
+              "routeInfo": "[JUEVES 02] JUEVES 02",
+              "route_name": "JUEVES 02",
+              "seller": "1003",
+              "sellerInfo": "[1003] WALTER COLMENARES 3186056072",
+              "seller_name": "WALTER COLMENARES 3186056072",
+              "trade_name": "tienda CONCRETOS",
+              "visit_order": 0
+            },
+            {
+              "active": 1,
+              "address": "CRA 7 # 7 esquina",
+              "branch_code": "",
+              "business_type": "",
+              "can_take_order_with_due_accounts": 0,
+              "city": "BELEN",
+              "code": " 3133934560",
+              "country": "Colombia",
+              "creation_time": 0,
+              "credit_limit": 0,
+              "department": "Boyaca",
+              "doc_num": "3133934560",
+              "doc_type": "CC",
+              "email": "",
+              "last_purchase": 0,
+              "last_update": 1614974537972,
+              "latitude": 0,
+              "longitude": 0,
+              "minimum_order": 0,
+              "mobile": "",
+              "neighborhood": "Centro",
+              "ownerFullName": "SARAY SARAY RINCON",
+              "owner_name": "SARAY",
+              "owner_name2": "",
+              "owner_surname": "SARAY",
+              "owner_surname2": "RINCON",
+              "payment_method": "",
+              "person_in_charge": "",
+              "phone": "3133934560",
+              "priceListInfo": "[] null",
+              "price_list": "",
+              "route": "VIERNES",
+              "routeInfo": "[VIERNES] VIERNES",
+              "route_name": "VIERNES",
+              "seller": "1003",
+              "sellerInfo": "[1003] WALTER COLMENARES 3186056072",
+              "seller_name": "WALTER COLMENARES 3186056072",
+              "trade_name": "Tienda Esquina",
+              "visit_order": 0
+            }
+          ]        
+        </pre>
+      </div>
+      <div>
+        <h3 class="werbservice-title">
+          SaveCustomer POST: /webservices/io/saveCustomer
+        </h3>
+        <h4>
+          Descripción
+        </h4>
+        <pre>
+          Se envía en JSON la información del cliente. Si el cliente existe lo actualiza, si no existe lo crea.
+        </pre>
+        <h4>
+          Request
+        </h4>
+        <pre>
+          POST /miempresa/webservices/io/saveCustomer HTTP/1.1
+          Host: apps3.comtor.net:8080
+          Auth-Token: D896915F9E69197A9E69197A9E69197A51
+          Content-Type: application/json
+          Accept: */*
+          
+          
+          {
+            "active": 1,
+            "address": "frente concretos nobsa",
+            "branch_code": "",
+            "business_type": "",
+            "can_take_order_with_due_accounts": 0,
+            "city": "Nobsa",
+            "code": " 3124424188",
+            "country": "Colombia ",
+            "creation_time": 0,
+            "credit_limit": 0,
+            "department": "Boyaca",
+            "doc_num": "3124424188",
+            "doc_type": "CC",
+            "email": "",
+            "last_purchase": 0,
+            "last_update": 1626982449064,
+            "latitude": 0,
+            "longitude": 0,
+            "minimum_order": 0,
+            "mobile": "",
+            "neighborhood": "concretos",
+            "owner_name": "ROCIO",
+            "owner_surname": "HERNANDEZ",
+            "person_in_charge": "",
+            "phone": "3124424188",
+            "route": "JUEVES 02",
+            "seller": "1003",
+            "trade_name": "tienda CONCRETOS",
+            "visit_order": 0
+          }
+        </pre>
+        <h4>
+          Response 
+        </h4>
+        <pre>
+          {
+            "detail": "CREATE",
+            "message": "",
+            "result": "ok"
+          }            
+        </pre>
+      </div>
+      <div>
+        <h3 class="werbservice-title">
+          DeleteCustomer POST: /webservices/io/deleteCustomer
+        </h3>
+        <h4>
+          Descripción
+        </h4>
+        <pre>
+          Se envía en JSON la información del cliente. Si el cliente existe lo borra, si no existe retorna un error. La llave de borrado es code (código).        </pre>
+        <h4>
+          Request
+        </h4>
+        <pre>
+          POST /miempresa/webservices/io/deleteCustomer HTTP/1.1
+          Host: apps3.comtor.net:8080
+          Auth-Token: D896915F9E69197A9E69197A9E69197A51
+          Content-Type: application/json
+          Accept: */*
+                    
+          {
+              "active": 1,
+              "address": "frente concretos nobsa",
+              "branch_code": "",
+              "business_type": "",
+              "can_take_order_with_due_accounts": 0,
+              "city": "Nobsa",
+              "code": " 3124424188",
+              "country": "Colombia ",
+              "creation_time": 0,
+              "credit_limit": 0,
+              "department": "Boyaca",
+              "doc_num": "3124424188",
+              "doc_type": "CC",
+              "email": "",
+              "last_purchase": 0,
+              "last_update": 1626982449064,
+              "latitude": 0,
+              "longitude": 0,
+              "minimum_order": 0,
+              "mobile": "",
+              "neighborhood": "concretos",
+              "owner_name": "ROCIO",
+              "owner_surname": "HERNANDEZ",
+              "person_in_charge": "",
+              "phone": "3124424188",
+              "route": "JUEVES 02",
+              "seller": "1003",
+              "trade_name": "tienda CONCRETOS",
+              "visit_order": 0
+          }          
+        </pre>
+        <h4>
+          Response 
+        </h4>
+        <pre>
+          {
+            "detail": "DELETE",
+            "message": "",
+            "result": "ok"
+          }                      
+        </pre>
+      </div>
+      <div>
+        <h3 class="werbservice-title">
+          SaveProductCategory POST: /webservices/io/saveProductCategory
+        </h3>
+        <h4>
+          Descripción
+        </h4>
+        <pre>
+          Se envía en JSON la información de la categoria de producto. La categoria existe la actualiza.
+        </pre>
+        <h4>
+          Request
+        </h4>
+        <pre>
+          POST /miempresa/webservices/io/saveProductCategory HTTP/1.1
+          Host: apps3.comtor.net:8080
+          Auth-Token: D896915F9E69197A9E69197A9E69197A51
+          Content-Type: application/json
+          Accept: */*
+                    
+          {
+          "code": "ABA",
+          "name": "ABARROTES"
+          },    
+        </pre>
+        <h4>
+          Response 
+        </h4>
+        <pre>
+          {
+            "detail": "CREATE",
+            "message": "",
+            "result": "ok"
+          }               
+        </pre>
+      </div>
+    </div>
+  </main>
+
+
+<!-- ======= Footer ======= -->
+  <footer class="site-footer">
+
+    <div class="container">
+        <div class="footer-logo text-center">
+            <img class="logo" src="media/images/footer-logo.svg" width="136" alt="Logo footer">
+        </div>
+        <div class="contact row">
+            <div class="information-footer col-md-4 text-center">
+                <div class="contact-info text-light">
+                    <div class="footer-icon">
+                      <img class="size-icon" src="media/icons/address.svg" height="89" alt="Address Icon">
+                    </div>
+                    <p>Bogotá, Cundinamarca, Colombia</p>
+                    <h6>Cll. 151 No. 18A-34 Ofc. 301</h6>                                            
+                </div>
+            </div>
+            <div class="information-footer principal-text col-md-4 text-center border-left border-right">
+                <div class="contact-info text-light">
+                    <div class="footer-icon">
+                      <img class="size-icon" src="media/icons/email.svg" height="89" alt="Address Icon">
+                    </div>
+                    <p>Contáctanos a nuestro Email</p>
+                    <h6>tomapedidos@comtor.com</h6>                                            
+                </div>
+            </div>
+            <div class="col-md-4 text-center">
+                <div class="contact-info text-light">
+                    <div class="footer-icon">
+                      <img class="size-icon" src="media/icons/whatsapp.svg" height="89" alt="Address Icon">
+                    </div>
+                    <p>Contáctanos a nuestro whatsapp</p>
+                    <h6><a class="link-footer-information" href="https://api.whatsapp.com/send/?phone=573103258432&text=Hola+.Estoy+interesado+en+la+aplicacion&type=phone_number&app_absent=0" target="_blank">+57 3103258432</a></h6>                                          
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-menu">
+          <ul class="menu justify-content-between text-light">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about-us.html">Cómo Funciona</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="portfolio-grid.html">Beneficios</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="faqs.html">Tarifas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contacts.html">Preguntas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contacts.html">Contactos</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-social d-flex justify-content-center">
+          <a class="footer-social-icon" href="#" target="_blank">
+            <img class="size-icon" src="media/icons/facebook.svg" height="40" alt="Address Icon">
+          </a>
+          <a class="footer-social-icon" href="#" target="_blank">
+            <img class="size-icon" src="media/icons/instagram.svg" height="40" alt="Address Icon">
+          </a>
+          <a class="footer-social-icon" href="#" target="_blank">
+            <img class="size-icon" src="media/icons/linkedin.svg" height="40" alt="Address Icon">
+          </a>
+        </div>
+
+        <p class="copyright text-light text-center">Copyright © 2023 Comtor - Toma Pedidos.</p>
+    </div>
+  </footer>
+<!-- End Footer -->
+
+  <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous">
+  </script>
+   <script src="js/main.js"></script>
+</body>
+</html>

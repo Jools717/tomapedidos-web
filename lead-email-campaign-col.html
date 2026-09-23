@@ -1,0 +1,1462 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Toma Pedidos</title>
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" />
+  <!-- Css -->
+  <link href="css/toma-pedidos-bootstrap.css" rel="stylesheet" />
+  <!-- Title -->
+  <title>Toma Pedidos</title>
+  <!-- Icon -->
+  <link rel="icon" type="image/x-icon" href="media/icons/logo_basket48x48.png" />
+  <style>
+    /*LEAD CAPTURE PAGE*/
+    .lead-email-principal-banner {
+      background: url('../media/images/leads-principal-banner-background.png');
+      background-position: center;
+      backdrop-filter: blur(8px);
+    }
+
+    @media (min-width: 992px) {
+      .lead-email-principal-banner {
+        background: linear-gradient(135deg, #041e42 30%, #e85d04 120%);
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+      }
+    }
+
+    @media (min-width: 992px) {
+      .lead-email-principal-banner {
+        background: linear-gradient(135deg, #041e42 30%, #e85d04 120%);
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+      }
+    }
+
+    .lead-logo {
+      margin-bottom: 2rem;
+    }
+
+    .lead-register-content {
+      height: 50%;
+      margin-left: 10rem;
+      color: var(--background-color);
+    }
+
+    .lead-tittle-banner,
+    .lead-register-card {
+      align-content: center;
+    }
+
+
+    /*Register Card*/
+    .lead-register-card {
+      display: grid;
+      justify-content: center;
+      color: var(--primary-color2);
+    }
+
+    .card-form {
+      width: 28rem;
+      padding: 2.5rem;
+      border-radius: 0.5rem;
+      text-align: center;
+      transition: 0.25s;
+      background-color: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(8px);
+      box-shadow: 0rem 0rem 0.3rem rgba(0, 0, 0, 0.3);
+    }
+
+    .edit-form {
+      width: 35rem;
+    }
+
+    .login-card p {
+      color: var(--primary-color2);
+    }
+
+    .card-form h2 {
+      font-size: 2rem;
+    }
+
+    .card-form input[type="text"],
+    .card-form input[type="password"] {
+      font-family: montserratMedium;
+      display: block;
+      margin: 1.25rem auto;
+      text-align: left;
+      background-color: #EBF4FF;
+      color: var(--default-color);
+      border: 0.1rem solid var(--primary-color2);
+      padding: 0.625rem 0.625rem;
+      width: 18rem;
+      border-radius: 0.625rem;
+      transition: 0.25s;
+    }
+
+
+    .card-form input[type="text"]:focus,
+    .card-form input[type="password"]:focus {
+      background-color: var(--background-color);
+      padding-left: 2.5rem;
+      outline: 0.1rem solid var(--background-color);
+      box-shadow: 0.0rem 0.2rem 0.1rem rgba(0, 0, 0, 0.1);
+      width: 22rem;
+    }
+
+    input[type="text"]::placeholder,
+    input[type="password"]::placeholder {
+      color: var(--primary-color2);
+    }
+
+    input[type="text"]:focus::placeholder,
+    input[type="password"]:focus::placeholder {
+      color: var(--background-color);
+    }
+
+    .card-form input[type="submit"] {
+      font-family: tommySoftBold;
+      border: 0;
+      background: var(--primary-color2);
+      display: block;
+      margin: 1.25rem auto;
+      text-align: center;
+      padding: 0.875rem 2.5rem;
+      color: var(--default-color);
+      border-radius: 0.625rem;
+      transition: 0.25s;
+      cursor: pointer;
+      box-shadow: 0.0rem 0.2rem 0.1rem rgba(0, 0, 0, 0.1);
+    }
+
+    .card-form input[type="submit"]:hover {
+      background: var(--secondary-color2);
+      color: var(--background-color);
+      box-shadow: 0.0rem 0.2rem 0.1rem rgba(0, 0, 0, 0.1);
+    }
+
+    .form-label {
+      width: 8rem;
+      text-align: left;
+      margin-bottom: 0;
+    }
+
+    .card-form .btn-first {
+      background-color: var(--primary-color2);
+      width: 10rem;
+      border: 0.1rem solid #b43809;
+    }
+
+    .card-form .btn-first:hover {
+      background-color: var(--secondary-color2);
+      width: 10rem;
+      border: 0.1rem solid #ffffff;
+    }
+
+    .btn-whatsapp {
+      background-color: #25D366;
+      color: #ffffff;
+      font-family: tommySoftBold, sans-serif;
+      font-size: 1.25rem;
+      padding: 0.75rem 2rem;
+      border-radius: 0.625rem;
+      transition: 0.25s;
+      cursor: pointer;
+      box-shadow: 0.0rem 0.2rem 0.1rem rgba(0, 0, 0, 0.1);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 0.1rem solid #1ebd59;
+    }
+
+    .btn-whatsapp:hover {
+      background-color: #20ba5a;
+      color: #ffffff;
+      box-shadow: 0.0rem 0.3rem 0.2rem rgba(0, 0, 0, 0.15);
+      border: 0.1rem solid #ffffff;
+    }
+
+    .btn-whatsapp img {
+      width: 24px !important;
+      height: 24px !important;
+      flex-shrink: 0;
+      object-fit: contain;
+    }
+
+    /*Admin and Mobile module*/
+    .lead-module {
+      color: var(--background-color);
+    }
+
+    .lead-slide-admin {
+      padding: 0;
+      display: grid;
+      justify-content: center;
+    }
+
+    .lead-slide-admin #carouselExampleControlsNoTouchingDesktop {
+      width: 55rem;
+      height: 44.77rem;
+    }
+
+    .lead-mobile {
+      padding: 0;
+      display: grid;
+      justify-content: start;
+      align-content: end;
+    }
+
+    .lead-mobile #carouselExampleControlsNoTouchingMobile {
+      width: 44.875rem;
+      height: 44.625rem;
+    }
+
+    .lead-email-tarifas .tarifas {
+      margin: 0rem;
+      padding-bottom: 5rem;
+    }
+
+    .preguntas-email {
+      padding-bottom: 3rem;
+    }
+
+    .video-email-container {
+      width: 65%;
+      /* Ajusta el tamaño según lo necesites */
+      margin: 0 auto;
+      position: relative;
+      padding-bottom: 65%;
+      /* 1:1 Aspect Ratio */
+      height: 0;
+      margin-top: 2rem;
+    }
+
+    .video-email-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .lead-alert-registration {
+      display: none;
+    }
+
+    .lead-alert-registration p {
+      margin-top: 1rem;
+    }
+
+    .lead-alert-registration a {
+      color: var(--primary-color);
+    }
+
+    .lead-alert-registration a:hover {
+      color: var(--secondary-color);
+    }
+
+    .form-lead-select {
+      width: 60%;
+      margin-left: 2rem;
+    }
+
+
+    /* Small Devices (Mobile) */
+    @media (max-width: 576px) {
+
+      /* LEAD CAPTURE PAGE */
+      .lead-email-principal-banner {
+        background-position: top;
+        padding-bottom: 2rem;
+      }
+
+      .lead-register-content {
+        margin: 0;
+      }
+
+      .lead-logo {
+        width: 15rem;
+        top: 2rem;
+        left: 4.5rem;
+      }
+
+      .lead-tittle-banner {
+        text-align: center;
+        margin-top: 3rem;
+        margin-bottom: 2rem;
+      }
+
+
+      .subtitle-hero {
+        font-size: 1.2rem;
+      }
+
+      .card-form {
+        padding: 1rem;
+      }
+
+      .card-form input[type="text"],
+      .card-form input[type="password"] {
+
+        margin: 0.25rem auto;
+      }
+
+      .card-form input[type="text"] {
+        padding: 0.625rem 0.625rem;
+        padding: 0.2rem 0.5rem;
+        border-radius: 0.625rem;
+        width: 12rem;
+        transition: 0s;
+      }
+
+      .card-form input[type="text"]:focus {
+        background-color: var(--background-color);
+        padding-left: 2.5rem;
+        outline: 0.1rem solid var(--background-color);
+        box-shadow: 0.0rem 0.2rem 0.1rem rgba(0, 0, 0, 0.1);
+        width: 12rem;
+      }
+
+      .edit-form {
+        margin-top: 10rem;
+        width: 22.5rem;
+      }
+
+
+      .lead-module {
+        margin-top: 6rem;
+      }
+
+      .lead-module h3 {
+        font-size: 1.5rem;
+        margin: 1rem !important;
+      }
+
+      .lead-module-title {
+        margin: 0 !important
+      }
+
+      .lead-slide-admin #carouselExampleControlsNoTouchingDesktop {
+        width: 23.5rem;
+        height: 19.2rem;
+      }
+
+      .lead-module #carouselExampleControlsNoTouchingMobile {
+        width: 24.875rem;
+        height: 24.625rem;
+      }
+
+      .preguntas-email-information-2 img {
+        width: 100%;
+      }
+
+      .video-email-container {
+        width: 90%;
+        height: 80%;
+        margin-top: 2rem;
+      }
+
+    }
+
+    /* NEW STYLES FOR NAV AND SPACING */
+    .bg-dark-blue {
+      background-color: #041e42;
+      padding-top: 3rem;
+      padding-bottom: 3rem;
+    }
+
+    .sticky-nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1050;
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+      padding: 1rem 0;
+      background-color: transparent;
+    }
+
+    .sticky-nav.scrolled {
+      background-color: #041e42;
+      /* Dark blue background when scrolling */
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .sticky-nav .nav-logo {
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      visibility: hidden;
+    }
+
+    .sticky-nav.scrolled .nav-logo {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .sticky-nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 1.5rem;
+      align-items: center;
+      justify-content: flex-end;
+    }
+
+    .sticky-nav ul a {
+      color: #fff;
+      text-decoration: none;
+      font-family: montserratMedium, sans-serif;
+      font-weight: 500;
+      padding: 0.4rem 0.8rem;
+      border-radius: 0.4rem;
+      border: 0.1rem solid transparent;
+      transition: all 0.3s ease;
+    }
+
+    .sticky-nav ul a:hover {
+      background-color: var(--background-color);
+      color: var(--primary-color2);
+      border-color: var(--primary-color2);
+    }
+
+
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 4rem;
+    }
+
+    [id] {
+      scroll-margin-top: 0.8rem;
+    }
+
+    /* Responsive nav */
+    @media (max-width: 768px) {
+      .sticky-nav {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+        padding: 0.5rem 0 !important;
+        top: 0 !important;
+        height: auto !important;
+        min-height: fit-content !important;
+      }
+
+      .sticky-nav .container {
+        align-items: flex-start !important;
+      }
+
+      .sticky-nav.scrolled {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        background-color: #041e42;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      }
+
+      .sticky-nav ul {
+        gap: 0.8rem;
+        font-size: 0.85rem;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 0;
+        padding: 0.2rem 0 0.5rem 0;
+        height: auto !important;
+      }
+
+      .nav-whatsapp-btn {
+        padding: 0.2rem 0.6rem;
+        font-size: 0.75rem;
+      }
+
+      .sticky-nav .nav-logo {
+        display: none;
+      }
+    }
+
+    /* Remove inline styles */
+    .text-red-strong {
+      color: #D60439;
+    }
+
+    .text-orange-strong {
+      color: #FD3C00;
+    }
+
+    .text-blue-strong {
+      color: #0c417b;
+    }
+
+    /* Micro animation for whatsapp button */
+    .btn-whatsapp {
+      transition: transform 0.25s, box-shadow 0.25s;
+    }
+
+    .btn-whatsapp:hover {
+      transform: scale(1.05);
+    }
+
+    @keyframes pulse-whatsapp {
+      0% {
+        box-shadow: 0 0 0 0 rgba(76, 175, 80, 0.7);
+      }
+
+      70% {
+        box-shadow: 0 0 0 15px rgba(76, 175, 80, 0);
+      }
+
+      100% {
+        box-shadow: 0 0 0 0 rgba(76, 175, 80, 0);
+      }
+    }
+
+    .btn-whatsapp-pulse {
+      animation: pulse-whatsapp 2s infinite;
+    }
+
+    .btn-whatsapp-pulse:hover {
+      transform: scale(1.05);
+      animation: none;
+    }
+
+    .nav-whatsapp-btn {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      transition: all 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 0.5rem 1.2rem;
+      border: none;
+      border-radius: 50px;
+      color: white !important;
+      text-decoration: none;
+      font-family: montserratBold, sans-serif;
+      font-size: 0.9rem;
+      background-color: #4CAF50;
+      box-shadow: 0 4px 10px rgba(76, 175, 80, 0.3);
+    }
+
+    .nav-whatsapp-btn:hover {
+      background-color: #45a049;
+      transform: scale(1.05);
+    }
+
+    .sticky-nav.scrolled .nav-whatsapp-btn {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="sticky-nav" id="main-nav">
+    <div class="container d-flex justify-content-between align-items-start align-items-lg-center flex-wrap">
+      <a href="#inicio" class="d-none d-lg-block">
+        <img src="media/icons/logo_horizontal296x93.svg" alt="Logo" height="40" class="nav-logo">
+      </a>
+      <div
+        class="d-flex flex-column flex-lg-row align-items-center gap-2 gap-lg-4 justify-content-center mt-2 mt-lg-0 w-100 w-lg-auto"
+        style="flex: 1;">
+        <ul class="mb-0">
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#nosotros">Nosotros</a></li>
+          <li><a href="#beneficios">Beneficios</a></li>
+          <li><a href="#modulos">Módulos</a></li>
+          <li><a href="#tarifas">Tarifas</a></li>
+          <li><a href="#preguntas">Preguntas</a></li>
+        </ul>
+        <a href="https://wa.me/573143783993?text=Hola,%20estaba%20viendo%20la%20%20página%20del%20Email.%20Quiero%20saber%20sobre%20Tomapedidos.&utm_source=leadpage-emails&utm_medium=boton-whatsapp&utm_campaign=colombia"
+          target="_blank" class="nav-whatsapp-btn mt-2 mt-lg-0">
+          <img src="https://www.tomapedidos.app/tomapedidos/media/images/WhatsApp_icon.png" alt="WhatsApp"
+            style="width: 20px; height: 20px;" />
+          Contactarme
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Register Banner -->
+  <main id="inicio" class="lead-email-principal-banner container-fluid section-padding">
+    <!-- MOBILE HERO (Original) -->
+    <div class="row lead-register-content d-lg-none">
+      <div class="lead-tittle-banner col-md-5">
+        <div>
+          <img class="lead-logo img-fluid" src="media/icons/logo_horizontal296x93.svg" width="300"
+            alt="Logo Toma Pedidos" />
+          <h1 class="subtitle-hero text-white">APLICACIÓN MÓVIL Y DE ESCRITORIO PARA TOMA DE PEDIDOS Y CONTROL DE
+            VENDEDORES TAT
+            <br>(TIENDA A TIENDA)
+          </h1>
+        </div>
+        <div class="video-email-container">
+          <iframe id="mobile-video" src="https://www.youtube.com/embed/U_8ly86zSEM?vq=large&mute=1" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+      <div class="lead-register-card col-md-7">
+        <div class="card-form edit-form">
+          <h2>¿Quieres más información?</h2>
+          <p class="text-center my-4">Si estás interesado, haz clic en el botón de WhatsApp a continuación para
+            comunicarte directamente.</p>
+          <div class="d-flex justify-content-center my-4">
+            <a class="btn btn-whatsapp gap-2" id="whatsapp-cta-link"
+              href="https://wa.me/573143783993?text=Hola,%20estaba%20viendo%20la%20%20página%20del%20Email.%20Quiero%20saber%20sobre%20Tomapedidos.&utm_source=leadpage-emails&utm_medium=boton-whatsapp&utm_campaign=colombia"
+              target="_blank">
+              <img src="https://www.tomapedidos.app/tomapedidos/media/images/WhatsApp_icon.png" alt="WhatsApp"
+                class="me-2" />
+              Contactarme con Santiago
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DESKTOP HERO (Nuevo Diseño) -->
+    <div class="row d-none d-lg-flex lead-hero-desktop align-items-center justify-content-center"
+      style="max-width: 1200px; margin: 0 auto; padding-top: 5rem;">
+      <!-- Left Column -->
+      <div class="col-lg-6 text-white pe-5">
+        <img class="lead-logo" src="media/icons/logo_horizontal296x93.svg" width="300" alt="Logo Toma Pedidos" />
+        <h1
+          style="font-family: montserratBold, sans-serif; font-size: 1.8rem; line-height: 1.3; margin-bottom: 1.5rem;">
+          La plataforma todo en uno para gestionar pedidos y vendedores TAT (Tienda a Tienda).</h1>
+        <div style="width: 50px; height: 4px; background-color: var(--primary-color); margin-bottom: 1.5rem;"></div>
+        <p
+          style="font-family: montserratRegular, sans-serif; font-size: 1.1rem; line-height: 1.5; margin-bottom: 2rem;">
+          Optimiza tu fuerza de ventas, controla tus pedidos y toma mejores decisiones desde cualquier lugar.</p>
+
+        <!-- Features Grid -->
+        <div class="d-flex flex-wrap gap-3 mb-4">
+          <div class="feature-item text-center" style="width: 100px;">
+            <div
+              style="background-color: rgba(4,30,66,0.5); border-radius: 12px; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; margin: 0 auto 10px auto;">
+              <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="var(--primary-color)" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+            </div>
+            <span style="font-size: 0.85rem; font-family: montserratMedium, sans-serif;">Seguimiento GPS</span>
+          </div>
+          <div class="feature-item text-center" style="width: 100px;">
+            <div
+              style="background-color: rgba(4,30,66,0.5); border-radius: 12px; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; margin: 0 auto 10px auto;">
+              <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="var(--primary-color)" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="9" cy="21" r="1"></circle>
+                <circle cx="20" cy="21" r="1"></circle>
+                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+              </svg>
+            </div>
+            <span style="font-size: 0.85rem; font-family: montserratMedium, sans-serif;">Toma de Pedidos</span>
+          </div>
+          <div class="feature-item text-center" style="width: 100px;">
+            <div
+              style="background-color: rgba(4,30,66,0.5); border-radius: 12px; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; margin: 0 auto 10px auto;">
+              <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="var(--primary-color)" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+              </svg>
+            </div>
+            <span style="font-size: 0.85rem; font-family: montserratMedium, sans-serif;">Control Vendedores</span>
+          </div>
+          <div class="feature-item text-center" style="width: 100px;">
+            <div
+              style="background-color: rgba(4,30,66,0.5); border-radius: 12px; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; margin: 0 auto 10px auto;">
+              <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="var(--primary-color)" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <line x1="18" y1="20" x2="18" y2="10"></line>
+                <line x1="12" y1="20" x2="12" y2="4"></line>
+                <line x1="6" y1="20" x2="6" y2="14"></line>
+              </svg>
+            </div>
+            <span style="font-size: 0.85rem; font-family: montserratMedium, sans-serif;">Reportes Tiempo Real</span>
+          </div>
+        </div>
+        <!-- Desktop CTA Button -->
+        <a href="#nosotros" class="btn text-white px-4 py-3 mb-3 d-inline-block"
+          style="background: linear-gradient(90deg, var(--primary-color) 0%, #ff8c00 100%); border-radius: 8px; font-family: montserratBold, sans-serif; font-size: 1.1rem; box-shadow: 0 4px 15px rgba(255, 60, 0, 0.4); border: none; transition: transform 0.3s; text-decoration: none;">
+          Quiero conocer Tomapedidos <span style="margin-left: 10px;">→</span>
+        </a>
+        <div style="font-size: 0.85rem; color: #d0d0d0; display: flex; align-items: center; gap: 8px;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--primary-color)" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            <polyline points="9 12 11 14 15 10"></polyline>
+          </svg>
+          Seguro, fácil de usar y siempre contigo.
+        </div>
+      </div>
+
+      <!-- Right Column -->
+      <div class="col-lg-6 ps-lg-4 mt-5 mt-lg-0">
+        <!-- Video Card -->
+        <div
+          style="background-color: #fff; border-radius: 16px; padding: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.3); margin-bottom: 25px;">
+          <div style="position: relative; border-radius: 12px; overflow: hidden; padding-bottom: 56.25%; height: 0;">
+            <iframe id="desktop-video" src="https://www.youtube.com/embed/U_8ly86zSEM?vq=large&mute=1" title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+          </div>
+        </div>
+
+        <!-- WhatsApp Card -->
+        <div
+          style="background-color: #fff; border-radius: 16px; padding: 30px 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); display: flex; align-items: center; gap: 20px;">
+          <div
+            style="background-color: #e5f7e6; border-radius: 50%; width: 70px; height: 70px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#25D366" stroke-width="1.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path
+                d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z">
+              </path>
+            </svg>
+          </div>
+          <div style="flex-grow: 1;">
+            <h3 style="color: #041e42; font-family: montserratBold, sans-serif; font-size: 1.4rem; margin-bottom: 5px;">
+              ¿Quieres más información?</h3>
+            <p style="color: #666; font-size: 0.95rem; margin-bottom: 15px; font-family: montserratMedium, sans-serif;">
+              Habla directamente con nuestro equipo y resuelve todas tus dudas.</p>
+            <a href="https://wa.me/573143783993?text=Hola,%20estaba%20viendo%20la%20%20página%20del%20Email.%20Quiero%20saber%20sobre%20Tomapedidos.&utm_source=leadpage-emails&utm_medium=boton-whatsapp&utm_campaign=colombia"
+              target="_blank" class="btn btn-whatsapp-pulse"
+              style="background-color: #4CAF50; color: white; border-radius: 8px; font-family: montserratBold, sans-serif; padding: 10px 20px; font-size: 0.95rem; display: inline-flex; align-items: center; gap: 10px; border: none; width: 100%; justify-content: center; text-decoration: none; transition: transform 0.3s;">
+              <img src="https://www.tomapedidos.app/tomapedidos/media/images/WhatsApp_icon.png" alt="WhatsApp"
+                class="me-2" style="width: 24px; height: 24px;" />
+              Contactarme con Santiago
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <!-- Section About Us -->
+  <section id="nosotros" class="about-us container container-sm section-padding">
+    <div class="row">
+      <div class="about-us-scenario-1 col-md-6">
+        <img src="media/images/home-about-us-scenario-1.svg" alt="ilustracion 1" />
+      </div>
+      <div class="about-us-text-scenario-1 col-md-5 offset-lg-1">
+        <h2 class="about-us-title text-center">¿Por qué Tomapedidos?</h2>
+        <h3>Automatización y toma de pedidos en tiempo real</h3>
+        <p>La aplicación Tomapedidos le va a permitir a tus vendedores tomarle
+          los pedidos a los diferentes clientes desde su celular o dispositivo
+          móvil en tiempo real.</p>
+        <h3>Optimización y administración de equipos de venta para empresas de cualquier tamaño</h2>
+          <p>La aplicación está diseñada principalmente para: comercializadoras,
+            distribuidoras, importadoras o fabricantes de cualquier tamaño y con
+            fuerzas de ventas T.A.T. (preventa y autoventa) que estén en busca de
+            eliminar la toma de pedidos manual y mejorar la administración y
+            gestión de equipos de ventas.
+            <br><br><strong>Nuestros diferenciales:</strong><br><strong>1.</strong> Es una aplicación
+            muy intuitiva y fácil de aprender a usar.<br>
+            <strong>2.</strong> El proceso de implementación es rápido y te ofrecemos un acompañamiento
+            personalizado en todo momento.
+          </p>
+      </div>
+    </div>
+    </div>
+  </section>
+
+
+  <!-- Section Beneficios -->
+  <section id="beneficios" class="beneficios-1-email container container-sm section-padding">
+    <div class="row">
+      <div class="beneficios-principal-text col text-center">
+        <h2>Toma Pedidos Móvil</h2>
+        <h3>Algunos de los beneficios de implementar Toma Pedidos en tu negocio o empresa son:</h3>
+      </div>
+    </div>
+    <div class="beneficios-illustrations row">
+      <div class="beneficios-scenario col-md-6 ">
+        <div class="d-flex justify-content-center">
+          <img class="beneficios-scenario-for-mobile" src="media/images/beneficios-scenario-8.svg" height="472"
+            alt="Ilustracion 8">
+        </div>
+        <div class="beneficios-text-illustration  text-center">
+          <h4>Los vendedores no deberán ir a la empresa o negocio a entregar las notas de pedido o a obtener la
+            información de ventas del día.</h4>
+        </div>
+      </div>
+      <div class="beneficios-scenario col-md-6">
+        <div class="d-flex justify-content-center">
+          <img class="beneficios-scenario-for-mobile" src="media/images/beneficios-scenario-9.svg" height="472"
+            alt="Ilustracion 8">
+        </div>
+        <div class="beneficios-text-illustration text-center">
+          <h4>
+            Los errores de digitación se reducen hasta en un 99% pues los datos de clientes y productos ya están
+            previamente
+            registrados. Los vendedores solo deben seleccionar las opciones ya existentes.
+          </h4>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="beneficios-2-email container-sm section-padding">
+    <div class="beneficios-illustrations row">
+      <div class="beneficios-scenario col-md-6 ">
+        <div class="d-flex justify-content-center">
+          <img class="beneficios-scenario-for-mobile" src="media/images/beneficios-scenario-10.svg" height="472"
+            alt="Ilustracion 8">
+        </div>
+        <div class="beneficios-text-illustration  text-center">
+          <h4>
+            La aplicación permite hacer un seguimiento GPS a los vendedores para validar si están cumpliendo
+            con su ruta programada. Adicionalmente se puede almacenar la georeferenciación del cliente para
+            ver si el vendedor lo visitó en el punto.
+          </h4>
+        </div>
+      </div>
+      <div class="beneficios-scenario col-md-6">
+        <div class="d-flex justify-content-center">
+          <img class="beneficios-scenario-for-mobile" src="media/images/beneficios-scenario-11.svg" height="472"
+            alt="Ilustracion 8">
+        </div>
+        <div class="beneficios-text-illustration text-center">
+          <h4>
+            Los vendedores pueden seguir tomando pedidos aún cuando no tengan internet, ya que la aplicación
+            guarda los pedidos localmente y los envía tan pronto el teléfono tenga conexión nuevamente.
+          </h4>
+        </div>
+      </div>
+      <div class="beneficios-scenario col-md-6">
+        <div class="d-flex justify-content-center">
+          <img class="beneficios-scenario-for-mobile" src="media/images/beneficios-scenario-12.svg" height="472"
+            alt="Ilustracion 8">
+        </div>
+        <div class="beneficios-text-illustration text-center">
+          <h4>
+            Llevar el control del inventario de tu negocio, ya que a medida de que el vendedor tomando pedidos
+            el inventario se va descontando automáticamente.
+          </h4>
+        </div>
+      </div>
+      <div class="beneficios-scenario col-md-6">
+        <div class="d-flex justify-content-center">
+          <img class="beneficios-scenario-for-mobile" src="media/images/beneficios-scenario-13.svg" height="472"
+            alt="Ilustracion 8">
+        </div>
+        <div class="beneficios-text-illustration text-center">
+          <h4>
+            Te vamos a enseñar a manejar la plataforma y dar un soporte técnico personalizado y directo en todo
+            momento para ayudarte con cualquier duda que tengas.
+          </h4>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lead Admin And Mobile Content -->
+  <section id="modulos" class="bg-dark-blue">
+    <div class="container-fluid">
+      <div class="row lead-module">
+        <div class="lead-module-title mt-4 mb-5">
+          <h2 class="text-center">Tomapedidos cuenta con dos módulos</h2>
+        </div>
+        <div class="lead-slide-admin col-lg-7">
+          <h3 class="text-center mb-5">
+            Módulo Administrativo
+          </h3>
+          <div id="carouselExampleControlsNoTouchingDesktop" class="carousel slide carousel-fade" data-bs-touch="false"
+            data-bs-interval="false">
+            <div class="carousel-inner como-funciona-carousel-inner ">
+              <img class="carousel-item active como-funciona-front-image"
+                src="media/images/como-funciona-image-desktop-1.png"
+                alt="Imagen de cómo funciona la plataforma en un ordenador.">
+              <img class="carousel-item como-funciona-front-image" src="media/images/como-funciona-image-desktop-2.png"
+                alt="Imagen que muestra los beneficios de usar la plataforma en un ordenador.">
+              <img class="carousel-item como-funciona-front-image" src="media/images/como-funciona-image-desktop-3.png"
+                alt="Ilustración de cómo utilizar la plataforma en una computadora.">
+              <img class="carousel-item como-funciona-front-image" src="media/images/como-funciona-image-desktop-4.png"
+                alt="Captura de pantalla de la plataforma en un ordenador.">
+              <img class="carousel-item como-funciona-front-image" src="media/images/como-funciona-image-desktop-5.png"
+                alt="Imagen que muestra cómo la plataforma mejora la gestión de pedidos en una computadora.">
+              <img class="carousel-item como-funciona-front-image" src="media/images/como-funciona-image-desktop-6.png"
+                alt="Visualización de las características de la plataforma en un ordenador.">
+            </div>
+            <button class="carousel-control-prev como-funciona-carousel-control-prev" type="button"
+              data-bs-target="#carouselExampleControlsNoTouchingDesktop" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon como-funciona-carousel-control-prev-icon"
+                aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next como-funciona-carousel-control-next" type="button"
+              data-bs-target="#carouselExampleControlsNoTouchingDesktop" data-bs-slide="next">
+              <span class="carousel-control-next-icon como-funciona-carousel-control-next-icon"
+                aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+        <div class="lead-mobile col-lg-5">
+          <h3 class="text-center mb-5">
+            Módulo móvil para vendedores
+          </h3>
+          <div id="carouselExampleControlsNoTouchingMobile" class="carousel slide carousel-fade" data-bs-touch="false"
+            data-bs-interval="false">
+            <div id="carouselExampleControlsNoTouchingMobile" class="carousel slide carousel-fade" data-bs-touch="false"
+              data-bs-interval="false">
+              <div class="carousel-inner como-funciona-carousel-inner-mobile ">
+                <img class="carousel-item active como-funciona-front-image-mobile"
+                  src="media/images/como-funciona-image-mobile-1.png" class="d-block w-100"
+                  alt="Persona usando una aplicación móvil para tomar pedidos de manera fácil y rápida.">
+                <img class="carousel-item como-funciona-front-image-mobile"
+                  src="media/images/como-funciona-image-mobile-2.png" class="d-block w-100"
+                  alt="Visualización de la interfaz de la aplicación para gestionar productos y clientes.">
+                <img class="carousel-item como-funciona-front-image-mobile"
+                  src="media/images/como-funciona-image-mobile-3.png" class="d-block w-100"
+                  alt="Proceso de realización de pedidos a través de la aplicación móvil.">
+                <img class="carousel-item como-funciona-front-image-mobile"
+                  src="media/images/como-funciona-image-mobile-4.png" class="d-block w-100"
+                  alt="Seguimiento de pedidos y confirmación de entrega en la aplicación móvil.">
+                <img class="carousel-item como-funciona-front-image-mobile"
+                  src="media/images/como-funciona-image-mobile-5.png" class="d-block w-100"
+                  alt="Personalización de pedidos y remisiones en la aplicación móvil.">
+                <img class="carousel-item como-funciona-front-image-mobile"
+                  src="media/images/como-funciona-image-mobile-6.png" class="d-block w-100"
+                  alt="Acceso a todas las funcionalidades y actualizaciones de la plataforma móvil.">
+                <img class="carousel-item como-funciona-front-image-mobile"
+                  src="media/images/como-funciona-image-mobile-7.png" class="d-block w-100"
+                  alt="Experiencia de usuario fácil y personalizada en la aplicación móvil.">
+                <img class="carousel-item como-funciona-front-image-mobile"
+                  src="media/images/como-funciona-image-mobile-8.png" class="d-block w-100"
+                  alt="Plataforma móvil para gestionar pedidos de manera eficiente y profesional.">
+              </div>
+              <button class="carousel-control-prev como-funciona-carousel-control-prev-mobile" type="button"
+                data-bs-target="#carouselExampleControlsNoTouchingMobile" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon como-funciona-carousel-control-prev-icon-mobile"
+                  aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next como-funciona-carousel-control-next-mobile" type="button"
+                data-bs-target="#carouselExampleControlsNoTouchingMobile" data-bs-slide="next">
+                <span class="carousel-control-next-icon como-funciona-carousel-control-next-icon-mobile"
+                  aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call To Action 2 -->
+
+  <section class="call-to-action-2 container-fluid">
+    <div class="row">
+      <div class="call-to-action-information align-items-center d-md-flex">
+        <div class="call-to-action-illustration-1 col-md-2">
+          <img src="media/images/call-to-action-illustration-1.svg" alt="Ilustración 1 call to action">
+        </div>
+        <div class="call-to-action-principal-text col-md-5 text-white">
+          <h3>¿Estás interesado? Prueba la aplicación GRATIS AHORA.</h3>
+        </div>
+        <div class="call-to-action-button col-md-3 text-end">
+          <a class="btn btn-whatsapp gap-2"
+            href="https://wa.me/573143783993?text=Hola,%20estaba%20viendo%20la%20página%20del%20Email.%20Quiero%20saber%20sobre%20Tomapedidos.&utm_source=leadpage-emails&utm_medium=boton-whatsapp-footer&utm_campaign=colombia"
+            target="_blank">
+            <img src="https://www.tomapedidos.app/tomapedidos/media/images/WhatsApp_icon.png" alt="WhatsApp"
+              class="me-2" />
+            Comunicarse con Santiago
+          </a>
+        </div>
+        <div class="call-to-action-illustration-2 col-md-2">
+          <img src="media/images/call-to-action-illustration-2.svg" alt="Ilustración 2 call to action">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="tarifas" class="lead-email-tarifas container container-sm section-padding">
+    <div class="tarifas">
+      <h1 class="tarifas-title text-center">
+        Tarifas Toma Pedidos - Colombia
+      </h1>
+      <div class="tarifas-part-1 row justify-content-center">
+        <div class="tarifas-card-1 col-lg-3 col-md-6 d-flex flex-column text-white align-self-start">
+          <div class="tarifas-part-1-content-1-image d-flex align-items-end justify-content-center">
+            <img src="media/images/tarifas-scenario-14.svg" alt="Ilustración de Toma Pedidos - Tarifa Vendedor-Demo">
+          </div>
+          <div class="tarifas-part-1-content-1-title">
+            <h2>Vendedor-Demo</h2>
+          </div>
+          <div class="tarifas-part-1-content-2 d-flex align-items-center">
+            <h3 class="tarifas-subtitle-text text-center">Ideal para quienes quieren probar la plataforma GRATIS.</h3>
+          </div>
+          <div class="tarifas-part-1-content-3">
+            <div class="tarifas-part-1-information-content-3 row">
+              <div class="tarifas-part-1-icon col-1 me-sm-4">
+                <img src="media/icons/tarifas-icon-check.svg" height="25">
+              </div>
+              <div class="col-10">
+                <p>
+                  Usuarios Vendedores ilimitados (quienes toman pedidos).
+                </p>
+              </div>
+            </div>
+            <div class="tarifas-part-1-information-content-3 row">
+              <div class="tarifas-part-1-icon col-1 me-sm-4">
+                <img src="media/icons/tarifas-icon-check.svg" height="25">
+              </div>
+              <div class="col-10">
+                <p>
+                  1 Usuario Administrador (quien recibe los pedidos).
+                </p>
+              </div>
+            </div>
+            <div class="tarifas-part-1-information-content-3 row">
+              <div class="tarifas-part-1-icon col-1 me-sm-4">
+                <img src="media/icons/tarifas-icon-check.svg" height="25">
+              </div>
+              <div class="tarifas-part-1-text-color col-10">
+                <p>
+                  <strong class="text-red-strong">15 dias de prueba.</strong>
+                </p>
+              </div>
+            </div>
+            <div class="tarifas-part-1-information-content-3 row">
+              <div class="tarifas-part-1-icon col-1 me-sm-4">
+                <img src="media/icons/tarifas-icon-check.svg" height="25">
+              </div>
+              <div class="col-10">
+                <p>
+                  Videos tutoriales para aprender a configurar y utilizar la plataforma
+                </p>
+              </div>
+            </div>
+            <div class="tarifas-part-1-information-content-3 row">
+              <div class="tarifas-part-1-icon col-1 me-sm-4">
+                <img src="media/icons/tarifas-icon-check.svg" height="25">
+              </div>
+              <div class="col-10">
+                <p>
+                  Acceso a todas las fundionalidades del <strong>vendedor Plus</strong>
+                </p>
+              </div>
+            </div>
+          </div>
+          <!--
+<div class="tarifas-part-1-content-4 d-flex justify-content-center">
+  <a href="https://www.tomapedidos.app/tomapedidos/registrarse.page" class="btn btn-second">Regístrate Gratis</a>
+</div>
+-->
+        </div>
+        <div class="tarifas-card-2 col-lg-3 col-md-6 d-flex flex-column text-white align-self-start">
+          <div class="tarifas-part-2-content-1-image d-flex align-items-end justify-content-center">
+            <img src="media/images/tarifas-scenario-15.svg" alt="Ilustración de Toma Pedidos - Tarifa Vendedor-Plus">
+          </div>
+          <div class="tarifas-part-2-content-1-title">
+            <h2>Vendedor-Plus</h2>
+          </div>
+          <div class="tarifas-part-2-content-2 d-flex align-items-center justify-content-center">
+            <h3 class="tarifas-subtitle-text text-center">$38.000+IVA <br>mensuales por cada vendedor <br>o
+              administrador.</h3>
+          </div>
+          <div class="tarifas-part-2-content-3">
+            <div class="tarifas-part-2-information-content-3 row">
+              <div class="tarifas-part-2-icon col-1 me-sm-4">
+                <img src="media/icons/tarifas-icon-check.svg" height="25">
+              </div>
+              <div class="col-10">
+                <p>
+                  Carga de información ilimitada y sin costos adicionales (productos, clientes, inventarios, etc.)
+                </p>
+              </div>
+            </div>
+            <div class="tarifas-part-2-information-content-3 row">
+              <div class="tarifas-part-2-icon col-1 me-sm-4">
+                <img src="media/icons/tarifas-icon-check.svg" height="25">
+              </div>
+              <div class="tarifas-part-2-text-color col-10">
+                <p>
+                  <strong class="text-orange-strong">Sin costo de implementación.</strong>
+                </p>
+              </div>
+            </div>
+            <div class="tarifas-part-2-information-content-3 row">
+              <div class="tarifas-part-2-icon col-1 me-sm-4">
+                <img src="media/icons/tarifas-icon-check.svg" height="25">
+              </div>
+              <div class="col-10">
+                <p>
+                  Te enseñamos a manejar y a configurar la plataforma.
+                </p>
+              </div>
+            </div>
+            <div class="tarifas-part-2-information-content-3 row">
+              <div class="tarifas-part-2-icon col-1 me-sm-4">
+                <img src="media/icons/tarifas-icon-check.svg" height="25">
+              </div>
+              <div class="col-10">
+                <p>
+                  Capacitación y acompañamiento continuo y personalizado.
+                </p>
+              </div>
+            </div>
+            <div class="tarifas-part-2-information-content-3 row">
+              <div class="tarifas-part-2-icon col-1 me-sm-4">
+                <img src="media/icons/tarifas-icon-check.svg" height="25">
+              </div>
+              <div class="col-10">
+                <p>
+                  $38.000+IVA mensuales por cada vendedor o administrador.
+                </p>
+              </div>
+            </div>
+            <div class="tarifas-part-2-information-content-3 row">
+              <div class="tarifas-part-2-icon col-1 me-sm-4">
+                <img src="media/icons/tarifas-icon-check.svg" height="25">
+              </div>
+              <div class="col-10">
+                <p>
+                  Aplicación móvil para tomar pedidos
+                </p>
+              </div>
+            </div>
+          </div>
+          <!--
+              <div class="tarifas-part-2-content-4 d-flex justify-content-center">
+                  <a href="https://wa.me/573143783993?text=Hola,%20estaba%20viendo%20la%20Lead%20Page.%20 Quiero%20saber%20sobre%20Tomapedidos.&utm_source=leadpage&utm_medium=boton&utm_campaign=paginatomapedidos" class="btn btn-second">Adquirir</a>
+              </div>
+              -->
+        </div>
+        <div class="tarifas-card-3 col-lg-3 col-md-6 d-flex flex-column text-white align-self-start">
+          <div class="tarifas-part-3-content-1-image d-flex align-items-end justify-content-center">
+            <img src="media/images/tarifas-scenario-16.svg" alt="Ilustración de Toma Pedidos - Tarifa Vendedor-Premium">
+          </div>
+          <div class="tarifas-part-3-content-1-title">
+            <h2>Vendedor-Premium</h2>
+          </div>
+          <div class="tarifas-part-3-content-2 d-flex align-items-center justify-content-center">
+            <h3 class="tarifas-subtitle-text text-center">$40.000+IVA <br>mensuales por cada vendedor <br>o
+              administrador.</h3>
+          </div>
+          <div class="tarifas-part-3-content-3">
+            <div class="tarifas-part-3-information-content-3 row">
+              <div class="tarifas-part-3-icon col-1 me-sm-4">
+                <img src="media/icons/tarifas-icon-check.svg" height="25">
+              </div>
+              <div class="col-10">
+                <p>
+                  Carga de información ilimitada y sin costos adicionales (productos, clientes, inventarios, etc.)
+                </p>
+              </div>
+            </div>
+            <div class="tarifas-part-3-information-content-3 row">
+              <div class="tarifas-part-2-icon col-1 me-sm-4">
+                <img src="media/icons/tarifas-icon-check.svg" height="25">
+              </div>
+              <div class="tarifas-part-3-text-color col-10">
+                <p>
+                  <strong class="text-blue-strong">Sin costo de implementación.</strong>
+                </p>
+              </div>
+            </div>
+            <div class="tarifas-part-3-information-content-3 row">
+              <div class="tarifas-part-3-icon col-1 me-sm-4">
+                <img src="media/icons/tarifas-icon-check.svg" height="25">
+              </div>
+              <div class="col-10">
+                <p>
+                  Te enseñamos a manejar y a configurar la plataforma.
+                </p>
+              </div>
+            </div>
+            <div class="tarifas-part-3-information-content-3 row">
+              <div class="tarifas-part-3-icon col-1 me-sm-4">
+                <img src="media/icons/tarifas-icon-check.svg" height="25">
+              </div>
+              <div class="col-10">
+                <p>
+                  Capacitación y acompañamiento continuo y personalizado.
+                </p>
+              </div>
+            </div>
+            <div class="tarifas-part-3-information-content-3 row">
+              <div class="tarifas-part-3-icon col-1 me-sm-4">
+                <img src="media/icons/tarifas-icon-check.svg" height="25">
+              </div>
+              <div class="col-10">
+                <p>
+                  $40.000+IVA mensuales por cada vendedor o administrador.
+                </p>
+              </div>
+            </div>
+            <div class="tarifas-part-3-information-content-3 row">
+              <div class="tarifas-part-3-icon col-1 me-sm-4">
+                <img src="media/icons/tarifas-icon-check.svg" height="25">
+              </div>
+              <div class="col-10">
+                <p>
+                  Aplicación móvil para tomar pedidos
+                </p>
+              </div>
+            </div>
+            <div class="tarifas-part-3-information-content-3 row">
+              <div class="tarifas-part-3-icon col-1 me-sm-4">
+                <img src="media/icons/tarifas-icon-check.svg" height="25">
+              </div>
+              <div class="col-10">
+                <p>
+                  Personalización de las remisiones o notas de pedidos
+                </p>
+              </div>
+            </div>
+            <div class="tarifas-part-3-information-content-3 row">
+              <div class="tarifas-part-3-icon col-1 me-sm-4">
+                <img src="media/icons/tarifas-icon-check.svg" height="25">
+              </div>
+              <div class="col-10">
+                <p>
+                  Duplicar pedidos historicos o pasados
+                </p>
+              </div>
+            </div>
+            <div class="tarifas-part-3-information-content-3 row">
+              <div class="tarifas-part-3-icon col-1 me-sm-4">
+                <img src="media/icons/tarifas-icon-check.svg" height="25">
+              </div>
+              <div class="col-10">
+                <p>
+                  Mago de Venta (IA)
+                </p>
+              </div>
+            </div>
+          </div>
+          <!--
+            <div class="tarifas-part-3-content-4 d-flex justify-content-center">
+              <a href="https://wa.me/573143783993?text=Hola,%20estaba%20viendo%20la%20Lead%20Page.%20 Quiero%20saber%20sobre%20Tomapedidos.&utm_source=leadpage&utm_medium=boton&utm_campaign=paginatomapedidos" class="btn btn-second">Adquirir</a>
+            </div>
+            -->
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Section Preguntas -->
+  <section id="preguntas" class="preguntas-email container container-sm section-padding">
+    <h2 class="text-center">
+      Toma Pedidos Móvil - Canal T.A.T (Tienda a Tienda): <br> Preguntas frecuentes
+    </h2>
+    <div class="preguntas-information row">
+      <div class="col-md-6">
+        <div class="accordion" id="accordionExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header " id="headingOne">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                aria-expanded="true" aria-controls="collapseOne">
+                <h5>¿Para que me sirve la plataforma TOMA PEDIDOS?</h5>
+              </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+              data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                Le va a permitir automatizar, gestionar y administrar la operación de la toma de pedidos de su compañía
+                de manera rápida y sencilla a través de su
+                dispositivo móvil o computador en tiempo real. Ayudándole a mejorar el manejo de su equipo de
+                vendedores, aumentar sus ventas y administrar los
+                pedidos de sus clientes.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                <h5>¿Cómo se crean los productos y clientes en Toma Pedidos?</h5>
+              </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+              data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                Los clientes y productos se pueden crear de manera masiva ya que el sistema tiene unas plantillas en
+                Excel definidas, donde pones la información y luego la cargas
+                en el sistema.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingThree">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                <h5>¿Mi vendedor puede tomar pedidos sin internet?</h5>
+              </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+              data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                Si, ya que la aplicación va almacenando los pedidos localmente en el celular del vendedor y estos se
+                envían automaticamente cuando la conexión se restablece, por lo cual
+                los pedidos no se van a perder y el vendedor puede continuar con sus labores.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingFour">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                <h5>¿Puedo guardar la ubicación o georeferencia de un cliente?</h5>
+              </button>
+            </h2>
+            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+              data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                Si, ya que la plataforma tiene la forma de capturar la georeferenciación de cada uno de los clientes.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingFive">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                <h5>¿En qué dispositivos puedo instalar la aplicación?</h5>
+              </button>
+            </h2>
+            <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
+              data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                La aplicación móvil para tomar pedidos se puede instalar en cualquier dispositivo con sistema operativo
+                Android 5.0
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingSix">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                <h5>¿Qué cantidad de internet consume la aplicación móvil al mes?</h5>
+              </button>
+            </h2>
+            <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
+              data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                El consumo de internet o datos es de 3000 a 6000 megas al mes.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingSeven">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                <h5>¿Puedo imprimir los pedidos en impresora térmica o de bolsillo?</h5>
+              </button>
+            </h2>
+            <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven"
+              data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                Si. Ya sea desde el celular o el computador, lo importante es que la impresora sea compatible con el
+                dispositivo móvil o equipo.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingEigh">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseEigh" aria-expanded="false" aria-controls="collapseEigh">
+                <h5>¿Qué precio tiene la plataforma en Colombia y otros países?</h5>
+              </button>
+            </h2>
+            <div id="collapseEigh" class="accordion-collapse collapse" aria-labelledby="headingEigh"
+              data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                La plataforma en Colombia tiene un valor de $25.000+IVA mensuales ya sea por usuario vendedor (quien
+                toma los pedidos) o por usuario administrador (quier recibe los pedidos).
+                En otros paises el valor es de $8USD mensuales ya sea por usuario vendedor (quien toma los pedidos) o
+                por usuario administrador (quier recibe los pedidos).
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingNine">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+                <h5>¿Puedo integrar TOMA PEDIDOS con mi software contable?</h5>
+              </button>
+            </h2>
+            <div id="collapseNine" class="accordion-collapse collapse" aria-labelledby="headingNine"
+              data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                Si, nuestro equipo de ingenieros puede realizar la integración con su herramienta contable. Este
+                desarrollo puede llegar a tardar aproximadamente dos semanas y en Colombia tiene
+                un valor aproximado de $1'600.000+IVA (único pago) para el caso de otros países el valor es de
+                aproximadamente de $400 USD (único pago).
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTen">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
+                <h5>¿La implementación tiene algún costo adicional?</h5>
+              </button>
+            </h2>
+            <div id="collapseTen" class="accordion-collapse collapse" aria-labelledby="headingTen"
+              data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                No, es totalemnte gratis y te brindamos soporte para que puedas hacerlo
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="preguntas-email-information-2 col-md-6">
+        <img src="media/images/preguntas-scenario-17.svg" height="626" alt="Preguntas Frecuentes Ilustración">
+      </div>
+    </div>
+    </div>
+  </section>
+
+
+
+
+  <script>
+    function updateNavScroll() {
+      const nav = document.getElementById('main-nav');
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+      if (scrollTop > 15) {
+        nav.classList.add('scrolled');
+      } else {
+        nav.classList.remove('scrolled');
+      }
+    }
+    window.addEventListener('scroll', updateNavScroll);
+    window.addEventListener('touchmove', updateNavScroll);
+    window.addEventListener('load', updateNavScroll);
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous">
+    </script>
+  <!-- Script to prevent double video autoplay -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Determine which video to autoplay based on screen width
+      var isDesktop = window.innerWidth >= 992;
+      var videoToPlay = document.getElementById(isDesktop ? 'desktop-video' : 'mobile-video');
+
+      if (videoToPlay && !videoToPlay.src.includes('autoplay=1')) {
+        videoToPlay.src = videoToPlay.src + '&autoplay=1';
+      }
+    });
+  </script>
+</body>
+
+</html>
