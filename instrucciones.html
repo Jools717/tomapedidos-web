@@ -17,10 +17,12 @@
 
 <body>
 <!-- Navbar -->
+  <!--HEADER START-->
+  <!-- Navbar -->
   <nav class="navbar nav-bar-other-page navbar-expand-lg navbar-dark fixed-top">
     <div class="container-fluid">
       <!-- Logo -->
-      <a class="navbar-brand" href="index.html">
+      <a class="navbar-brand" href="index.page">
         <img src="media/icons/logo_horizontal296x93.svg" width="146" alt="Logo Toma Pedidos" />
       </a>
       <!-- Hamburger Menu -->
@@ -30,48 +32,88 @@
       </button>
 
       <!-- SideBar -->
-      <div class="sidebar offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
-        aria-labelledby="title-navbar">
-        <!-- SideBar -->
+      <div class="sidebar offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="title-navbar">
+        <!-- SideBar Header -->
         <div class="offcanvas-header">
-          <h5 class="offcanvas-title" id="title-navbar">  
-            <a class="navbar-brand" href="index.html">
+          <h5 class="offcanvas-title" id="title-navbar">
+            <a class="navbar-brand" href="index.page">
               <img class="logo-2" src="media/icons/logo_horizontal296x93.svg" alt="Logo Toma Pedidos" />
-            </a>  
+            </a>
           </h5>
-          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+            aria-label="Close"></button>
         </div>
         <!-- SideBar Body -->
         <div class="offcanvas-body d-flex flex-column flex-lg-row p-4 p-lg-0">
-          <ul class="navbar-nav justify-content-center align-items-center  flex-grow-1 ">
+          <ul class="navbar-nav justify-content-center align-items-center flex-grow-1">
             <li class="nav-item mx-3">
-              <a class="nav-link" aria-current="page" href="index.html">Inicio</a>
+              <a class="nav-link" aria-current="page" href="index.page">Inicio</a>
             </li>
             <li class="nav-item mx-2">
-              <a class="nav-link" href="como-funciona.html">Cómo Funciona</a>
+              <a class="nav-link" href="como-funciona.page">Cómo Funciona</a>
             </li>
             <li class="nav-item mx-2">
-              <a class="nav-link" href="beneficios.html">Beneficios</a>
+              <a class="nav-link" href="beneficios-app-toma-pedidos-movil-control-vendedores.page">Beneficios</a>
             </li>
             <li class="nav-item mx-2">
-              <a class="nav-link" href="tarifas.html">Tarifas</a>
+              <a class="nav-link" href="tarifas-tomapedidos-ventas-t-a-t.page">Tarifas</a>
             </li>
             <li class="nav-item mx-2">
-              <a class="nav-link" href="preguntas.html">Preguntas</a>
+              <a class="nav-link" href="preguntas-frecuentes.page">Preguntas</a>
+            </li>
+            <!-- Menú Desplegable Productos -->
+            <li class="nav-item dropdown mx-2 tomapedidos-dropdown">
+              <a class="nav-link dropdown-toggle tomapedidos-nav-dropdown-btn" href="#" id="navbarDropdownProductos" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">
+                <span class="nav-productos-title-wrap">
+                  Productos
+                  <span class="badge-nuevo-navbar">
+                    <img class="badge-nuevo-navbar-img" src="media/images/badge-nuevo.svg" alt="Nuevo" />
+                  </span>
+                </span>
+                <svg class="dropdown-chevron-icon" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M2.5 4.5L6 8L9.5 4.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </a>
+              <ul class="dropdown-menu tomapedidos-dropdown-menu" aria-labelledby="navbarDropdownProductos">
+                <li>
+                  <a class="dropdown-item tomapedidos-dropdown-item" href="entregadores-para-repartidores.page">
+                    <span class="dropdown-item-title">Entregadores</span>
+                    <span class="dropdown-item-badge-wrap">
+                      <img class="badge-nuevo-item-img" src="media/images/badge-nuevo.svg" alt="Nuevo" />
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item tomapedidos-dropdown-item" href="tienda-virtual-para-empresas.page">
+                    <span class="dropdown-item-title">Ecommerce</span>
+                    <span class="dropdown-item-badge-wrap">
+                      <img class="badge-nuevo-item-img" src="media/images/badge-nuevo.svg" alt="Nuevo" />
+                    </span>
+                  </a>
+                </li>
+              </ul>
             </li>
             <li class="nav-item mx-2">
-              <a class="nav-link" href="contacto.html">Contactos</a>
+              <a class="nav-link" href="contacto-y-soporte.page">Contactos</a>
             </li>
           </ul>
+          <div class="youtube-channel-mobile">
+            <a href="https://www.youtube.com/channel/UCmWC3VomOBwNen0Bb7n7GjA" target="_blank">
+              <img height="250" src="https://tomapedidos.app/tomapedidos/media/images/youtube-channel-web.svg"
+                alt="Ilustración para el canal de youtube">
+            </a>
+          </div>
           <!-- Login / Create Account -->
-          <div class="d-flex flex-lg-row justify-content-center align-items-center ">
-            <a href="#" class="btn btn-first me-4">Iniciar Sesión</a>
-            <a href="#" class="btn btn-second">Crear Cuenta</a>
+          <div class="d-flex flex-lg-row justify-content-center align-items-center">
+            <a href="inicio-sesion.page" class="btn btn-first me-4">Iniciar Sesión</a>
+            <a href="/tomapedidos/registrarse.page" class="btn btn-second">Empieza Gratis</a>
           </div>
         </div>
       </div>
     </div>
   </nav>
+  <!--HEADER END-->
 
   <div class="container">
     <!--Title-->

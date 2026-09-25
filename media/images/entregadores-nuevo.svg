@@ -1,0 +1,23 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 52" width="100" height="52">
+  <defs>
+    <linearGradient id="nuevoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff5500" />
+      <stop offset="100%" stop-color="#e63600" />
+    </linearGradient>
+    <filter id="nuevoShadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="1.5" stdDeviation="1.2" flood-color="#000000" flood-opacity="0.35" />
+    </filter>
+  </defs>
+  <path d="M88.00,26.00 L80.69,28.85 L85.71,32.84 L76.99,34.20 L79.11,38.86 L70.03,38.56 L69.00,43.32 L60.66,41.41 L56.60,45.70 L50.00,42.40 L43.40,45.70 L39.34,41.41 L31.00,43.32 L29.97,38.56 L20.89,38.86 L23.01,34.20 L14.29,32.84 L19.31,28.85 L12.00,26.00 L19.31,23.15 L14.29,19.16 L23.01,17.80 L20.89,13.14 L29.97,13.44 L31.00,8.68 L39.34,10.59 L43.40,6.30 L50.00,9.60 L56.60,6.30 L60.66,10.59 L69.00,8.68 L70.03,13.44 L79.11,13.14 L76.99,17.80 L85.71,19.16 L80.69,23.15 Z"
+        fill="url(#nuevoGradient)"
+        filter="url(#nuevoShadow)" />
+  <text x="50" y="32.5" 
+        fill="#ffffff" 
+        font-family="'tommysoftbold', 'Montserrat', 'Arial Black', sans-serif" 
+        font-weight="900" 
+        font-size="17" 
+        text-anchor="middle" 
+        font-style="italic" 
+        letter-spacing="0.5"
+        transform="rotate(-8, 50, 26)">Nuevo</text>
+</svg>

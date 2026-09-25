@@ -84,6 +84,7 @@ body {
 
 
 /* Barra de navegacion*/
+/* Barra de navegacion*/
 .navbar {
     padding: 1rem 4.5rem 1rem 4.5rem;
     transition: all 0.5s;
@@ -107,13 +108,249 @@ body {
 }
 
 .nav-link:hover {
-    color: var(--primary-color);
-    border-bottom: 0.1rem solid var(--primary-color);
+    color: var(--background-color);
+    font-weight: 800;
+    border-bottom: 0.1rem solid var(--background-color);
 
 }
 
 .logo-2 {
     width: 10rem;
+}
+
+
+/* Menú Desplegable Productos - Rediseño Premium */
+.tomapedidos-dropdown {
+    position: relative;
+}
+
+.tomapedidos-nav-dropdown-btn {
+    display: inline-flex !important;
+    align-items: center;
+    gap: 7px;
+    position: relative;
+    cursor: pointer;
+    padding: 6px 14px !important;
+    border-radius: 8px;
+    transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+/* Ocultar el triángulo tosco por defecto de Bootstrap */
+.tomapedidos-nav-dropdown-btn::after {
+    display: none !important;
+}
+
+.tomapedidos-nav-dropdown-btn:hover,
+.tomapedidos-dropdown.show .tomapedidos-nav-dropdown-btn {
+    background-color: rgba(255, 255, 255, 0.16) !important;
+    color: #ffffff !important;
+    border-bottom: none !important;
+}
+
+.nav-productos-title-wrap {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    font-family: montserratBold, sans-serif;
+    font-size: 1rem;
+    color: #ffffff;
+    letter-spacing: 0.2px;
+}
+
+/* Letrero "Nuevo" llamativo sobre Productos en el Navbar */
+.badge-nuevo-navbar {
+    position: absolute;
+    top: -20px;
+    right: -34px;
+    display: inline-block;
+    pointer-events: none;
+    filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.35));
+    animation: badgePulseNavbar 2.4s infinite ease-in-out;
+    z-index: 5;
+}
+
+.badge-nuevo-navbar-img {
+    height: 28px;
+    width: auto;
+    display: block;
+}
+
+@keyframes badgePulseNavbar {
+
+    0%,
+    100% {
+        transform: scale(1) rotate(-6deg);
+    }
+
+    50% {
+        transform: scale(1.12) rotate(-2deg);
+    }
+}
+
+.dropdown-chevron-icon {
+    transition: transform 0.25s ease;
+    stroke: #ffffff;
+    opacity: 0.9;
+    flex-shrink: 0;
+}
+
+.tomapedidos-dropdown:hover .dropdown-chevron-icon,
+.tomapedidos-dropdown.show .dropdown-chevron-icon {
+    transform: rotate(180deg);
+}
+
+/* Tarjeta flotante moderna del menú desplegable */
+.tomapedidos-dropdown-menu {
+    background: #ffffff !important;
+    border: 1px solid rgba(16, 87, 164, 0.15) !important;
+    border-radius: 14px !important;
+    box-shadow: 0 16px 38px rgba(12, 65, 123, 0.2), 0 4px 12px rgba(0, 0, 0, 0.08) !important;
+    padding: 8px !important;
+    min-width: 215px !important;
+    margin-top: 12px !important;
+    position: absolute;
+}
+
+/* Puntero/flecha superior que conecta el menú con Productos */
+.tomapedidos-dropdown-menu::before {
+    content: '';
+    position: absolute;
+    top: -7px;
+    left: 36px;
+    width: 14px;
+    height: 14px;
+    background: #ffffff;
+    transform: rotate(45deg);
+    border-left: 1px solid rgba(16, 87, 164, 0.15);
+    border-top: 1px solid rgba(16, 87, 164, 0.15);
+    z-index: 1;
+}
+
+/* Fila interactiva de cada producto (Nombre + Icono de Nuevo) */
+.tomapedidos-dropdown-item {
+    display: flex !important;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 10px 14px !important;
+    border-radius: 10px !important;
+    text-decoration: none !important;
+    transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease !important;
+    background: transparent !important;
+    margin-bottom: 4px;
+    position: relative;
+    z-index: 2;
+}
+
+.tomapedidos-dropdown-item:last-child {
+    margin-bottom: 0;
+}
+
+/* Título del producto */
+.dropdown-item-title {
+    font-family: montserratBold, sans-serif !important;
+    font-size: 0.98rem !important;
+    color: #1057a4 !important;
+    letter-spacing: -0.2px;
+    line-height: 1.2;
+    transition: color 0.2s ease;
+}
+
+.dropdown-item-badge-wrap {
+    display: inline-flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.badge-nuevo-item-img {
+    height: 23px;
+    width: auto;
+    display: block;
+    filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.2));
+    transition: transform 0.2s ease;
+}
+
+/* Hover de ALTO CONTRASTE */
+.tomapedidos-dropdown-item:hover,
+.tomapedidos-dropdown-item:focus {
+    background-color: var(--secondary-color2) !important;
+    box-shadow: 0 4px 14px rgba(12, 65, 123, 0.35);
+    transform: translateX(4px);
+}
+
+.tomapedidos-dropdown-item:hover .dropdown-item-title,
+.tomapedidos-dropdown-item:focus .dropdown-item-title {
+    color: #ffffff !important;
+}
+
+.tomapedidos-dropdown-item:hover .badge-nuevo-item-img,
+.tomapedidos-dropdown-item:focus .badge-nuevo-item-img {
+    transform: scale(1.1);
+}
+
+/* Apertura fluida en escritorio */
+@media (min-width: 992px) {
+    .tomapedidos-dropdown:hover>.dropdown-menu {
+        display: block;
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+    .tomapedidos-dropdown>.dropdown-menu {
+        display: block;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(10px);
+        transition: opacity 0.22s cubic-bezier(0.16, 1, 0.3, 1),
+            transform 0.22s cubic-bezier(0.16, 1, 0.3, 1),
+            visibility 0.22s;
+    }
+}
+
+/* Adaptación móvil en offcanvas sidebar */
+@media (max-width: 991px) {
+    .tomapedidos-dropdown-menu {
+        background: rgba(12, 65, 123, 0.95) !important;
+        border: 1px solid rgba(255, 255, 255, 0.18) !important;
+        box-shadow: none !important;
+        min-width: 100% !important;
+        margin-top: 8px !important;
+        margin-bottom: 12px !important;
+    }
+
+    .tomapedidos-dropdown-menu::before {
+        display: none !important;
+    }
+
+    .tomapedidos-dropdown-item {
+        color: #ffffff !important;
+    }
+
+    .dropdown-item-title {
+        color: #ffffff !important;
+    }
+
+    .tomapedidos-dropdown-item:hover,
+    .tomapedidos-dropdown-item:focus {
+        background-color: rgba(255, 255, 255, 0.25) !important;
+    }
+
+    .badge-nuevo-navbar {
+        top: -10px;
+        right: -24px;
+    }
+}
+
+.new {
+    position: absolute;
+    top: -11px;
+    left: 85px;
+}
+
+.entregadores-li {
+    position: relative;
+    top: -11px;
 }
 
 .btn-first {
@@ -132,6 +369,14 @@ body {
     border-radius: 10px;
 }
 
+.btn-entregadores {
+    position: relative;
+}
+
+.btn-entregadores:hover {
+    background-color: var(--secondary-color2);
+}
+
 .btn-second {
     background-color: var(--primary-color);
     color: var(--background-color);
@@ -146,6 +391,16 @@ body {
     background-color: var(--secondary-color);
     color: var(--background-color);
     border: 0.1rem solid var(--background-color);
+}
+
+.btn-second-navbar {
+    background-color: #31ff00;
+    color: #000000;
+}
+
+.btn-second-navbar:hover {
+    background-color: var(--primary-color);
+    color: var(--background-color);
 }
 
 /* Hero Section */
@@ -2382,6 +2637,7 @@ input[type="password"]:focus::placeholder {
         opacity: 0;
         transform: translateY(12px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -2647,12 +2903,15 @@ input[type="password"]:focus::placeholder {
     .ecommerce-mobile-mockup-standalone {
         width: 250px;
     }
+
     #carouselEcommerceMobile {
         height: 545px;
     }
+
     .ecommerce-carousel-control-prev-mobile {
         left: -14px;
     }
+
     .ecommerce-carousel-control-next-mobile {
         right: -14px;
     }
@@ -2662,12 +2921,15 @@ input[type="password"]:focus::placeholder {
     .ecommerce-mobile-mockup-standalone {
         width: 230px;
     }
+
     #carouselEcommerceMobile {
         height: 502px;
     }
+
     .ecommerce-carousel-control-prev-mobile {
         left: 2px;
     }
+
     .ecommerce-carousel-control-next-mobile {
         right: 2px;
     }
@@ -2685,8 +2947,8 @@ input[type="password"]:focus::placeholder {
     border: 3px solid #ffffff;
     overflow: hidden;
     transition: opacity 0.22s cubic-bezier(0.16, 1, 0.3, 1),
-                transform 0.22s cubic-bezier(0.16, 1, 0.3, 1),
-                visibility 0.22s;
+        transform 0.22s cubic-bezier(0.16, 1, 0.3, 1),
+        visibility 0.22s;
 }
 
 .ecommerce-popout-preview.active {
@@ -2798,6 +3060,7 @@ input[type="password"]:focus::placeholder {
     from {
         opacity: 0;
     }
+
     to {
         opacity: 1;
     }
@@ -3315,6 +3578,7 @@ input[type="password"]:focus::placeholder {
 
 /* X-Large devices (Larger Desktops / Portátiles) */
 @media (max-width: 1200px) {
+
     /* ENTREGADORES PAGE - PORTÁTIL / LAPTOPS */
     .entregadores-hero-banner {
         padding-top: 76px;
@@ -3480,6 +3744,7 @@ input[type="password"]:focus::placeholder {
 
 /* Large Devices (Tablets / Dispositivos medianos) */
 @media (max-width: 992px) {
+
     /* ENTREGADORES PAGE - TABLETS */
     .entregadores-hero-banner {
         height: auto;
@@ -3698,6 +3963,7 @@ input[type="password"]:focus::placeholder {
 
 /* Medimum Devices (Tablets en orientación vertical) */
 @media (max-width: 768px) {
+
     /* ENTREGADORES PAGE - TABLETS PEQUEÑAS */
     .entregadores-hero-title {
         font-size: 1.9rem;
