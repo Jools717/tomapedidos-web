@@ -84,7 +84,6 @@ body {
 
 
 /* Barra de navegacion*/
-/* Barra de navegacion*/
 .navbar {
     padding: 1rem 4.5rem 1rem 4.5rem;
     transition: all 0.5s;
@@ -226,6 +225,20 @@ body {
     z-index: 1;
 }
 
+/* Puente invisible que cubre la separación física entre el botón del navbar y el menú desplegable.
+   Esto evita que el cursor pase por una 'zona muerta' al bajar a los items, eliminando el parpadeo
+   sin alterar la estética ni la separación visual del menú flotante. */
+.tomapedidos-dropdown-menu::after {
+    content: '';
+    position: absolute;
+    top: -18px;
+    left: -10px;
+    right: -10px;
+    height: 18px;
+    background: transparent;
+    z-index: 1;
+}
+
 /* Fila interactiva de cada producto (Nombre + Icono de Nuevo) */
 .tomapedidos-dropdown-item {
     display: flex !important;
@@ -288,58 +301,27 @@ body {
     transform: scale(1.1);
 }
 
-/* Apertura fluida en escritorio */
-@media (min-width: 992px) {
-    .tomapedidos-dropdown:hover>.dropdown-menu {
-        display: block;
-        opacity: 1;
-        visibility: visible;
-        transform: translateY(0);
-    }
-
-    .tomapedidos-dropdown>.dropdown-menu {
-        display: block;
-        opacity: 0;
-        visibility: hidden;
-        transform: translateY(10px);
-        transition: opacity 0.22s cubic-bezier(0.16, 1, 0.3, 1),
-            transform 0.22s cubic-bezier(0.16, 1, 0.3, 1),
-            visibility 0.22s;
-    }
+/* Apertura fluida del menú desplegable */
+.tomapedidos-dropdown:hover>.dropdown-menu,
+.tomapedidos-dropdown.show>.dropdown-menu {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0);
+    transition-delay: 0s;
 }
 
-/* Adaptación móvil en offcanvas sidebar */
-@media (max-width: 991px) {
-    .tomapedidos-dropdown-menu {
-        background: rgba(12, 65, 123, 0.95) !important;
-        border: 1px solid rgba(255, 255, 255, 0.18) !important;
-        box-shadow: none !important;
-        min-width: 100% !important;
-        margin-top: 8px !important;
-        margin-bottom: 12px !important;
-    }
-
-    .tomapedidos-dropdown-menu::before {
-        display: none !important;
-    }
-
-    .tomapedidos-dropdown-item {
-        color: #ffffff !important;
-    }
-
-    .dropdown-item-title {
-        color: #ffffff !important;
-    }
-
-    .tomapedidos-dropdown-item:hover,
-    .tomapedidos-dropdown-item:focus {
-        background-color: rgba(255, 255, 255, 0.25) !important;
-    }
-
-    .badge-nuevo-navbar {
-        top: -10px;
-        right: -24px;
-    }
+.tomapedidos-dropdown>.dropdown-menu {
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateY(8px);
+    transition: opacity 0.22s cubic-bezier(0.16, 1, 0.3, 1),
+        transform 0.22s cubic-bezier(0.16, 1, 0.3, 1),
+        visibility 0.22s;
+    transition-delay: 0.12s;
 }
 
 .new {
@@ -403,7 +385,7 @@ body {
     color: var(--background-color);
 }
 
-/* Hero Section */
+/* HERO SECTION */
 
 .principal-banner {
     background: url('../media/images/home-fondo-banner.jpg');
@@ -2899,42 +2881,6 @@ input[type="password"]:focus::placeholder {
     margin-right: auto;
 }
 
-@media (max-width: 575px) {
-    .ecommerce-mobile-mockup-standalone {
-        width: 250px;
-    }
-
-    #carouselEcommerceMobile {
-        height: 545px;
-    }
-
-    .ecommerce-carousel-control-prev-mobile {
-        left: -14px;
-    }
-
-    .ecommerce-carousel-control-next-mobile {
-        right: -14px;
-    }
-}
-
-@media (max-width: 360px) {
-    .ecommerce-mobile-mockup-standalone {
-        width: 230px;
-    }
-
-    #carouselEcommerceMobile {
-        height: 502px;
-    }
-
-    .ecommerce-carousel-control-prev-mobile {
-        left: 2px;
-    }
-
-    .ecommerce-carousel-control-next-mobile {
-        right: 2px;
-    }
-}
-
 /* PREVISUALIZADOR FLOTANTE LATERAL EN ALTA DEFINICIÓN (POPOUT PREVIEW) */
 .ecommerce-popout-preview {
     position: absolute;
@@ -3002,39 +2948,6 @@ input[type="password"]:focus::placeholder {
     height: auto;
     display: block;
     border-radius: 21px;
-}
-
-@media (max-width: 991px) {
-    .ecommerce-popout-preview.ecommerce-popout-desktop {
-        top: 46%;
-        left: 50% !important;
-        transform: translateX(-50%) scale(0.96);
-        width: 92vw;
-        border-radius: 16px;
-    }
-
-    .ecommerce-popout-preview.ecommerce-popout-desktop.active {
-        transform: translateX(-50%) scale(1);
-    }
-
-    .ecommerce-popout-preview.ecommerce-popout-mobile {
-        left: 50% !important;
-        right: auto !important;
-        top: 50%;
-        transform: translate(-50%, -50%) scale(0.96);
-        width: 90vw;
-        max-width: 320px;
-        border-radius: 16px;
-    }
-
-    .ecommerce-popout-preview.ecommerce-popout-mobile.active {
-        transform: translate(-50%, -50%) scale(1);
-    }
-
-    .ecommerce-popout-preview.ecommerce-popout-desktop img,
-    .ecommerce-popout-preview.ecommerce-popout-mobile img {
-        border-radius: 13px;
-    }
 }
 
 /* PREVISUALIZADOR MODAL EN ALTA DEFINICIÓN (LIGHTBOX) */
@@ -3259,42 +3172,6 @@ input[type="password"]:focus::placeholder {
     font-size: 0.78rem;
     color: #64748b;
     text-align: center;
-}
-
-@media (max-width: 768px) {
-    .ecommerce-lightbox-modal {
-        padding: 8px;
-    }
-
-    .ecommerce-lightbox-container {
-        border-radius: 14px;
-        max-height: 96vh;
-    }
-
-    .ecommerce-lightbox-header {
-        padding: 12px 16px;
-    }
-
-    .ecommerce-lightbox-title {
-        font-size: 0.92rem;
-    }
-
-    .ecommerce-lightbox-nav {
-        width: 36px;
-        height: 36px;
-    }
-
-    .ecommerce-lightbox-prev {
-        left: 8px;
-    }
-
-    .ecommerce-lightbox-next {
-        right: 8px;
-    }
-
-    .ecommerce-lightbox-footer {
-        display: none;
-    }
 }
 
 .ecommerce-carousel-control-prev-mobile {
@@ -3573,6 +3450,11 @@ input[type="password"]:focus::placeholder {
     font-size: 1.05rem;
 }
 
+/* ==========================================================================
+   RESPONSIVE DESIGN (MEDIA QUERIES)
+   ========================================================================== */
+
+
 /* XX-Large Devices (Large desktops) */
 @media (max-width: 1400px) {}
 
@@ -3702,6 +3584,7 @@ input[type="password"]:focus::placeholder {
 
 /* Adaptación para portátiles con pantallas de poca altura (ej: 1366x768) */
 @media (max-height: 750px) and (min-width: 992px) {
+
     .entregadores-hero-banner {
         padding-top: 72px;
         padding-bottom: 10px;
@@ -3744,6 +3627,70 @@ input[type="password"]:focus::placeholder {
 
 /* Large Devices (Tablets / Dispositivos medianos) */
 @media (max-width: 992px) {
+
+    /* NAVBAR - Menú desplegable Productos en Offcanvas Sidebar */
+    .tomapedidos-dropdown {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .tomapedidos-dropdown-menu {
+        background: rgba(12, 65, 123, 0.95) !important;
+        border: 1px solid rgba(255, 255, 255, 0.18) !important;
+        box-shadow: none !important;
+        min-width: 220px !important;
+        max-width: 100% !important;
+        position: static !important;
+    }
+
+    /* Ocultar completamente el menú cuando esté cerrado para no empujar a Contactos */
+    .tomapedidos-dropdown > .dropdown-menu,
+    .tomapedidos-dropdown:hover > .dropdown-menu {
+        display: none !important;
+        opacity: 0 !important;
+        visibility: hidden !important;
+        pointer-events: none !important;
+        transform: none !important;
+        transition: none !important;
+        margin: 0 !important;
+    }
+
+    /* Mostrarlo únicamente al hacer click/tap (cuando Bootstrap añade .show) */
+    .tomapedidos-dropdown.show > .dropdown-menu,
+    .tomapedidos-dropdown.show:hover > .dropdown-menu,
+    .tomapedidos-dropdown > .dropdown-menu.show {
+        display: block !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        pointer-events: auto !important;
+        margin-top: 8px !important;
+        margin-bottom: 12px !important;
+    }
+
+    .tomapedidos-dropdown-menu::before,
+    .tomapedidos-dropdown-menu::after {
+        display: none !important;
+    }
+
+    .tomapedidos-dropdown-item {
+        color: #ffffff !important;
+    }
+
+    .dropdown-item-title {
+        color: #ffffff !important;
+    }
+
+    .tomapedidos-dropdown-item:hover,
+    .tomapedidos-dropdown-item:focus {
+        background-color: rgba(255, 255, 255, 0.25) !important;
+    }
+
+    .badge-nuevo-navbar {
+        top: -10px;
+        right: -24px;
+    }
 
     /* ENTREGADORES PAGE - TABLETS */
     .entregadores-hero-banner {
@@ -3959,10 +3906,45 @@ input[type="password"]:focus::placeholder {
         width: 260px;
         margin: 0 auto;
     }
+
+    /* ECOMMERCE PAGE - PREVISUALIZADOR FLOTANTE (POPOUT PREVIEW) */
+    .ecommerce-popout-preview.ecommerce-popout-desktop {
+        top: 46%;
+        left: 50% !important;
+        transform: translateX(-50%) scale(0.96);
+        width: 92vw;
+        border-radius: 16px;
+    }
+
+    .ecommerce-popout-preview.ecommerce-popout-desktop.active {
+        transform: translateX(-50%) scale(1);
+    }
+
+    .ecommerce-popout-preview.ecommerce-popout-mobile {
+        left: 50% !important;
+        right: auto !important;
+        top: 50%;
+        transform: translate(-50%, -50%) scale(0.96);
+        width: 90vw;
+        max-width: 320px;
+        border-radius: 16px;
+    }
+
+    .ecommerce-popout-preview.ecommerce-popout-mobile.active {
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    .ecommerce-popout-preview.ecommerce-popout-desktop img,
+    .ecommerce-popout-preview.ecommerce-popout-mobile img {
+        border-radius: 13px;
+    }
 }
 
 /* Medimum Devices (Tablets en orientación vertical) */
 @media (max-width: 768px) {
+    .offcanvas.offcanvas-start {
+        width: 100% !important;
+    }
 
     /* ENTREGADORES PAGE - TABLETS PEQUEÑAS */
     .entregadores-hero-title {
@@ -3971,6 +3953,41 @@ input[type="password"]:focus::placeholder {
 
     .entregadores-hero-features-grid {
         gap: 10px;
+    }
+
+    /* ECOMMERCE PAGE - PREVISUALIZADOR MODAL (LIGHTBOX) */
+    .ecommerce-lightbox-modal {
+        padding: 8px;
+    }
+
+    .ecommerce-lightbox-container {
+        border-radius: 14px;
+        max-height: 96vh;
+    }
+
+    .ecommerce-lightbox-header {
+        padding: 12px 16px;
+    }
+
+    .ecommerce-lightbox-title {
+        font-size: 0.92rem;
+    }
+
+    .ecommerce-lightbox-nav {
+        width: 36px;
+        height: 36px;
+    }
+
+    .ecommerce-lightbox-prev {
+        left: 8px;
+    }
+
+    .ecommerce-lightbox-next {
+        right: 8px;
+    }
+
+    .ecommerce-lightbox-footer {
+        display: none;
     }
 }
 
@@ -4035,6 +4052,10 @@ input[type="password"]:focus::placeholder {
     .about-us-title {
         order: 1;
         /* Cambia el orden de este elemento a 1 */
+    }
+
+    .offcanvas.offcanvas-start {
+        width: 100% !important;
     }
 
     /* Web Module */
@@ -4844,5 +4865,41 @@ input[type="password"]:focus::placeholder {
 
     .ecommerce-cta-subtitle {
         font-size: 0.92rem;
+    }
+
+    /* ECOMMERCE - CARRUSEL Y MOCKUP CELULAR */
+    .ecommerce-mobile-mockup-standalone {
+        width: 250px;
+    }
+
+    #carouselEcommerceMobile {
+        height: 545px;
+    }
+
+    .ecommerce-carousel-control-prev-mobile {
+        left: -14px;
+    }
+
+    .ecommerce-carousel-control-next-mobile {
+        right: -14px;
+    }
+}
+
+/* Extra Small Devices (Smartphones ultra compactos) */
+@media (max-width: 360px) {
+    .ecommerce-mobile-mockup-standalone {
+        width: 230px;
+    }
+
+    #carouselEcommerceMobile {
+        height: 502px;
+    }
+
+    .ecommerce-carousel-control-prev-mobile {
+        left: 2px;
+    }
+
+    .ecommerce-carousel-control-next-mobile {
+        right: 2px;
     }
 }
